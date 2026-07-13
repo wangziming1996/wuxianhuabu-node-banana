@@ -4,7 +4,7 @@
  * 输出: imageUrl（被下游图像/角色节点引用）
  */
 import { Handle, Position, useUpdateNodeInternals, type NodeProps } from 'reactflow'
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import type { AiCanvasNode, AspectRatioId } from '../types'
 import { useCanvasStore } from '../stores/canvasStore'
 import { defaultProvider } from '../ai/provider'
@@ -21,6 +21,8 @@ export function ImageNode({ id, data, selected }: Props) {
 
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  const [flash, setFlash] = useState(false)
+  const lastImageRef = useRef<string | undefined>(undefined)
 
   /* 收集上游注入:文本节点的 text 当作 prompt,图像节点的 imageUrl 当作参考图 */
   const injectedPrompt = useMemo(() => {
@@ -56,6 +58,17 @@ export function ImageNode({ id, data, selected }: Props) {
   useEffect(() => {
     refInit(id)
   }, [id, refInit])
+
+  /* 图片生成成功后短期闪烁提示 */
+  useEffect(() => {
+    const cur = (data as any).imageUrl
+    if (cur && cur !== lastImageRef.current && !busy) {
+      lastImageRef.current = cur
+      setFlash(true)
+      const t = setTimeout(() => setFlash(false), 1100)
+      return () => clearTimeout(t)
+    }
+  }, [(data as any).imageUrl, busy])
 
   async function handleGenerate() {
     setBusy(true)
@@ -98,7 +111,7 @@ export function ImageNode({ id, data, selected }: Props) {
   }
 
   return (
-    <div className={`nb-node nb-image-node ${selected ? 'nb-selected' : ''} nb-status-${data.status}`}>
+    <div className={`nb-node nb-image-node ${selected ? 'nb-selected' : ''} nb-status-${data.status} ${flash ? 'nb-flash-new' : ''}`}>
       <Handle type="target" position={Position.Left} id="prompt" className="nb-handle nb-handle-text" />
       <Handle type="target" position={Position.Left} id="ref" className="nb-handle nb-handle-img" style={{ top: 80 }} />
       <Handle type="source" position={Position.Right} id="image" className="nb-handle nb-handle-img" />

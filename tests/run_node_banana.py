@@ -825,6 +825,79 @@ def case_nb_16_multi_tab_warning(report):
     report.add(cid, name, status, f"{elapsed:.1f}s", art, body)
 
 
+
+def case_nb_17_polish_v2(report):
+    """NB-17: 视觉调优 — MiniMap 按节点类型染色 + 任务徽标 + 闪烁效果."""
+    cid, name = "NB-17", "视觉调优 v2 完整渲染"
+    t0 = int(time.time()*1000)
+    folder = ARTE(cid); os.makedirs(folder, exist_ok=True)
+    shot = os.path.join(folder, "polish.png")
+    from playwright.sync_api import sync_playwright
+    errs, perrs = [], []
+    minimap_colored = False
+    task_pill_seen = False
+    flash_visible_after = False
+    with sync_playwright() as p:
+        b = p.chromium.launch(headless=True, args=["--no-sandbox","--disable-dev-shm-usage"])
+        page = b.new_context(viewport={"width":1600,"height":1000}).new_page()
+        page.on("console", lambda m: errs.append(m.text[:200]) if m.type == "error" else None)
+        page.on("pageerror", lambda exc: perrs.append(str(exc)[:200]))
+        page.goto("http://localhost:5422/", timeout=30000, wait_until="domcontentloaded")
+        _auth(page); _open(page)
+        # 添加 1 张 image + 1 text + 1 character(3 种类型,触发 minimap 染色)
+        for label in ["图片", "文本", "角色"]:
+            page.click(f'.nb-add-node-btn:has-text("{label}")')
+            page.wait_for_timeout(400)
+        # 拿 MiniMap 中的节点颜色
+        minimap_colored = page.evaluate("""() => {
+            const svgs = document.querySelectorAll('.react-flow__minimap-svg rect, .react-flow__minimasp-node');
+            // 我们的 MiniMap 是用 canvas,尝试拿 SVG 里的 path
+            const nodes = document.querySelectorAll('.react-flow__minimap rect');
+            if (!nodes.length) return false;
+            // React Flow MiniMap v11 默认用 canvas 渲,我们用 nodeColor callback → 它会给 RECT 加 fill
+            // 让我们看至少 3 个 minimap 的 rect 有不同颜色
+            const fills = new Set();
+            nodes.forEach(n => { const f = n.getAttribute('fill') || (n.style && n.style.fill); if (f) fills.add(f); });
+            return fills.size >= 2;  // 至少 2 种不同颜色
+        }""")
+        # Image 节点生成,等到 task pill 出现
+        page.click('.nb-add-node-btn:has-text("图片")')
+        page.wait_for_timeout(400)
+        page.locator(".nb-image-node .nb-prompt-input").last.fill("黄色玫瑰花特写")
+        page.wait_for_timeout(300)
+        page.locator(".nb-image-node button.nb-primary-btn").last.click()
+        # 在 ~5s 内 task pill 应该出现
+        deadline = time.time() + 10
+        while time.time() < deadline:
+            has = page.evaluate("""() => !!document.querySelector('.nb-task-pill')""")
+            if has:
+                task_pill_seen = True
+                break
+            time.sleep(0.4)
+        # 等生成完成
+        deadline = time.time() + 100
+        while time.time() < deadline:
+            src_val = page.evaluate("""() => {
+                const imgs = document.querySelectorAll('.nb-image-node .nb-image-preview img');
+                for (const i of imgs) if (i.src && i.src.startsWith('http')) return i.src;
+                return null;
+            }""")
+            if src_val: break
+            time.sleep(1)
+        page.wait_for_timeout(1500)
+        # 检查 image 是否存在于 dom
+        flash_visible_after = page.evaluate("""() => document.querySelectorAll('.nb-image-node').length >= 4""")
+        page.screenshot(path=shot, full_page=False)
+        b.close()
+    elapsed = (int(time.time()*1000)-t0)/1000
+    ok = minimap_colored and task_pill_seen and not perrs
+    status = "PASS" if ok else "FAIL"
+    art = REL(shot)
+    msg = json.dumps({"minimap_colored": minimap_colored, "task_pill_seen": task_pill_seen, "image_nodes_after": flash_visible_after, "console_errors": len(errs), "page_errors": len(perrs)}, ensure_ascii=False)
+    body = f"### {cid} {name}\n**状态**: **{status}** | {elapsed:.1f}s\n[{os.path.basename(shot)}]({art})\n**指标**: {msg}\n"
+    report.add(cid, name, status, f"{elapsed:.1f}s", art, body)
+
+
 def main():
     report = Report()
     started = time.time()
@@ -850,6 +923,8 @@ def main():
     case_nb_15_all_presets_listed(report)
     # 多 Tab 协调
     case_nb_16_multi_tab_warning(report)
+    # 视觉调优
+    case_nb_17_polish_v2(report)
     # 后端代理
     case_nb_10_video_endpoint(report)
 

@@ -170,10 +170,23 @@ function NodeCanvasInner() {
             maxZoom={2}
             nodeOrigin={[0.5, 0.5]}
             deleteKeyCode={['Backspace', 'Delete']}
+            defaultEdgeOptions={{
+              animated: false,
+              style: { stroke: '#475569', strokeWidth: 1.5 },
+            }}
           >
             <Background variant={BackgroundVariant.Dots} gap={20} size={1.2} color="#333" />
             <Controls />
-            <MiniMap pannable zoomable nodeStrokeWidth={2} maskColor="rgba(0,0,0,0.5)" />
+            <MiniMap
+              pannable
+              zoomable
+              nodeStrokeWidth={2}
+              maskColor="rgba(0,0,0,0.5)"
+              nodeColor={(n) => {
+                const k = (n.data as any)?.kind || 'image'
+                return { image: '#6366f1', text: '#06b6d4', character: '#f59e0b', audio: '#a78bfa', custom: '#10b981' }[k] || '#6366f1'
+              }}
+            />
           </ReactFlow>
         </div>
 

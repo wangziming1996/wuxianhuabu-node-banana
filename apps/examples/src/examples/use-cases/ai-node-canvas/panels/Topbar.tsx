@@ -3,10 +3,13 @@
  */
 import { useEffect, useState } from 'react'
 import { useProjectStore, initProjectStore } from '../stores/projectStore'
+import { useTaskStore } from '../stores/taskStore'
 import { getStorageEstimate } from '../utils/idb'
 import { getCostRecords, subscribeCosts } from '../ai/cost'
 
 export function Topbar({ onOpenSettings, onOpenPresets }: { onOpenSettings: () => void; onOpenPresets: () => void }) {
+  const taskRunning = useTaskStore((s) => s.tasks.filter((t) => t.status === 'running').length)
+  const taskQueued = useTaskStore((s) => s.tasks.filter((t) => t.status === 'queued').length)
   const currentId = useProjectStore((s) => s.currentId)
   const currentName = useProjectStore((s) => s.currentName)
   const projects = useProjectStore((s) => s.projects)
@@ -110,6 +113,12 @@ export function Topbar({ onOpenSettings, onOpenPresets }: { onOpenSettings: () =
         <button className="nb-secondary-btn" disabled={!dirty} onClick={() => saveCurrent(() => [], () => [], undefined)}>
           保存
         </button>
+        {(taskRunning > 0 || taskQueued > 0) && (
+          <span className="nb-task-pill" data-testid="task-pill">
+            {taskRunning > 0 && <span className="nb-task-spinner" />}
+            {taskRunning + taskQueued} 个任务在跑
+          </span>
+        )}
         <button className="nb-secondary-btn" onClick={onOpenPresets}>
           工作流预设
         </button>

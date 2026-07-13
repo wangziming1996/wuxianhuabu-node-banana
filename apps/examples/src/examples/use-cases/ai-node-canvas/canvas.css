@@ -697,3 +697,74 @@
 }
 .nb-cost-label { color: #10b981; }
 .nb-cost-value { color: #c7cad1; font-family: ui-monospace, Menlo, monospace; font-weight: 600; }
+/* ---------- 生成中动画 ---------- */
+@keyframes nb-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.35); }
+  50% { box-shadow: 0 0 0 8px rgba(99, 102, 241, 0); }
+}
+@keyframes nb-shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.nb-status-generating {
+  position: relative;
+  animation: nb-pulse 1.6s infinite;
+}
+.nb-status-generating::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  pointer-events: none;
+  background: linear-gradient(110deg, transparent 30%, rgba(99, 102, 241, 0.18) 50%, transparent 70%);
+  background-size: 200% 100%;
+  animation: nb-shimmer 1.4s infinite linear;
+}
+.nb-status-error { border-left: 3px solid #ef476f; }
+
+/* 节点生成成功后短暂闪光提示 */
+@keyframes nb-flash-new {
+  0% { box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.6); }
+  100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+.nb-image-node.nb-flash-new img { animation: nb-flash-new 1s ease-out 1; }
+
+/* ---------- MiniMap 节点按类型染色 ---------- */
+.react-flow__minimap {
+  border-radius: 8px;
+}
+.react-flow__minimap-node {
+  fill-opacity: 0.85;
+}
+.react-flow__minimap-node[data-kind="image"]      { fill: #6366f1; }
+.react-flow__minimap-node[data-kind="text"]       { fill: #06b6d4; }
+.react-flow__minimap-node[data-kind="character"]  { fill: #f59e0b; }
+.react-flow__minimap-node[data-kind="audio"]      { fill: #a78bfa; }
+.react-flow__minimap-node[data-kind="custom"]      { fill: #10b981; }
+
+/* ---------- 边在连线时可点击删除后变红色 ---------- */
+.react-flow__edge-path:hover { stroke: #ef476f !important; }
+.nb-task-pill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(99, 102, 241, 0.12);
+  border: 1px solid rgba(99, 102, 241, 0.5);
+  color: #c7cad1;
+  font-size: 11px;
+}
+@keyframes nb-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.nb-task-spinner {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border: 2px solid rgba(99, 102, 241, 0.3);
+  border-top-color: #6366f1;
+  border-radius: 50%;
+  animation: nb-spin 0.8s linear infinite;
+}
