@@ -60,14 +60,12 @@ function NodeCanvasInner() {
         }
       }
       // 把当前项目的 nodes/edges 一次性灌到 canvas store
-      const list = await (await fetch('/api/auth/session', { credentials: 'include' })).json()
-      // 不能直接抓 session,从 listProjects 拉
-      const idbList = await import('./utils/idb').then((m) => m.listProjects())
+      const idbList = await (await import('./utils/idb')).listProjects()
       const proj = idbList.find((p) => p.id === useProjectStore.getState().currentId)
       if (proj) {
         setAll(proj.nodes as any, proj.edges as any)
       }
-      // 启 auto-save:把 canvas 当前快照传给持久化层
+      // 把 canvas 当前快照 getter 给 auto-save(走 store 直接读,避免 window 全局丢失)
       startAutoSave(() => ({
         nodes: useCanvasStore.getState().nodes,
         edges: useCanvasStore.getState().edges,
@@ -82,10 +80,11 @@ function NodeCanvasInner() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  /* 把 canvas store 当前快照暴露到 window,供自动保存回调 + 测试钩子使用 */
+  /* 把 canvas / project store 当前快照暴露到 window,供自动保存回调 + 测试钩子使用 */
   useEffect(() => {
     ;(window as any).__NB_CANVAS = { nodes, edges }
     ;(window as any).__NB_CANVAS_STORE = useCanvasStore
+    ;(window as any).__NB_PROJECT_STORE = useProjectStore
     setDirty(true)
   }, [nodes, edges, setDirty])
 

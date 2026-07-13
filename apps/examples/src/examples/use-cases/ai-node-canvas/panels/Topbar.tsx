@@ -2,7 +2,7 @@
  * 顶栏 — 项目名 + 新建/打开/保存 + 存储空间 / 成本看板
  */
 import { useEffect, useState } from 'react'
-import { useProjectStore, initProjectStore, startAutoSave } from '../stores/projectStore'
+import { useProjectStore, initProjectStore } from '../stores/projectStore'
 import { getStorageEstimate } from '../utils/idb'
 import { getCostRecords, subscribeCosts } from '../ai/cost'
 
@@ -48,12 +48,8 @@ export function Topbar({ onOpenSettings, onOpenPresets }: { onOpenSettings: () =
   }, [])
 
   useEffect(() => {
-    initProjectStore().then(() => {
-      startAutoSave(() => ({
-        nodes: (window as any).__NB_CANVAS?.nodes || [],
-        edges: (window as any).__NB_CANVAS?.edges || [],
-      }))
-    })
+    // auto-save 由 AiNodeCanvasExample 启动并订阅 canvas store,这里只需初始化 IDB
+    initProjectStore()
   }, [])
 
   const storageWarn = storage && storage.percent > 0.85
