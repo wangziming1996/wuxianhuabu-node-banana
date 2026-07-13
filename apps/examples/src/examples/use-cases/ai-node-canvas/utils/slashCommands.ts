@@ -12,13 +12,30 @@ export interface SlashCommandMatch {
   preset?: WorkflowPreset
 }
 
+const SLUG_TO_PRESET: Record<string, string> = {
+  sixview: 'character-triptych',      // 产品六视图 → 用 character 三视图生成
+  triptych: 'character-triptych',
+  lighting: 'storyboard-grid-9',
+  motion: 'motion-transfer',
+  poster: 'cn-poster',
+  sketch: 'quick-sketch',
+  prodesign: 'pro-design',
+  retouch: 'image-retouch',
+  edittext: 'text-edit',
+  story: 'story-outline',
+  progression: 'story-progression-4',
+  board: 'storyboard-grid-9',
+}
+
 export function matchSlashCommand(text: string, presets: WorkflowPreset[]): SlashCommandMatch | null {
   const trimmed = text.trim()
   const m = PATTERN.exec(trimmed)
   if (!m) return null
   const command = m[1]
   const args = (m[2] || '').trim()
-  const preset = presets.find((p) => p.id.includes(command) || command === p.id.toLowerCase())
+  // 优先按 slug 映射找预设
+  const presetId = SLUG_TO_PRESET[command] || presets.find((p) => p.id.includes(command) || command === p.id.toLowerCase())?.id
+  const preset = presets.find((p) => p.id === presetId)
   return { command, args, preset }
 }
 

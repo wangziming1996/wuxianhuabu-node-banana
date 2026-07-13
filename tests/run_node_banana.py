@@ -569,6 +569,149 @@ def case_nb_11_upload(report):
     report.add(cid, name, status, f"{elapsed:.1f}s", art, body)
 
 
+
+def case_nb_12_slash_insert(report):
+    """NB-12: TextNode 输入 /sixview 后点 插入 → 画布多一个 CustomNode (预设)。"""
+    cid, name = "NB-12", "斜杠命令插入预设节点"
+    t0 = int(time.time()*1000)
+    folder = ARTE(cid); os.makedirs(folder, exist_ok=True)
+    shot = os.path.join(folder, "slash.png")
+    from playwright.sync_api import sync_playwright
+    errs, perrs = [], []
+    custom_after = 0
+    with sync_playwright() as p:
+        b = p.chromium.launch(headless=True, args=["--no-sandbox","--disable-dev-shm-usage"])
+        page = b.new_context(viewport={"width":1600,"height":1000}).new_page()
+        page.on("console", lambda m: errs.append(m.text[:200]) if m.type == "error" else None)
+        page.on("pageerror", lambda exc: perrs.append(str(exc)[:200]))
+        page.goto("http://localhost:5422/", timeout=30000, wait_until="domcontentloaded")
+        _auth(page); _open(page)
+        # 添加 text 节点
+        page.click('.nb-add-node-btn:has-text("文本")')
+        page.wait_for_timeout(500)
+        node_id = page.evaluate("""() => document.querySelector('.nb-text-node')?.parentElement?.getAttribute('data-id')""")
+        # 输入 /sixview
+        page.locator(f'[data-id="{node_id}"] .nb-text-input').fill("/sixview")
+        page.wait_for_timeout(500)
+        # 验证 slash 匹配
+        match_visible = page.evaluate(f"""(() => {{
+            const m = document.querySelector('[data-id=\"{node_id}\" ] .nb-slash-match');
+            return m ? m.textContent : null;
+        }})()""")
+        # 点插入按钮
+        page.click('[data-testid="insert-preset-btn"]')
+        page.wait_for_timeout(800)
+        custom_after = page.evaluate("""() => document.querySelectorAll('.nb-custom-node').length""")
+        page.screenshot(path=shot, full_page=False)
+        b.close()
+    elapsed = (int(time.time()*1000)-t0)/1000
+    ok = (custom_after >= 1) and ("sixview" in (match_visible or "").lower()) and not perrs
+    status = "PASS" if ok else "FAIL"
+    art = REL(shot)
+    msg = json.dumps({"match_text": match_visible, "custom_nodes_after": custom_after, "console_errors": len(errs), "page_errors": len(perrs)}, ensure_ascii=False)
+    body = f"### {cid} {name}\n**状态**: **{status}** | {elapsed:.1f}s\n[{os.path.basename(shot)}]({art})\n**指标**: {msg}\n"
+    report.add(cid, name, status, f"{elapsed:.1f}s", art, body)
+
+
+def case_nb_13_storage_widget(report):
+    """NB-13: Topbar 出现存储空间 + 成本 widget。"""
+    cid, name = "NB-13", "顶栏存储空间 + 成本 widget"
+    t0 = int(time.time()*1000)
+    folder = ARTE(cid); os.makedirs(folder, exist_ok=True)
+    shot = os.path.join(folder, "widgets.png")
+    from playwright.sync_api import sync_playwright
+    errs, perrs = [], []
+    storage_pct = None
+    cost_value = None
+    with sync_playwright() as p:
+        b = p.chromium.launch(headless=True, args=["--no-sandbox","--disable-dev-shm-usage"])
+        page = b.new_context(viewport={"width":1600,"height":1000}).new_page()
+        page.on("console", lambda m: errs.append(m.text[:200]) if m.type == "error" else None)
+        page.on("pageerror", lambda exc: perrs.append(str(exc)[:200]))
+        page.goto("http://localhost:5422/", timeout=30000, wait_until="domcontentloaded")
+        _auth(page); _open(page)
+        page.wait_for_timeout(2000)
+        # 触发一次图片生成以让 cost > 0
+        page.click('.nb-add-node-btn:has-text("图片")')
+        page.wait_for_timeout(500)
+        node_id = page.evaluate("""() => document.querySelector('.nb-image-node')?.parentElement?.getAttribute('data-id')""")
+        page.locator(f'[data-id="{node_id}"] .nb-prompt-input').fill("蓝色立方体")
+        page.locator(f'[data-id="{node_id}"] button.nb-primary-btn').click()
+        # 等生成
+        deadline = time.time() + 90
+        while time.time() < deadline:
+            src_check = page.evaluate(f"""(() => {{
+                const img = document.querySelector('[data-id=\"{node_id}\" ] .nb-image-preview img');
+                return img ? img.src : null;
+            }})()""")
+            if src_check and src_check.startswith("http"):
+                break
+            time.sleep(1.5)
+        page.wait_for_timeout(1000)
+        info = page.evaluate("""() => ({
+            storage: document.querySelector('.nb-storage-widget')?.textContent,
+            storage_pct: document.querySelector('.nb-storage-pct')?.textContent,
+            cost: document.querySelector('.nb-cost-widget')?.textContent,
+        })""")
+        storage_pct = info.get("storage_pct")
+        cost_value = info.get("cost")
+        page.screenshot(path=shot, full_page=False)
+        b.close()
+    elapsed = (int(time.time()*1000)-t0)/1000
+    ok = (storage_pct is not None) and (cost_value is not None and "$" in cost_value) and not perrs
+    status = "PASS" if ok else "FAIL"
+    art = REL(shot)
+    msg = json.dumps(info, ensure_ascii=False)
+    body = f"### {cid} {name}\n**状态**: **{status}** | {elapsed:.1f}s\n[{os.path.basename(shot)}]({art})\n**指标**: {msg}\n"
+    report.add(cid, name, status, f"{elapsed:.1f}s", art, body)
+
+
+def case_nb_14_multi_project_create(report):
+    """NB-14: Topbar "新建" 按钮 → 新项目出现 + 当前项目切换."""
+    cid, name = "NB-14", "多项目创建与切换"
+    t0 = int(time.time()*1000)
+    folder = ARTE(cid); os.makedirs(folder, exist_ok=True)
+    shot = os.path.join(folder, "switch.png")
+    from playwright.sync_api import sync_playwright
+    errs, perrs = [], []
+    project_count_before = 0
+    project_count_after = 0
+    current_id_changed = False
+    with sync_playwright() as p:
+        b = p.chromium.launch(headless=True, args=["--no-sandbox","--disable-dev-shm-usage"])
+        page = b.new_context(viewport={"width":1600,"height":1000}).new_page()
+        page.on("console", lambda m: errs.append(m.text[:200]) if m.type == "error" else None)
+        page.on("pageerror", lambda exc: perrs.append(str(exc)[:200]))
+        page.goto("http://localhost:5422/", timeout=30000, wait_until="domcontentloaded")
+        _auth(page); _open(page)
+        # 打开 switcher 菜单,清点当前项目数
+        page.click('.nb-topbar-center button.nb-secondary-btn:has-text("打开")')
+        page.wait_for_timeout(500)
+        project_count_before = page.evaluate("""() => document.querySelectorAll('.nb-switcher-item').length""")
+        # 关 switcher
+        page.click('.nb-topbar-center button.nb-secondary-btn:has-text("打开")')
+        page.wait_for_timeout(300)
+        # 点 新建
+        page.click('.nb-topbar-center button.nb-secondary-btn:has-text("新建")')
+        page.wait_for_timeout(1500)
+        # 当前项目名应该变化
+        cur_name = page.evaluate("""() => document.querySelector('.nb-project-title span')?.textContent""")
+        # 重新打开 switcher
+        page.click('.nb-topbar-center button.nb-secondary-btn:has-text("打开")')
+        page.wait_for_timeout(500)
+        project_count_now = page.evaluate("""() => document.querySelectorAll('.nb-switcher-item').length""")
+        current_id_changed = project_count_now > project_count_before and cur_name and '未命名' in cur_name
+        page.screenshot(path=shot, full_page=False)
+        b.close()
+    elapsed = (int(time.time()*1000)-t0)/1000
+    ok = current_id_changed and not perrs
+    status = "PASS" if ok else "FAIL"
+    art = REL(shot)
+    msg = json.dumps({"projects_before": project_count_before, "projects_after": project_count_after, "projects_now": project_count_now, "current_name": cur_name, "console_errors": len(errs), "page_errors": len(perrs)}, ensure_ascii=False)
+    body = f"### {cid} {name}\n**状态**: **{status}** | {elapsed:.1f}s\n[{os.path.basename(shot)}]({art})\n**指标**: {msg}\n"
+    report.add(cid, name, status, f"{elapsed:.1f}s", art, body)
+
+
 def main():
     report = Report()
     started = time.time()
@@ -586,6 +729,10 @@ def main():
     case_nb_09_keysettings(report)
     # 本地上传
     case_nb_11_upload(report)
+    # 斜杠 + widget + 多项目
+    case_nb_12_slash_insert(report)
+    case_nb_13_storage_widget(report)
+    case_nb_14_multi_project_create(report)
     # 后端代理
     case_nb_10_video_endpoint(report)
 

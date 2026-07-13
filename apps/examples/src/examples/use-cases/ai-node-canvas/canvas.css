@@ -647,3 +647,53 @@
   text-align: center;
 }
 .nb-upload-hint { display: block; color: #8a8e99; font-size: 11px; margin-top: 6px; }
+.nb-slash-confirm {
+  background: rgba(16, 185, 129, 0.15);
+  border-color: #10b981;
+  color: #10b981;
+}
+.nb-slash-match {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nb-slash-match em { color: #ffd166; font-style: normal; font-weight: 600; }
+.nb-topbar-right { display: flex; align-items: center; gap: 10px; }
+.nb-storage-widget {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  background: #20242c;
+  border: 1px solid #2a2e3a;
+  border-radius: 6px;
+  font-size: 11px;
+}
+.nb-storage-widget.nb-storage-warn { border-color: #ef476f; }
+.nb-storage-label { color: #8a8e99; }
+.nb-storage-bar {
+  width: 60px;
+  height: 6px;
+  background: #0f1115;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.nb-storage-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #06b6d4, #6366f1);
+  transition: width 0.3s;
+}
+.nb-storage-widget.nb-storage-warn .nb-storage-fill { background: linear-gradient(90deg, #ef476f, #f59e0b); }
+.nb-storage-pct { color: #c7cad1; font-family: ui-monospace, Menlo, monospace; }
+.nb-cost-widget {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid #10b981;
+  border-radius: 6px;
+  font-size: 11px;
+}
+.nb-cost-label { color: #10b981; }
+.nb-cost-value { color: #c7cad1; font-family: ui-monospace, Menlo, monospace; font-weight: 600; }
