@@ -3,6 +3,7 @@
  * 数据流:Canvas store = 编辑主存,Project store = 持久化元数据,自动保存定时把 Canvas 写入 IDB
  */
 import { useCallback, useEffect, useRef, useState } from 'react'
+import { useReactFlow } from 'reactflow'
 import ReactFlow, {
   Background,
   BackgroundVariant,
@@ -23,8 +24,10 @@ import { ApiKeyManager } from './modals/ApiKeyManager'
 import { PresetPicker } from './modals/PresetPicker'
 
 import './canvas.css'
+import { newId } from './utils/ulid'
 
 function NodeCanvasInner() {
+  const rf = useReactFlow()
   const [showSettings, setShowSettings] = useState(false)
   const [showPresets, setShowPresets] = useState(false)
   const [otherTabWarning, setOtherTabWarning] = useState<string | null>(null)
@@ -86,6 +89,53 @@ function NodeCanvasInner() {
     setDirty(true)
   }, [nodes, edges, setDirty])
 
+
+  function readFileAsDataUrl(file: File): Promise<string> {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader()
+      reader.onload = () => resolve(String(reader.result || ''))
+      reader.onerror = () => reject(reader.error)
+      reader.readAsDataURL(file)
+    })
+  }
+
+  async function handleDrop(e: React.DragEvent) {
+    e.preventDefault()
+    const files = Array.from(e.dataTransfer.files).filter((f) => f.type.startsWith('image/'))
+    if (!files.length) return
+    const file = files[0]
+    try {
+      const dataUrl = await readFileAsDataUrl(file)
+      const rect = (e.currentTarget as HTMLElement).getBoundingClientRect()
+      const pos = rf.screenToFlowPosition({ x: e.clientX - rect.left, y: e.clientY - rect.top })
+      const id = useCanvasStore.getState().addNode('image', pos, {
+        title: file.name.replace(/\.[^.]+$/, ''),
+        prompt: '',
+        imageUrl: dataUrl,
+        size: '1:1',
+        count: 1,
+        model: 'agnes-image-2.0-flash',
+        status: 'done',
+      } as any)
+      // 入历史(kind='uploaded')
+      const proj = useProjectStore.getState()
+      if (proj.currentId) {
+        proj.recordHistory({
+          id: newId('h'),
+          projectId: proj.currentId,
+          nodeId: id,
+          kind: 'uploaded',
+          title: file.name,
+          imageUrl: dataUrl,
+          createdAt: Date.now(),
+        })
+      }
+    } catch (err) {
+      console.error('[upload] failed:', err)
+    }
+  }
+
+  const handleDropOnFlow = useCallback((e: any) => handleDrop(e as any), [])
   const onNodesChange = useCallback((changes: any) => applyNodeChanges(changes), [applyNodeChanges])
   const onEdgesChange = useCallback((changes: any) => applyEdgeChanges(changes), [applyEdgeChanges])
   const handleConnect = useCallback((conn: any) => onConnect(conn), [onConnect])
@@ -103,13 +153,18 @@ function NodeCanvasInner() {
       <div className="nb-main">
         <LeftSidebar />
 
-        <div className="nb-canvas-area">
+        <div
+          className="nb-canvas-area"
+          onDragOver={(e) => { e.preventDefault(); e.dataTransfer.dropEffect = 'copy' }}
+          onDrop={handleDrop}
+        >
           <ReactFlow
             nodes={nodes}
             edges={edges}
             onNodesChange={onNodesChange}
             onEdgesChange={onEdgesChange}
             onConnect={handleConnect}
+            onDrop={handleDropOnFlow}
             nodeTypes={NODE_TYPES}
             fitView
             minZoom={0.2}

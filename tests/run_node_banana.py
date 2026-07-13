@@ -526,6 +526,49 @@ def case_nb_10_video_endpoint(report):
     report.add(cid, name, status, f"{elapsed:.1f}s", "n/a", body)
 
 
+
+def case_nb_11_upload(report):
+    """NB-11: 点击 上传图片 按钮 → 选择文件 → Image 节点创建 + 历史图库入一条."""
+    cid, name = "NB-11", "本地上传图片"
+    t0 = int(time.time()*1000)
+    folder = ARTE(cid); os.makedirs(folder, exist_ok=True)
+    shot = os.path.join(folder, "after_upload.png")
+    test_png = os.path.join(folder, "test_upload.png")
+    if not os.path.exists(test_png):
+        import base64
+        png_b64 = "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgAAIAAAUAAen63NgAAAAASUVORK5CYII="
+        with open(test_png, "wb") as f:
+            f.write(base64.b64decode(png_b64))
+    from playwright.sync_api import sync_playwright
+    errs, perrs = [], []
+    img_count = 0; history_count = 0
+    with sync_playwright() as p:
+        b = p.chromium.launch(headless=True, args=["--no-sandbox","--disable-dev-shm-usage"])
+        page = b.new_context(viewport={"width":1600,"height":1000}).new_page()
+        page.on("console", lambda m: errs.append(m.text[:200]) if m.type == "error" else None)
+        page.on("pageerror", lambda exc: perrs.append(str(exc)[:200]))
+        page.goto("http://localhost:5422/", timeout=30000, wait_until="domcontentloaded")
+        _auth(page); _open(page)
+        page.click('[data-testid="upload-btn"]')
+        page.wait_for_timeout(500)
+        page.set_input_files('[data-testid="upload-input"]', test_png)
+        page.wait_for_timeout(1500)
+        counts = page.evaluate("""() => ({
+            image_nodes: document.querySelectorAll('.nb-image-node').length,
+            history_items: document.querySelectorAll('.nb-history-item').length,
+        })""")
+        img_count = counts["image_nodes"]; history_count = counts["history_items"]
+        page.screenshot(path=shot, full_page=False)
+        b.close()
+    elapsed = (int(time.time()*1000)-t0)/1000
+    ok = (img_count >= 1 and history_count >= 1 and not perrs)
+    status = "PASS" if ok else "FAIL"
+    art = REL(shot)
+    msg = json.dumps({**counts, "console_errors": len(errs), "page_errors": len(perrs)}, ensure_ascii=False)
+    body = f"### {cid} {name}\n**状态**: **{status}** | {elapsed:.1f}s\n[{os.path.basename(shot)}]({art})\n**指标**: {msg}\n"
+    report.add(cid, name, status, f"{elapsed:.1f}s", art, body)
+
+
 def main():
     report = Report()
     started = time.time()
@@ -541,6 +584,8 @@ def main():
     case_nb_07_custom_preset(report)
     case_nb_08_agent_chat(report)
     case_nb_09_keysettings(report)
+    # 本地上传
+    case_nb_11_upload(report)
     # 后端代理
     case_nb_10_video_endpoint(report)
 

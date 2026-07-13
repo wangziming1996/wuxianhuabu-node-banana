@@ -1,9 +1,10 @@
 /**
- * 左侧节点面板 — 添加新节点(image / text / character / audio / custom)
+ * 左侧节点面板 — 添加新节点 + 上传本地图片
  */
-import { useCallback } from 'react'
-import { useReactFlow } from 'reactflow'
+import { useCallback, useRef } from 'react'
 import { useCanvasStore } from '../stores/canvasStore'
+import { useProjectStore } from '../stores/projectStore'
+import { newId } from '../utils/ulid'
 
 const NODE_BUTTONS = [
   { kind: 'image', label: '图片', icon: '🖼', desc: '上传 / 生成 / 编辑' },
@@ -14,19 +15,50 @@ const NODE_BUTTONS = [
 ] as const
 
 export function LeftSidebar() {
-  const rf = useReactFlow()
+  const fileInputRef = useRef<HTMLInputElement>(null)
   const addNode = useCanvasStore((s) => s.addNode)
+  const recordHistory = useProjectStore((s) => s.recordHistory)
+  const currentId = useProjectStore((s) => s.currentId)
 
-  const onAdd = useCallback(
-    (kind: typeof NODE_BUTTONS[number]['kind']) => {
-      const bounds = rf.getViewport()
-      // 把节点加在屏幕中心(基于当前 viewport)
-      const x = (window.innerWidth / 2 - bounds.x) / bounds.zoom - 100
-      const y = (window.innerHeight / 2 - bounds.y) / bounds.zoom - 50
-      addNode(kind, { x, y })
-    },
-    [rf, addNode]
-  )
+  function addNodeAt(kind: any) {
+    const x = 240 + Math.random() * 320
+    const y = 160 + Math.random() * 240
+    addNode(kind, { x, y })
+  }
+
+  const onUploadClick = () => fileInputRef.current?.click()
+
+  const onUploadFile = useCallback(async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0]
+    e.target.value = ''  // 允许重新上传同一文件
+    if (!file || !file.type.startsWith('image/')) return
+    const dataUrl = await new Promise<string>((resolve, reject) => {
+      const reader = new FileReader()
+      reader.onload = () => resolve(String(reader.result || ''))
+      reader.onerror = () => reject(reader.error)
+      reader.readAsDataURL(file)
+    })
+    const id = addNode('image', { x: 300, y: 200 }, {
+      title: file.name.replace(/\.[^.]+$/, ''),
+      imageUrl: dataUrl,
+      prompt: '',
+      size: '1:1',
+      count: 1,
+      model: 'agnes-image-2.0-flash',
+      status: 'done',
+    } as any)
+    if (currentId) {
+      recordHistory({
+        id: newId('h'),
+        projectId: currentId,
+        nodeId: id,
+        kind: 'uploaded',
+        title: file.name,
+        imageUrl: dataUrl,
+        createdAt: Date.now(),
+      })
+    }
+  }, [addNode, currentId, recordHistory])
 
   return (
     <aside className="nb-left-sidebar">
@@ -34,13 +66,29 @@ export function LeftSidebar() {
         <h3>添加节点</h3>
         <div className="nb-node-buttons">
           {NODE_BUTTONS.map((b) => (
-            <button key={b.kind} className="nb-add-node-btn" onClick={() => onAdd(b.kind)} title={b.desc}>
+            <button key={b.kind} className="nb-add-node-btn" onClick={() => addNodeAt(b.kind)} title={b.desc}>
               <span className="nb-icon">{b.icon}</span>
               <span className="nb-label">{b.label}</span>
               <small>{b.desc}</small>
             </button>
           ))}
         </div>
+      </div>
+
+      <div className="nb-sidebar-section">
+        <h3>本地上传</h3>
+        <input
+          ref={fileInputRef}
+          type="file"
+          accept="image/*"
+          style={{ display: 'none' }}
+          onChange={onUploadFile}
+          data-testid="upload-input"
+        />
+        <button className="nb-secondary-btn" onClick={onUploadClick} data-testid="upload-btn">
+          📂 上传图片
+        </button>
+        <small className="nb-upload-hint">或拖图到右侧画布</small>
       </div>
 
       <div className="nb-sidebar-section nb-tips">

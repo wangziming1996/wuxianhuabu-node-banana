@@ -646,3 +646,4 @@
   cursor: pointer;
   text-align: center;
 }
+.nb-upload-hint { display: block; color: #8a8e99; font-size: 11px; margin-top: 6px; }
