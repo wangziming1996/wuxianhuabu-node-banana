@@ -38,7 +38,6 @@ function NodeCanvasInner() {
   const applyEdgeChanges = useCanvasStore((s) => s.applyEdgeChanges)
   const onConnect = useCanvasStore((s) => s.onConnect)
   const setAll = useCanvasStore((s) => s.setAll)
-  const setDirty = useProjectStore((s) => s.setDirty)
   const currentId = useProjectStore((s) => s.currentId)
   const loadCurrent = useProjectStore((s) => s.openProject)
   const projects = useProjectStore((s) => s.projects)
@@ -85,8 +84,7 @@ function NodeCanvasInner() {
     ;(window as any).__NB_CANVAS = { nodes, edges }
     ;(window as any).__NB_CANVAS_STORE = useCanvasStore
     ;(window as any).__NB_PROJECT_STORE = useProjectStore
-    setDirty(true)
-  }, [nodes, edges, setDirty])
+  }, [nodes, edges])
 
 
   function readFileAsDataUrl(file: File): Promise<string> {

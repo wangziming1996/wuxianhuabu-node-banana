@@ -4,6 +4,7 @@
  * 这样避开 useEffect 在 canvas 和 project 之间互相 update 的死循环。
  */
 import { create } from 'zustand'
+import { useCanvasStore } from './canvasStore'
 import { ulid } from 'ulid'
 import { getChannel, getTabId, publish, subscribe } from '../utils/broadcast'
 import {
@@ -194,18 +195,27 @@ export async function initProjectStore(): Promise<void> {
   }
 }
 
-/* 自动保存:每 4 秒若 dirty 则写 */
+/* 自动保存:每 4 秒若 canvas dirty 则写 */
 let autoSaveTimer: any = null
 let getCurrentData: (() => { nodes: any; edges: any; thumbnail?: string }) | null = null
+let lastSavedFingerprint: string = ''
 
 export function startAutoSave(provider: () => { nodes: any; edges: any; thumbnail?: string }) {
   if (!getCurrentData) getCurrentData = provider
   if (autoSaveTimer) return
   autoSaveTimer = setInterval(async () => {
-    const s = useProjectStore.getState()
-    if (s.dirty && s.currentId && getCurrentData) {
-      const { nodes, edges, thumbnail } = getCurrentData()
-      await s.saveCurrent(() => nodes, () => edges, () => thumbnail)
-    }
+    if (!getCurrentData) return
+    const canvasStore = useCanvasStore.getState()
+    if (!canvasStore.dirty) return
+    const projStore = useProjectStore.getState()
+    if (!projStore.currentId) return
+    const { nodes, edges, thumbnail } = getCurrentData()
+    // 指纹去重:相同内容别重复写
+    const fp = JSON.stringify({ nodes: nodes.length, edges: edges.length, lastNode: nodes.at(-1)?.id })
+    if (fp === lastSavedFingerprint) return
+    lastSavedFingerprint = fp
+    await projStore.saveCurrent(() => nodes, () => edges, () => thumbnail)
+    // save 成功,清 canvas 的 dirty
+    useCanvasStore.setState({ dirty: false })
   }, 4000)
 }

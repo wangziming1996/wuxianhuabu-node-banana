@@ -13,7 +13,14 @@ export function Topbar({ onOpenSettings, onOpenPresets }: { onOpenSettings: () =
   const currentId = useProjectStore((s) => s.currentId)
   const currentName = useProjectStore((s) => s.currentName)
   const projects = useProjectStore((s) => s.projects)
-  const dirty = useProjectStore((s) => s.dirty)
+  // dirty 来源:canvasStore(真正改动的源头),autosave 写完后会清 dirty=false
+  const [dirty, setDirtyLocal] = useState(false)
+  useEffect(() => {
+    const store = (window as any).__NB_CANVAS_STORE
+    if (!store) return
+    setDirtyLocal(store.getState().dirty)
+    return store.subscribe((s: any) => setDirtyLocal(s.dirty))
+  }, [])
   const lastSavedAt = useProjectStore((s) => s.lastSavedAt)
   const setName = useProjectStore((s) => s.setName)
   const saveCurrent = useProjectStore((s) => s.saveCurrent)
@@ -110,7 +117,19 @@ export function Topbar({ onOpenSettings, onOpenPresets }: { onOpenSettings: () =
             ))}
           </div>
         )}
-        <button className="nb-secondary-btn" disabled={!dirty} onClick={() => saveCurrent(() => [], () => [], undefined)}>
+        <button
+          className="nb-secondary-btn"
+          disabled={!dirty}
+          onClick={async () => {
+            await saveCurrent(
+              () => (window as any).__NB_CANVAS?.nodes || [],
+              () => (window as any).__NB_CANVAS?.edges || [],
+              undefined
+            )
+            const clear = (window as any).__NB_CANVAS_STORE?.getState?.().clearDirty
+            if (clear) clear()
+          }}
+        >
           保存
         </button>
         {(taskRunning > 0 || taskQueued > 0) && (

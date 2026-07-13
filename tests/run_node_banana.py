@@ -288,14 +288,23 @@ def case_nb_05_history_panel(report):
         page.locator(f'[data-id="{node_id}"] button.nb-primary-btn').click()
         # 等生成
         deadline = time.time() + 120
+        result_url = None
         while time.time() < deadline:
             src_val = page.evaluate(f"""(() => {{
                 const img = document.querySelector('[data-id=\"{node_id}\" ] .nb-image-preview img');
                 return img ? img.src : null;
             }})()""")
             if src_val and src_val.startswith("http"):
+                result_url = src_val
                 break
             time.sleep(2)
+        # 等历史 panel 反映
+        if result_url:
+            d2 = time.time() + 30
+            while time.time() < d2:
+                ci = page.evaluate("""() => document.querySelectorAll('.nb-history-item').length""")
+                if ci >= 1: break
+                time.sleep(1)
         page.wait_for_timeout(1000)
         items_count = page.evaluate("""() => document.querySelectorAll('.nb-history-item').length""")
         first_image = page.evaluate("""() => document.querySelector('.nb-history-item img')?.src || null""")
@@ -345,7 +354,7 @@ def case_nb_06_persistence(report):
         for lbl in ["图片","文本","角色"]:
             page.click(f'.nb-add-node-btn:has-text("{lbl}")')
             page.wait_for_timeout(300)
-        page.wait_for_timeout(700)
+        page.wait_for_timeout(5000)  # NB-06: wait for autosave
         n_before = page.evaluate("""() => document.querySelectorAll('.nb-node').length""")
         page.screenshot(path=shot_before, full_page=False)
         # 刷新

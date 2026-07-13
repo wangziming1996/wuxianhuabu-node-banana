@@ -13,6 +13,11 @@ import {
   type Viewport,
 } from 'reactflow'
 import type { AiCanvasEdge, AiCanvasNode, AnyNodeData, NodeKind } from '../types'
+import { useProjectStore } from './projectStore'
+
+// 模块级 lazy 引用:canvas 修改 → 直接调 projectStore.setDirty,不走 useEffect,
+// 避免 React Flow StoreUpdater ↔ nodes/edges useEffect 形成 setState 循环。
+
 
 export interface CanvasState {
   nodes: AiCanvasNode[]
@@ -20,6 +25,7 @@ export interface CanvasState {
   viewport: Viewport
   selectedNodeIds: string[]
   selectedEdgeIds: string[]
+  dirty: boolean
 
   /* mutations */
   setAll(nodes: AiCanvasNode[], edges: AiCanvasEdge[]): void
@@ -48,11 +54,13 @@ export const useCanvasStore = create<CanvasState>((set, get) => ({
   viewport: { x: 0, y: 0, zoom: 1 },
   selectedNodeIds: [],
   selectedEdgeIds: [],
+  dirty: false,
 
-  setAll: (nodes, edges) => set({ nodes, edges }),
+  setAll: (nodes, edges) => set({ nodes, edges, dirty: false }),
+  clearDirty: () => set({ dirty: false }),
 
-  applyNodeChanges: (changes) => set((s) => ({ nodes: applyNodeChanges(changes, s.nodes) as AiCanvasNode[] })),
-  applyEdgeChanges: (changes) => set((s) => ({ edges: applyEdgeChanges(changes, s.edges) as AiCanvasEdge[] })),
+  applyNodeChanges: (changes) => set((s) => ({ nodes: applyNodeChanges(changes, s.nodes) as AiCanvasNode[], dirty: true })),
+  applyEdgeChanges: (changes) => set((s) => ({ edges: applyEdgeChanges(changes, s.edges) as AiCanvasEdge[], dirty: true })),
 
   onConnect: (conn) =>
     set((s) => {
@@ -69,7 +77,7 @@ export const useCanvasStore = create<CanvasState>((set, get) => ({
         sourceHandle: conn.sourceHandle || undefined,
         targetHandle: conn.targetHandle || undefined,
       }
-      return { edges: addEdge(edge, s.edges as any) as AiCanvasEdge[] }
+      return { edges: addEdge(edge, s.edges as any) as AiCanvasEdge[], dirty: true }
     }),
 
   setViewport: (v) => set({ viewport: v }),
@@ -114,7 +122,7 @@ export const useCanvasStore = create<CanvasState>((set, get) => ({
       position,
       data: merged,
     } as AiCanvasNode
-    set((s) => ({ nodes: [...s.nodes, node] }))
+    set((s) => ({ nodes: [...s.nodes, node], dirty: true }))
     return id
   },
 
@@ -130,6 +138,7 @@ export const useCanvasStore = create<CanvasState>((set, get) => ({
   updateNodeData: (id, patch) =>
     set((s) => ({
       nodes: s.nodes.map((n) => (n.id === id ? ({ ...n, data: { ...n.data, ...patch } as AnyNodeData } as AiCanvasNode) : n)),
+      dirty: true,
     })),
 
   setNodeStatus: (id, status, errorMessage) =>
@@ -139,6 +148,7 @@ export const useCanvasStore = create<CanvasState>((set, get) => ({
           ? { ...n, data: { ...n.data, status, errorMessage } as AnyNodeData } as AiCanvasNode
           : n
       ),
+      dirty: true,
     })),
 
   selectNodes: (ids) => set({ selectedNodeIds: ids }),
