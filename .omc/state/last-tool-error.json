@@ -1,0 +1,7 @@
+{
+  "tool_name": "Bash",
+  "tool_input_preview": "{\"command\":\"curl -s http://localhost:5421/api/ark-status | python3 -m json.tool 2>&1\",\"description\":\"Check ARK video API status\"}",
+  "error": "Exit code 1\nExpecting value: line 1 column 1 (char 0)",
+  "timestamp": "2026-07-03T11:41:32.252Z",
+  "retry_count": 1
+}

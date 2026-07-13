@@ -1,0 +1,3555 @@
+uid=8_0 RootWebArea "Agnes AI | Free Omni-Modal AI API, World-Class AI Models & AI Applications" url="https://agnes-ai.com/doc/agnes-video-v20#3764a189-eee5-806d-ac8e-ccac0f432286"
+  uid=8_1 ignored
+    uid=8_2 generic
+      uid=8_3 generic
+        uid=8_4 alert atomic live="assertive" relevant="additions text"
+          uid=8_5 StaticText "Agnes AI | Free Omni-Modal AI API, World-Class AI Models & AI Applications"
+            uid=8_6 InlineTextBox "Agnes AI | Free Omni-Modal AI API, World-Class AI Models & AI Applications"
+      uid=8_7 banner
+        uid=8_8 ignored
+          uid=8_9 link "Agnes AI 首页" url="https://agnes-ai.com/"
+            uid=8_10 image "Agnes AI" url="https://agnes-ai.com/images/logo.png"
+          uid=8_11 navigation
+            uid=8_12 generic
+              uid=8_13 generic
+                uid=8_14 StaticText "模型"
+                  uid=8_6 InlineTextBox "模型"
+              uid=8_15 generic
+                uid=8_16 ignored
+                  uid=8_17 ignored
+                    uid=8_18 ignored
+                      uid=8_19 ignored
+                        uid=8_20 image "文本" url="https://agnes-ai.com/icon/model-text.svg"
+                        uid=8_21 ignored
+                          uid=8_22 StaticText "文本"
+                            uid=8_6 InlineTextBox "文本"
+                      uid=8_23 ignored
+                        uid=8_24 link "Agnes 2.0 Flash new" url="https://agnes-ai.com/doc/agnes-20-flash"
+                          uid=8_25 ignored
+                            uid=8_26 ignored
+                              uid=8_27 StaticText "Agnes 2.0 Flash"
+                                uid=8_6 InlineTextBox "Agnes 2.0 Flash"
+                            uid=8_28 image "new" url="https://agnes-ai.com/icon/newIcon.svg"
+                    uid=8_29 ignored
+                      uid=8_30 ignored
+                        uid=8_31 image "图像" url="https://agnes-ai.com/icon/image.svg"
+                        uid=8_32 ignored
+                          uid=8_33 StaticText "图像"
+                            uid=8_6 InlineTextBox "图像"
+                      uid=8_34 ignored
+                        uid=8_35 link "Agnes Image 2.0 Flash new" url="https://agnes-ai.com/doc/agnes-image-20-flash"
+                          uid=8_36 ignored
+                            uid=8_37 ignored
+                              uid=8_38 StaticText "Agnes Image 2.0 Flash"
+                                uid=8_6 InlineTextBox "Agnes Image 2.0 Flash"
+                            uid=8_39 image "new" url="https://agnes-ai.com/icon/newIcon.svg"
+                        uid=8_40 link "Agnes Image 2.1 Flash new" url="https://agnes-ai.com/doc/agnes-image-21-flash"
+                          uid=8_41 ignored
+                            uid=8_42 ignored
+                              uid=8_43 StaticText "Agnes Image 2.1 Flash"
+                                uid=8_6 InlineTextBox "Agnes Image 2.1 Flash"
+                            uid=8_44 image "new" url="https://agnes-ai.com/icon/newIcon.svg"
+                    uid=8_45 ignored
+                      uid=8_46 ignored
+                        uid=8_47 image "视频" url="https://agnes-ai.com/icon/video.svg"
+                        uid=8_48 ignored
+                          uid=8_49 StaticText "视频"
+                            uid=8_6 InlineTextBox "视频"
+                      uid=8_50 ignored
+                        uid=8_51 link "Agnes Video V2.0 new" url="https://agnes-ai.com/doc/agnes-video-v20"
+                          uid=8_52 ignored
+                            uid=8_53 ignored
+                              uid=8_54 StaticText "Agnes Video V2.0"
+                                uid=8_6 InlineTextBox "Agnes Video V2.0"
+                            uid=8_55 image "new" url="https://agnes-ai.com/icon/newIcon.svg"
+            uid=8_56 generic
+              uid=8_57 generic
+                uid=8_58 StaticText "产品"
+                  uid=8_6 InlineTextBox "产品"
+              uid=8_59 generic
+                uid=8_60 ignored
+                  uid=8_61 ignored
+                    uid=8_62 ignored
+                      uid=8_63 ignored
+                        uid=8_64 image "AI 原生应用" url="https://agnes-ai.com/icon/product.svg"
+                        uid=8_65 ignored
+                          uid=8_66 StaticText "AI 原生应用"
+                            uid=8_6 InlineTextBox "AI 原生应用"
+                      uid=8_67 ignored
+                        uid=8_68 link "Agnes" url="https://app.agnes-ai.com/"
+                          uid=8_69 ignored
+                            uid=8_70 ignored
+                            uid=8_71 ignored
+                              uid=8_72 StaticText "Agnes"
+                                uid=8_6 InlineTextBox "Agnes"
+                        uid=8_73 link "Pavo" url="https://app.pavo-ai.work/"
+                          uid=8_74 ignored
+                            uid=8_75 ignored
+                            uid=8_76 ignored
+                              uid=8_77 StaticText "Pavo"
+                                uid=8_6 InlineTextBox "Pavo"
+                        uid=8_78 ignored
+                          uid=8_79 ignored
+                            uid=8_80 ignored
+                            uid=8_81 ignored
+                              uid=8_82 StaticText "Echo"
+                                uid=8_6 InlineTextBox "Echo"
+            uid=8_83 generic
+              uid=8_84 generic
+                uid=8_85 StaticText "API"
+                  uid=8_6 InlineTextBox "API"
+              uid=8_86 generic
+                uid=8_87 ignored
+                  uid=8_88 ignored
+                    uid=8_89 ignored
+                      uid=8_90 ignored
+                        uid=8_91 image "在 Agnes 上开发" url="https://agnes-ai.com/icon/api.svg"
+                        uid=8_92 ignored
+                          uid=8_93 StaticText "在 Agnes 上开发"
+                            uid=8_6 InlineTextBox "在 Agnes 上开发"
+                      uid=8_94 ignored
+                        uid=8_95 link "开发者文档" url="https://agnes-ai.com/doc/overview"
+                          uid=8_96 ignored
+                            uid=8_97 ignored
+                              uid=8_98 StaticText "开发者文档"
+                                uid=8_6 InlineTextBox "开发者文档"
+                        uid=8_99 link "API 平台" url="https://platform.agnes-ai.com/"
+                          uid=8_100 ignored
+                            uid=8_101 ignored
+                              uid=8_102 StaticText "API 平台"
+                                uid=8_6 InlineTextBox "API 平台"
+                        uid=8_103 link "官方 GitHub" url="https://github.com/AgnesAI-Labs/Agnes-AI"
+                          uid=8_104 ignored
+                            uid=8_105 ignored
+                              uid=8_106 StaticText "官方 GitHub"
+                                uid=8_6 InlineTextBox "官方 GitHub"
+            uid=8_107 generic
+              uid=8_108 generic
+                uid=8_109 StaticText "公司"
+                  uid=8_6 InlineTextBox "公司"
+              uid=8_110 generic
+                uid=8_111 ignored
+                  uid=8_112 ignored
+                    uid=8_113 ignored
+                      uid=8_114 ignored
+                        uid=8_115 image "公司" url="https://agnes-ai.com/icon/compass.svg"
+                        uid=8_116 ignored
+                          uid=8_117 StaticText "公司"
+                            uid=8_6 InlineTextBox "公司"
+                      uid=8_118 ignored
+                        uid=8_119 link "隐私政策" url="https://agnes-ai.com/doc/privacy-policy"
+                          uid=8_120 ignored
+                            uid=8_121 ignored
+                              uid=8_122 StaticText "隐私政策"
+                                uid=8_6 InlineTextBox "隐私政策"
+                        uid=8_123 link "服务条款" url="https://agnes-ai.com/doc/terms-of-service"
+                          uid=8_124 ignored
+                            uid=8_125 ignored
+                              uid=8_126 StaticText "服务条款"
+                                uid=8_6 InlineTextBox "服务条款"
+            uid=8_127 generic
+              uid=8_128 generic
+                uid=8_129 StaticText "社区"
+                  uid=8_6 InlineTextBox "社区"
+              uid=8_130 generic
+                uid=8_131 ignored
+                  uid=8_132 ignored
+                    uid=8_133 ignored
+                      uid=8_134 ignored
+                        uid=8_135 image "加入我们" url="https://agnes-ai.com/icon/vector.svg"
+                        uid=8_136 ignored
+                          uid=8_137 StaticText "加入我们"
+                            uid=8_6 InlineTextBox "加入我们"
+                      uid=8_138 ignored
+                        uid=8_139 link "线下活动" url="https://agnes-ai.com/meetups"
+                          uid=8_140 ignored
+                            uid=8_141 ignored
+                              uid=8_142 StaticText "线下活动"
+                                uid=8_6 InlineTextBox "线下活动"
+                        uid=8_143 link "Discord" url="https://discord.com/invite/buKQPVMW2s"
+                          uid=8_144 ignored
+                            uid=8_145 ignored
+                              uid=8_146 StaticText "Discord"
+                                uid=8_6 InlineTextBox "Discord"
+                        uid=8_147 link "GitHub" url="https://github.com/AgnesAI-Labs/Agnes-AI"
+                          uid=8_148 ignored
+                            uid=8_149 ignored
+                              uid=8_150 StaticText "GitHub"
+                                uid=8_6 InlineTextBox "GitHub"
+                        uid=8_151 button "WeChat"
+                          uid=8_152 ignored
+                            uid=8_153 ignored
+                              uid=8_154 StaticText "WeChat"
+                                uid=8_6 InlineTextBox "WeChat"
+            uid=8_155 link "研究" url="https://agnes-ai.com/research"
+              uid=8_156 StaticText "研究"
+                uid=8_6 InlineTextBox "研究"
+            uid=8_157 link "商务" url="https://agnes-ai.com/business"
+              uid=8_158 StaticText "商务"
+                uid=8_6 InlineTextBox "商务"
+        uid=8_159 generic
+          uid=8_160 button "登录" haspopup="menu"
+            uid=8_161 StaticText "登录"
+              uid=8_6 InlineTextBox "登录"
+          uid=8_162 generic
+            uid=8_163 menu orientation="vertical"
+              uid=8_164 menuitem "API 平台"
+                uid=8_165 ignored
+                  uid=8_166 StaticText "API 平台"
+                    uid=8_6 InlineTextBox "API 平台"
+              uid=8_167 menuitem "Agnes"
+                uid=8_168 ignored
+                  uid=8_169 StaticText "Agnes"
+                    uid=8_6 InlineTextBox "Agnes"
+              uid=8_170 menuitem "Pavo"
+                uid=8_171 ignored
+                  uid=8_172 StaticText "Pavo"
+                    uid=8_6 InlineTextBox "Pavo"
+      uid=8_173 ignored
+        uid=8_174 ignored
+          uid=8_175 complementary
+            uid=8_176 ignored
+              uid=8_177 generic
+                uid=8_178 generic
+                  uid=8_179 generic
+                    uid=8_180 StaticText "简体中文"
+                      uid=8_6 InlineTextBox "简体中文"
+                    uid=8_181 combobox autocomplete="list" expandable haspopup="listbox"
+                      uid=8_182 ignored
+                        uid=8_183 generic
+                  uid=8_184 generic
+                    uid=8_185 image "down"
+            uid=8_186 ignored
+              uid=8_187 generic
+                uid=8_188 generic
+                  uid=8_189 textbox "搜索…"
+                    uid=8_190 ignored
+                    uid=8_191 generic
+              uid=8_192 ignored
+                uid=8_193 ignored
+                  uid=8_194 ignored
+                    uid=8_195 heading level="4"
+                    uid=8_196 list
+                      uid=8_197 listitem level="1"
+                        uid=8_198 ignored
+                          uid=8_199 button "开始使用"
+                            uid=8_200 StaticText "开始使用"
+                              uid=8_6 InlineTextBox "开始使用"
+                          uid=8_201 generic
+                      uid=8_202 listitem level="1"
+                        uid=8_203 ignored
+                          uid=8_204 button "模型"
+                            uid=8_205 StaticText "模型"
+                              uid=8_6 InlineTextBox "模型"
+                          uid=8_206 generic
+                        uid=8_207 list
+                          uid=8_208 listitem level="2"
+                            uid=8_209 ignored
+                              uid=8_210 button "文本"
+                                uid=8_211 StaticText "文本"
+                                  uid=8_6 InlineTextBox "文本"
+                              uid=8_212 generic
+                          uid=8_213 listitem level="2"
+                            uid=8_214 ignored
+                              uid=8_215 button "图像"
+                                uid=8_216 StaticText "图像"
+                                  uid=8_6 InlineTextBox "图像"
+                              uid=8_217 generic
+                          uid=8_218 listitem level="2"
+                            uid=8_219 ignored
+                              uid=8_220 button "视频"
+                                uid=8_221 StaticText "视频"
+                                  uid=8_6 InlineTextBox "视频"
+                              uid=8_222 generic
+                            uid=8_223 list
+                              uid=8_224 listitem level="3"
+                                uid=8_225 ignored
+                                  uid=8_226 button "Agnes Video V2.0"
+                                    uid=8_227 StaticText "Agnes Video V2.0"
+                                      uid=8_6 InlineTextBox "Agnes Video V2.0"
+                      uid=8_228 listitem level="1"
+                        uid=8_229 ignored
+                          uid=8_230 button "FAQs"
+                            uid=8_231 StaticText "FAQs"
+                              uid=8_6 InlineTextBox "FAQs"
+                          uid=8_232 generic
+                      uid=8_233 listitem level="1"
+                        uid=8_234 ignored
+                          uid=8_235 button "常见接入文档"
+                            uid=8_236 StaticText "常见接入文档"
+                              uid=8_6 InlineTextBox "常见接入文档"
+                          uid=8_237 generic
+                      uid=8_238 listitem level="1"
+                        uid=8_239 ignored
+                          uid=8_240 button "条款与政策"
+                            uid=8_241 StaticText "条款与政策"
+                              uid=8_6 InlineTextBox "条款与政策"
+                          uid=8_242 generic
+          uid=8_243 main
+            uid=8_244 ignored
+              uid=8_245 ignored
+                uid=8_246 button "复制页面"
+                  uid=8_247 StaticText "复制页面"
+                    uid=8_6 InlineTextBox "复制页面"
+              uid=8_248 ignored
+                uid=8_249 main
+                  uid=8_250 generic
+                  uid=8_251 heading "Agnes-Video-V2.0 API 接入指南 Agnes-Video-V2.0 API 接入指南" level="2"
+                    uid=8_252 generic
+                    uid=8_253 link "Agnes-Video-V2.0 API 接入指南" url="https://agnes-ai.com/doc/agnes-video-v20#3764a189eee5804ba179c8f99ceeeec5"
+                      uid=8_254 image
+                    uid=8_255 StaticText "Agnes-Video-V2.0 API 接入指南"
+                      uid=8_6 InlineTextBox "Agnes-Video-V2.0 API 接入指南"
+                  uid=8_256 heading "概述 概述" level="3"
+                    uid=8_257 generic
+                    uid=8_258 link "概述" url="https://agnes-ai.com/doc/agnes-video-v20#3764a189eee5802a939ac7d361f2420d"
+                      uid=8_259 image
+                    uid=8_260 StaticText "概述"
+                      uid=8_6 InlineTextBox "概述"
+                  uid=8_261 generic
+                    uid=8_262 StaticText "Agnes-Video-V2.0 是一款面向生产环境的视频生成模型，支持 "
+                      uid=8_6 InlineTextBox "Agnes-Video-V2.0 是一款面向生产环境的视频生成模型，支持 "
+                    uid=8_263 StaticText "文生视频"
+                      uid=8_6 InlineTextBox "文生视频"
+                    uid=8_264 StaticText "、"
+                      uid=8_6 InlineTextBox "、"
+                    uid=8_265 StaticText "图生视频"
+                      uid=8_6 InlineTextBox "图生视频"
+                    uid=8_266 StaticText "、"
+                      uid=8_6 InlineTextBox "、"
+                    uid=8_267 StaticText "多图视频生成"
+                      uid=8_6 InlineTextBox "多图视频生"
+                      uid=8_6 InlineTextBox "成"
+                    uid=8_268 StaticText " 和 "
+                      uid=8_6 InlineTextBox " 和 "
+                    uid=8_269 StaticText "关键帧动画"
+                      uid=8_6 InlineTextBox "关键帧动画"
+                    uid=8_270 StaticText " 工作流。"
+                      uid=8_6 InlineTextBox " 工作流。"
+                  uid=8_271 generic
+                    uid=8_272 StaticText "开发者可以通过文本提示词、图片 URL 或多张参考图片生成高质量视频。该模型适用于故事创作、营销视频、产品演示、社交媒体内容、App 动态素材以及 AI 创意工作流。"
+                      uid=8_6 InlineTextBox "开发者可以通过文本提示词、图片 URL 或多张参考图片生成高质量视频。该模型适用于故事创作、营销"
+                      uid=8_6 InlineTextBox "视频、产品演示、社交媒体内容、App 动态素材以及 AI 创意工作流。"
+                  uid=8_273 generic
+                    uid=8_274 StaticText "Agnes-Video-V2.0 采用异步任务式 API。你需要先创建视频生成任务，然后使用返回的 "
+                      uid=8_6 InlineTextBox "Agnes-Video-V2.0 采用异步任务式 API。你需要先创建视频生成任务，然后使用返回的 "
+                    uid=8_275 code
+                      uid=8_276 StaticText "video_id"
+                        uid=8_6 InlineTextBox "video_id"
+                    uid=8_277 StaticText " 或 "
+                      uid=8_6 InlineTextBox " 或 "
+                    uid=8_278 code
+                      uid=8_279 StaticText "task_id"
+                        uid=8_6 InlineTextBox "task_id"
+                    uid=8_280 StaticText " 查询视频结果。"
+                      uid=8_6 InlineTextBox " 查询视频结果。"
+                  uid=8_281 separator orientation="horizontal"
+                  uid=8_282 heading "支持能力 支持能力" level="3"
+                    uid=8_283 generic
+                    uid=8_284 link "支持能力" url="https://agnes-ai.com/doc/agnes-video-v20#3764a189eee58041b082d19d7754b425"
+                      uid=8_285 image
+                    uid=8_286 StaticText "支持能力"
+                      uid=8_6 InlineTextBox "支持能力"
+                  uid=8_287 table
+                    uid=8_288 ignored
+                      uid=8_289 row
+                        uid=8_290 cell "能力"
+                          uid=8_291 generic
+                            uid=8_292 StaticText "能力"
+                              uid=8_6 InlineTextBox "能力"
+                        uid=8_293 cell "说明"
+                          uid=8_294 generic
+                            uid=8_295 StaticText "说明"
+                              uid=8_6 InlineTextBox "说明"
+                      uid=8_296 row
+                        uid=8_297 cell "文生视频"
+                          uid=8_298 generic
+                            uid=8_299 StaticText "文生视频"
+                              uid=8_6 InlineTextBox "文生视频"
+                        uid=8_300 cell "根据文本提示词直接生成视频"
+                          uid=8_301 generic
+                            uid=8_302 StaticText "根据文本提示词直接生成视频"
+                              uid=8_6 InlineTextBox "根据文本提示词直接生成视频"
+                      uid=8_303 row
+                        uid=8_304 cell "图生视频"
+                          uid=8_305 generic
+                            uid=8_306 StaticText "图生视频"
+                              uid=8_6 InlineTextBox "图生视频"
+                        uid=8_307 cell "将静态图片动画化为动态视频"
+                          uid=8_308 generic
+                            uid=8_309 StaticText "将静态图片动画化为动态视频"
+                              uid=8_6 InlineTextBox "将静态图片动画化为动态视频"
+                      uid=8_310 row
+                        uid=8_311 cell "多图视频生成"
+                          uid=8_312 generic
+                            uid=8_313 StaticText "多图视频生成"
+                              uid=8_6 InlineTextBox "多图视频生成"
+                        uid=8_314 cell "使用多张参考图片指导视频生成"
+                          uid=8_315 generic
+                            uid=8_316 StaticText "使用多张参考图片指导视频生成"
+                              uid=8_6 InlineTextBox "使用多张参考图片指导视频生成"
+                      uid=8_317 row
+                        uid=8_318 cell "关键帧动画"
+                          uid=8_319 generic
+                            uid=8_320 StaticText "关键帧动画"
+                              uid=8_6 InlineTextBox "关键帧动画"
+                        uid=8_321 cell "在多个关键帧之间生成平滑过渡"
+                          uid=8_322 generic
+                            uid=8_323 StaticText "在多个关键帧之间生成平滑过渡"
+                              uid=8_6 InlineTextBox "在多个关键帧之间生成平滑过渡"
+                      uid=8_324 row
+                        uid=8_325 cell "场景运动控制"
+                          uid=8_326 generic
+                            uid=8_327 StaticText "场景运动控制"
+                              uid=8_6 InlineTextBox "场景运动控制"
+                        uid=8_328 cell "通过提示词控制主体动作、镜头运动和场景动态"
+                          uid=8_329 generic
+                            uid=8_330 StaticText "通过提示词控制主体动作、镜头运动和场景动态"
+                              uid=8_6 InlineTextBox "通过提示词控制主体动作、镜头运动和场景动态"
+                      uid=8_331 row
+                        uid=8_332 cell "视觉一致性"
+                          uid=8_333 generic
+                            uid=8_334 StaticText "视觉一致性"
+                              uid=8_6 InlineTextBox "视觉一致性"
+                        uid=8_335 cell "在多帧之间保持主体、风格和场景一致"
+                          uid=8_336 generic
+                            uid=8_337 StaticText "在多帧之间保持主体、风格和场景一致"
+                              uid=8_6 InlineTextBox "在多帧之间保持主体、风格和场景一致"
+                      uid=8_338 row
+                        uid=8_339 cell "电影级输出"
+                          uid=8_340 generic
+                            uid=8_341 StaticText "电影级输出"
+                              uid=8_6 InlineTextBox "电影级输出"
+                        uid=8_342 cell "生成高质量电影级视频"
+                          uid=8_343 generic
+                            uid=8_344 StaticText "生成高质量电影级视频"
+                              uid=8_6 InlineTextBox "生成高质量电影级视频"
+                      uid=8_345 row
+                        uid=8_346 cell "异步 API"
+                          uid=8_347 generic
+                            uid=8_348 StaticText "异步 API"
+                              uid=8_6 InlineTextBox "异步 API"
+                        uid=8_349 cell "先提交任务，再查询生成结果"
+                          uid=8_350 generic
+                            uid=8_351 StaticText "先提交任务，再查询生成结果"
+                              uid=8_6 InlineTextBox "先提交任务，再查询生成结果"
+                  uid=8_352 separator orientation="horizontal"
+                  uid=8_353 heading "适用场景 适用场景" level="3"
+                    uid=8_354 generic
+                    uid=8_355 link "适用场景" url="https://agnes-ai.com/doc/agnes-video-v20#3764a189eee580ec87bfc98f9885d0c6"
+                      uid=8_356 image
+                    uid=8_357 StaticText "适用场景"
+                      uid=8_6 InlineTextBox "适用场景"
+                  uid=8_358 table
+                    uid=8_359 ignored
+                      uid=8_360 row
+                        uid=8_361 cell "场景"
+                          uid=8_362 generic
+                            uid=8_363 StaticText "场景"
+                              uid=8_6 InlineTextBox "场景"
+                        uid=8_364 cell "示例"
+                          uid=8_365 generic
+                            uid=8_366 StaticText "示例"
+                              uid=8_6 InlineTextBox "示例"
+                      uid=8_367 row
+                        uid=8_368 cell "故事创作"
+                          uid=8_369 generic
+                            uid=8_370 StaticText "故事创作"
+                              uid=8_6 InlineTextBox "故事创作"
+                        uid=8_371 cell "短片、角色场景、叙事片段"
+                          uid=8_372 generic
+                            uid=8_373 StaticText "短片、角色场景、叙事片段"
+                              uid=8_6 InlineTextBox "短片、角色场景、叙事片段"
+                      uid=8_374 row
+                        uid=8_375 cell "营销视频"
+                          uid=8_376 generic
+                            uid=8_377 StaticText "营销视频"
+                              uid=8_6 InlineTextBox "营销视频"
+                        uid=8_378 cell "产品广告、活动视频、推广内容"
+                          uid=8_379 generic
+                            uid=8_380 StaticText "产品广告、活动视频、推广内容"
+                              uid=8_6 InlineTextBox "产品广告、活动视频、推广内容"
+                      uid=8_381 row
+                        uid=8_382 cell "社交媒体内容"
+                          uid=8_383 generic
+                            uid=8_384 StaticText "社交媒体内容"
+                              uid=8_6 InlineTextBox "社交媒体内容"
+                        uid=8_385 cell "Reels、Shorts、TikTok 风格视频"
+                          uid=8_386 generic
+                            uid=8_387 StaticText "Reels、Shorts、TikTok 风格视频"
+                              uid=8_6 InlineTextBox "Reels、Shorts、TikTok 风格视频"
+                      uid=8_388 row
+                        uid=8_389 cell "图像动画化"
+                          uid=8_390 generic
+                            uid=8_391 StaticText "图像动画化"
+                              uid=8_6 InlineTextBox "图像动画化"
+                        uid=8_392 cell "动画化人像、产品、角色或场景"
+                          uid=8_393 generic
+                            uid=8_394 StaticText "动画化人像、产品、角色或场景"
+                              uid=8_6 InlineTextBox "动画化人像、产品、角色或场景"
+                      uid=8_395 row
+                        uid=8_396 cell "产品演示"
+                          uid=8_397 generic
+                            uid=8_398 StaticText "产品演示"
+                              uid=8_6 InlineTextBox "产品演示"
+                        uid=8_399 cell "根据文本或图像生成产品展示视频"
+                          uid=8_400 generic
+                            uid=8_401 StaticText "根据文本或图像生成产品展示视频"
+                              uid=8_6 InlineTextBox "根据文本或图像生成产品展示视频"
+                      uid=8_402 row
+                        uid=8_403 cell "关键帧过渡"
+                          uid=8_404 generic
+                            uid=8_405 StaticText "关键帧过渡"
+                              uid=8_6 InlineTextBox "关键帧过渡"
+                        uid=8_406 cell "在不同视觉状态之间生成平滑转场"
+                          uid=8_407 generic
+                            uid=8_408 StaticText "在不同视觉状态之间生成平滑转场"
+                              uid=8_6 InlineTextBox "在不同视觉状态之间生成平滑转场"
+                      uid=8_409 row
+                        uid=8_410 cell "游戏 / App 素材"
+                          uid=8_411 generic
+                            uid=8_412 StaticText "游戏 / App 素材"
+                              uid=8_6 InlineTextBox "游戏 / App 素材"
+                        uid=8_413 cell "为数字产品生成动态视觉素材"
+                          uid=8_414 generic
+                            uid=8_415 StaticText "为数字产品生成动态视觉素材"
+                              uid=8_6 InlineTextBox "为数字产品生成动态视觉素材"
+                      uid=8_416 row
+                        uid=8_417 cell "沉浸式内容"
+                          uid=8_418 generic
+                            uid=8_419 StaticText "沉浸式内容"
+                              uid=8_6 InlineTextBox "沉浸式内容"
+                        uid=8_420 cell "生成电影级 AI 场景和氛围视频"
+                          uid=8_421 generic
+                            uid=8_422 StaticText "生成电影级 AI 场景和氛围视频"
+                              uid=8_6 InlineTextBox "生成电影级 AI 场景和氛围视频"
+                  uid=8_423 separator orientation="horizontal"
+                  uid=8_424 heading "准备工作 准备工作" level="3"
+                    uid=8_425 generic
+                    uid=8_426 link "准备工作" url="https://agnes-ai.com/doc/agnes-video-v20#3764a189eee580aaa70fdeacb6a33b03"
+                      uid=8_427 image
+                    uid=8_428 StaticText "准备工作"
+                      uid=8_6 InlineTextBox "准备工作"
+                  uid=8_429 generic
+                    uid=8_430 StaticText "开始接入前，请确保你已经具备以下条件："
+                      uid=8_6 InlineTextBox "开始接入前，请确保你已经具备以下条件："
+                  uid=8_431 list
+                    uid=8_432 listitem level="1"
+                      uid=8_433 ListMarker "1. "
+                        uid=8_6 ignored
+                      uid=8_434 StaticText "已获得有效的 Agnes AI API Key。"
+                        uid=8_6 InlineTextBox "已获得有效的 Agnes AI API Key。"
+                  uid=8_435 list
+                    uid=8_436 listitem level="1"
+                      uid=8_437 ListMarker "2. "
+                        uid=8_6 ignored
+                      uid=8_438 StaticText "当前网络环境可以访问 Agnes AI API Gateway。"
+                        uid=8_6 InlineTextBox "当前网络环境可以访问 Agnes AI API Gateway。"
+                  uid=8_439 list
+                    uid=8_440 listitem level="1"
+                      uid=8_441 ListMarker "3. "
+                        uid=8_6 ignored
+                      uid=8_442 StaticText "已确认模型名称："
+                        uid=8_6 InlineTextBox "已确认模型名称："
+                      uid=8_443 code
+                        uid=8_444 StaticText "agnes-video-v2.0"
+                          uid=8_6 InlineTextBox "agnes-video-v2.0"
+                      uid=8_445 StaticText "。"
+                        uid=8_6 InlineTextBox "。"
+                  uid=8_446 list
+                    uid=8_447 listitem level="1"
+                      uid=8_448 ListMarker "4. "
+                        uid=8_6 ignored
+                      uid=8_449 StaticText "已准备好视频生成所需的文本提示词。"
+                        uid=8_6 InlineTextBox "已准备好视频生成所需的文本提示词。"
+                  uid=8_450 list
+                    uid=8_451 listitem level="1"
+                      uid=8_452 ListMarker "5. "
+                        uid=8_6 ignored
+                      uid=8_453 StaticText "如需使用图生视频、多图视频或关键帧动画，请准备可公网访问的图片 URL。"
+                        uid=8_6 InlineTextBox "如需使用图生视频、多图视频或关键帧动画，请准备可公网访问的图片 URL。"
+                  uid=8_454 separator orientation="horizontal"
+                  uid=8_455 heading "API Endpoints API Endpoints" level="3"
+                    uid=8_456 generic
+                    uid=8_457 link "API Endpoints" url="https://agnes-ai.com/doc/agnes-video-v20#3764a189eee580c0bbf6f52d8aee7786"
+                      uid=8_458 image
+                    uid=8_459 StaticText "API Endpoints"
+                      uid=8_6 InlineTextBox "API Endpoints"
+                  uid=8_460 heading "创建视频任务 创建视频任务" level="4"
+                    uid=8_461 generic
+                    uid=8_462 link "创建视频任务" url="https://agnes-ai.com/doc/agnes-video-v20#3764a189eee5802ea101cb2b4edd0ece"
+                      uid=8_463 image
+                    uid=8_464 StaticText "创建视频任务"
+                      uid=8_6 InlineTextBox "创建视频任务"
+                  uid=8_465 table
+                    uid=8_466 ignored
+                      uid=8_467 row
+                        uid=8_468 cell "项目"
+                          uid=8_469 generic
+                            uid=8_470 StaticText "项目"
+                              uid=8_6 InlineTextBox "项目"
+                        uid=8_471 cell "说明"
+                          uid=8_472 generic
+                            uid=8_473 StaticText "说明"
+                              uid=8_6 InlineTextBox "说明"
+                      uid=8_474 row
+                        uid=8_475 cell "Endpoint"
+                          uid=8_476 generic
+                            uid=8_477 StaticText "Endpoint"
+                              uid=8_6 InlineTextBox "Endpoint"
+                        uid=8_478 cell "https://apihub.agnes-ai.com/v1/videos"
+                          uid=8_479 generic
+                            uid=8_480 code
+                              uid=8_481 StaticText "https://apihub.agnes-ai.com/v1/videos"
+                                uid=8_6 InlineTextBox "https://apihub.agnes-ai.com/v1/videos"
+                      uid=8_482 row
+                        uid=8_483 cell "Method"
+                          uid=8_484 generic
+                            uid=8_485 StaticText "Method"
+                              uid=8_6 InlineTextBox "Method"
+                        uid=8_486 cell "POST"
+                          uid=8_487 generic
+                            uid=8_488 code
+                              uid=8_489 StaticText "POST"
+                                uid=8_6 InlineTextBox "POST"
+                      uid=8_490 row
+                        uid=8_491 cell "Content-Type"
+                          uid=8_492 generic
+                            uid=8_493 StaticText "Content-Type"
+                              uid=8_6 InlineTextBox "Content-Type"
+                        uid=8_494 cell "application/json"
+                          uid=8_495 generic
+                            uid=8_496 code
+                              uid=8_497 StaticText "application/json"
+                                uid=8_6 InlineTextBox "application/json"
+                      uid=8_498 row
+                        uid=8_499 cell "Authentication"
+                          uid=8_500 generic
+                            uid=8_501 StaticText "Authentication"
+                              uid=8_6 InlineTextBox "Authentication"
+                        uid=8_502 cell "Bearer Token"
+                          uid=8_503 generic
+                            uid=8_504 StaticText "Bearer Token"
+                              uid=8_6 InlineTextBox "Bearer Token"
+                      uid=8_505 row
+                        uid=8_506 cell "Header"
+                          uid=8_507 generic
+                            uid=8_508 StaticText "Header"
+                              uid=8_6 InlineTextBox "Header"
+                        uid=8_509 cell "Authorization: Bearer YOUR_API_KEY"
+                          uid=8_510 generic
+                            uid=8_511 code
+                              uid=8_512 StaticText "Authorization: Bearer YOUR_API_KEY"
+                                uid=8_6 InlineTextBox "Authorization: Bearer YOUR_API_KEY"
+                  uid=8_513 separator orientation="horizontal"
+                  uid=8_514 heading "查询视频结果：推荐方式 查询视频结果：推荐方式" level="4"
+                    uid=8_515 generic
+                    uid=8_516 link "查询视频结果：推荐方式" url="https://agnes-ai.com/doc/agnes-video-v20#3764a189eee580d0855dff5be579f79b"
+                      uid=8_517 image
+                    uid=8_518 StaticText "查询视频结果：推荐方式"
+                      uid=8_6 InlineTextBox "查询视频结果：推荐方式"
+                  uid=8_519 generic
+                    uid=8_520 StaticText "创建视频任务后，响应中会返回 "
+                      uid=8_6 InlineTextBox "创建视频任务后，响应中会返回 "
+                    uid=8_521 code
+                      uid=8_522 StaticText "video_id"
+                        uid=8_6 InlineTextBox "video_id"
+                    uid=8_523 StaticText "。"
+                      uid=8_6 InlineTextBox "。"
+                  uid=8_524 generic
+                    uid=8_525 StaticText "推荐使用 "
+                      uid=8_6 InlineTextBox "推荐使用 "
+                    uid=8_526 code
+                      uid=8_527 StaticText "video_id"
+                        uid=8_6 InlineTextBox "video_id"
+                    uid=8_528 StaticText " 查询视频结果。"
+                      uid=8_6 InlineTextBox " 查询视频结果。"
+                  uid=8_529 table
+                    uid=8_530 ignored
+                      uid=8_531 row
+                        uid=8_532 cell "项目"
+                          uid=8_533 generic
+                            uid=8_534 StaticText "项目"
+                              uid=8_6 InlineTextBox "项目"
+                        uid=8_535 cell "说明"
+                          uid=8_536 generic
+                            uid=8_537 StaticText "说明"
+                              uid=8_6 InlineTextBox "说明"
+                      uid=8_538 row
+                        uid=8_539 cell "Endpoint"
+                          uid=8_540 generic
+                            uid=8_541 StaticText "Endpoint"
+                              uid=8_6 InlineTextBox "Endpoint"
+                        uid=8_542 cell "https://apihub.agnes-ai.com/agnesapi?video_id=<VIDEO_ID>"
+                          uid=8_543 generic
+                            uid=8_544 code
+                              uid=8_545 StaticText "https://apihub.agnes-ai.com/agnesapi?video_id=<VIDEO_ID>"
+                                uid=8_6 InlineTextBox "https://apihub.agnes-ai.com/agnesapi?video_id=<VIDEO_ID>"
+                      uid=8_546 row
+                        uid=8_547 cell "Method"
+                          uid=8_548 generic
+                            uid=8_549 StaticText "Method"
+                              uid=8_6 InlineTextBox "Method"
+                        uid=8_550 cell "GET"
+                          uid=8_551 generic
+                            uid=8_552 code
+                              uid=8_553 StaticText "GET"
+                                uid=8_6 InlineTextBox "GET"
+                      uid=8_554 row
+                        uid=8_555 cell "Authentication"
+                          uid=8_556 generic
+                            uid=8_557 StaticText "Authentication"
+                              uid=8_6 InlineTextBox "Authentication"
+                        uid=8_558 cell "Bearer Token"
+                          uid=8_559 generic
+                            uid=8_560 StaticText "Bearer Token"
+                              uid=8_6 InlineTextBox "Bearer Token"
+                      uid=8_561 row
+                        uid=8_562 cell "Header"
+                          uid=8_563 generic
+                            uid=8_564 StaticText "Header"
+                              uid=8_6 InlineTextBox "Header"
+                        uid=8_565 cell "Authorization: Bearer YOUR_API_KEY"
+                          uid=8_566 generic
+                            uid=8_567 code
+                              uid=8_568 StaticText "Authorization: Bearer YOUR_API_KEY"
+                                uid=8_6 InlineTextBox "Authorization: Bearer YOUR_API_KEY"
+                  uid=8_569 separator orientation="horizontal"
+                  uid=8_570 heading "查询视频结果：兼容旧方式 查询视频结果：兼容旧方式" level="4"
+                    uid=8_571 generic
+                    uid=8_572 link "查询视频结果：兼容旧方式" url="https://agnes-ai.com/doc/agnes-video-v20#3764a189eee5806a93c2d6a81ae795d5"
+                      uid=8_573 image
+                    uid=8_574 StaticText "查询视频结果：兼容旧方式"
+                      uid=8_6 InlineTextBox "查询视频结果：兼容旧方式"
+                  uid=8_575 generic
+                    uid=8_576 StaticText "旧版任务查询接口仍然支持，用于兼容已有接入逻辑。"
+                      uid=8_6 InlineTextBox "旧版任务查询接口仍然支持，用于兼容已有接入逻辑。"
+                  uid=8_577 table
+                    uid=8_578 ignored
+                      uid=8_579 row
+                        uid=8_580 cell "项目"
+                          uid=8_581 generic
+                            uid=8_582 StaticText "项目"
+                              uid=8_6 InlineTextBox "项目"
+                        uid=8_583 cell "说明"
+                          uid=8_584 generic
+                            uid=8_585 StaticText "说明"
+                              uid=8_6 InlineTextBox "说明"
+                      uid=8_586 row
+                        uid=8_587 cell "Endpoint"
+                          uid=8_588 generic
+                            uid=8_589 StaticText "Endpoint"
+                              uid=8_6 InlineTextBox "Endpoint"
+                        uid=8_590 cell "https://apihub.agnes-ai.com/v1/videos/{task_id}"
+                          uid=8_591 generic
+                            uid=8_592 code
+                              uid=8_593 StaticText "https://apihub.agnes-ai.com/v1/videos/{task_id}"
+                                uid=8_6 InlineTextBox "https://apihub.agnes-ai.com/v1/videos/{task_id}"
+                      uid=8_594 row
+                        uid=8_595 cell "Method"
+                          uid=8_596 generic
+                            uid=8_597 StaticText "Method"
+                              uid=8_6 InlineTextBox "Method"
+                        uid=8_598 cell "GET"
+                          uid=8_599 generic
+                            uid=8_600 code
+                              uid=8_601 StaticText "GET"
+                                uid=8_6 InlineTextBox "GET"
+                      uid=8_602 row
+                        uid=8_603 cell "Authentication"
+                          uid=8_604 generic
+                            uid=8_605 StaticText "Authentication"
+                              uid=8_6 InlineTextBox "Authentication"
+                        uid=8_606 cell "Bearer Token"
+                          uid=8_607 generic
+                            uid=8_608 StaticText "Bearer Token"
+                              uid=8_6 InlineTextBox "Bearer Token"
+                      uid=8_609 row
+                        uid=8_610 cell "Header"
+                          uid=8_611 generic
+                            uid=8_612 StaticText "Header"
+                              uid=8_6 InlineTextBox "Header"
+                        uid=8_613 cell "Authorization: Bearer YOUR_API_KEY"
+                          uid=8_614 generic
+                            uid=8_615 code
+                              uid=8_616 StaticText "Authorization: Bearer YOUR_API_KEY"
+                                uid=8_6 InlineTextBox "Authorization: Bearer YOUR_API_KEY"
+                  uid=8_617 separator orientation="horizontal"
+                  uid=8_618 heading "请求参数 请求参数" level="3"
+                    uid=8_619 generic
+                    uid=8_620 link "请求参数" url="https://agnes-ai.com/doc/agnes-video-v20#3764a189eee5804e9e4ecaaa74cb07ea"
+                      uid=8_621 image
+                    uid=8_622 StaticText "请求参数"
+                      uid=8_6 InlineTextBox "请求参数"
+                  uid=8_623 heading "创建视频任务参数 创建视频任务参数" level="4"
+                    uid=8_624 generic
+                    uid=8_625 link "创建视频任务参数" url="https://agnes-ai.com/doc/agnes-video-v20#3764a189eee5808899d4de9f3e805a3e"
+                      uid=8_626 image
+                    uid=8_627 StaticText "创建视频任务参数"
+                      uid=8_6 InlineTextBox "创建视频任务参数"
+                  uid=8_628 table
+                    uid=8_629 ignored
+                      uid=8_630 row
+                        uid=8_631 cell "参数"
+                          uid=8_632 generic
+                            uid=8_633 StaticText "参数"
+                              uid=8_6 InlineTextBox "参数"
+                        uid=8_634 cell "类型"
+                          uid=8_635 generic
+                            uid=8_636 StaticText "类型"
+                              uid=8_6 InlineTextBox "类型"
+                        uid=8_637 cell "是否必填"
+                          uid=8_638 generic
+                            uid=8_639 StaticText "是否必填"
+                              uid=8_6 InlineTextBox "是否必填"
+                        uid=8_640 cell "说明"
+                          uid=8_641 generic
+                            uid=8_642 StaticText "说明"
+                              uid=8_6 InlineTextBox "说明"
+                      uid=8_643 row
+                        uid=8_644 cell "model"
+                          uid=8_645 generic
+                            uid=8_646 code
+                              uid=8_647 StaticText "model"
+                                uid=8_6 InlineTextBox "model"
+                        uid=8_648 cell "string"
+                          uid=8_649 generic
+                            uid=8_650 StaticText "string"
+                              uid=8_6 InlineTextBox "string"
+                        uid=8_651 cell "是"
+                          uid=8_652 generic
+                            uid=8_653 StaticText "是"
+                              uid=8_6 InlineTextBox "是"
+                        uid=8_654 cell "模型名称，使用  agnes-video-v2.0"
+                          uid=8_655 generic
+                            uid=8_656 StaticText "模型名称，使用 "
+                              uid=8_6 InlineTextBox "模型名称，使用 "
+                            uid=8_657 code
+                              uid=8_658 StaticText "agnes-video-v2.0"
+                                uid=8_6 InlineTextBox "agnes-video-"
+                                uid=8_6 InlineTextBox "v2.0"
+                      uid=8_659 row
+                        uid=8_660 cell "prompt"
+                          uid=8_661 generic
+                            uid=8_662 code
+                              uid=8_663 StaticText "prompt"
+                                uid=8_6 InlineTextBox "prompt"
+                        uid=8_664 cell "string"
+                          uid=8_665 generic
+                            uid=8_666 StaticText "string"
+                              uid=8_6 InlineTextBox "string"
+                        uid=8_667 cell "是"
+                          uid=8_668 generic
+                            uid=8_669 StaticText "是"
+                              uid=8_6 InlineTextBox "是"
+                        uid=8_670 cell "视频内容的文本描述"
+                          uid=8_671 generic
+                            uid=8_672 StaticText "视频内容的文本描述"
+                              uid=8_6 InlineTextBox "视频内容的文本"
+                              uid=8_6 InlineTextBox "描述"
+                      uid=8_673 row
+                        uid=8_674 cell "image"
+                          uid=8_675 generic
+                            uid=8_676 code
+                              uid=8_677 StaticText "image"
+                                uid=8_6 InlineTextBox "image"
+                        uid=8_678 cell "string / array"
+                          uid=8_679 generic
+                            uid=8_680 StaticText "string / array"
+                              uid=8_6 InlineTextBox "string / array"
+                        uid=8_681 cell "否"
+                          uid=8_682 generic
+                            uid=8_683 StaticText "否"
+                              uid=8_6 InlineTextBox "否"
+                        uid=8_684 cell "图片 URL 或图片 URL 数组"
+                          uid=8_685 generic
+                            uid=8_686 StaticText "图片 URL 或图片 URL 数组"
+                              uid=8_6 InlineTextBox "图片 URL 或图"
+                              uid=8_6 InlineTextBox "片 URL 数组"
+                      uid=8_687 row
+                        uid=8_688 cell "mode"
+                          uid=8_689 generic
+                            uid=8_690 code
+                              uid=8_691 StaticText "mode"
+                                uid=8_6 InlineTextBox "mode"
+                        uid=8_692 cell "string"
+                          uid=8_693 generic
+                            uid=8_694 StaticText "string"
+                              uid=8_6 InlineTextBox "string"
+                        uid=8_695 cell "否"
+                          uid=8_696 generic
+                            uid=8_697 StaticText "否"
+                              uid=8_6 InlineTextBox "否"
+                        uid=8_698 cell "生成模式，例如  ti2vid  或  keyframes"
+                          uid=8_699 generic
+                            uid=8_700 StaticText "生成模式，例如 "
+                              uid=8_6 InlineTextBox "生成模式，例如 "
+                            uid=8_701 code
+                              uid=8_702 StaticText "ti2vid"
+                                uid=8_6 InlineTextBox "ti2vid"
+                            uid=8_703 StaticText " 或 "
+                              uid=8_6 InlineTextBox " 或 "
+                            uid=8_704 code
+                              uid=8_705 StaticText "keyframes"
+                                uid=8_6 InlineTextBox "keyframes"
+                      uid=8_706 row
+                        uid=8_707 cell "height"
+                          uid=8_708 generic
+                            uid=8_709 code
+                              uid=8_710 StaticText "height"
+                                uid=8_6 InlineTextBox "height"
+                        uid=8_711 cell "integer"
+                          uid=8_712 generic
+                            uid=8_713 StaticText "integer"
+                              uid=8_6 InlineTextBox "integer"
+                        uid=8_714 cell "否"
+                          uid=8_715 generic
+                            uid=8_716 StaticText "否"
+                              uid=8_6 InlineTextBox "否"
+                        uid=8_717 cell "视频高度，默认值为  768"
+                          uid=8_718 generic
+                            uid=8_719 StaticText "视频高度，默认值为 "
+                              uid=8_6 InlineTextBox "视频高度，默认"
+                              uid=8_6 InlineTextBox "值为 "
+                            uid=8_720 code
+                              uid=8_721 StaticText "768"
+                                uid=8_6 InlineTextBox "768"
+                      uid=8_722 row
+                        uid=8_723 cell "width"
+                          uid=8_724 generic
+                            uid=8_725 code
+                              uid=8_726 StaticText "width"
+                                uid=8_6 InlineTextBox "width"
+                        uid=8_727 cell "integer"
+                          uid=8_728 generic
+                            uid=8_729 StaticText "integer"
+                              uid=8_6 InlineTextBox "integer"
+                        uid=8_730 cell "否"
+                          uid=8_731 generic
+                            uid=8_732 StaticText "否"
+                              uid=8_6 InlineTextBox "否"
+                        uid=8_733 cell "视频宽度，默认值为  1152"
+                          uid=8_734 generic
+                            uid=8_735 StaticText "视频宽度，默认值为 "
+                              uid=8_6 InlineTextBox "视频宽度，默认"
+                              uid=8_6 InlineTextBox "值为 "
+                            uid=8_736 code
+                              uid=8_737 StaticText "1152"
+                                uid=8_6 InlineTextBox "1152"
+                      uid=8_738 row
+                        uid=8_739 cell "num_frames"
+                          uid=8_740 generic
+                            uid=8_741 code
+                              uid=8_742 StaticText "num_frames"
+                                uid=8_6 InlineTextBox "num_frames"
+                        uid=8_743 cell "integer"
+                          uid=8_744 generic
+                            uid=8_745 StaticText "integer"
+                              uid=8_6 InlineTextBox "integer"
+                        uid=8_746 cell "否"
+                          uid=8_747 generic
+                            uid=8_748 StaticText "否"
+                              uid=8_6 InlineTextBox "否"
+                        uid=8_749 cell "视频帧数，必须  ≤ 441 ，且满足  8n + 1"
+                          uid=8_750 generic
+                            uid=8_751 StaticText "视频帧数，必须 "
+                              uid=8_6 InlineTextBox "视频帧数，必须 "
+                            uid=8_752 code
+                              uid=8_753 StaticText "≤ 441"
+                                uid=8_6 InlineTextBox "≤ 441"
+                            uid=8_754 StaticText "，且满足 "
+                              uid=8_6 InlineTextBox "，且满"
+                              uid=8_6 InlineTextBox "足 "
+                            uid=8_755 code
+                              uid=8_756 StaticText "8n + 1"
+                                uid=8_6 InlineTextBox "8n + 1"
+                      uid=8_757 row
+                        uid=8_758 cell "frame_rate"
+                          uid=8_759 generic
+                            uid=8_760 code
+                              uid=8_761 StaticText "frame_rate"
+                                uid=8_6 InlineTextBox "frame_rate"
+                        uid=8_762 cell "number"
+                          uid=8_763 generic
+                            uid=8_764 StaticText "number"
+                              uid=8_6 InlineTextBox "number"
+                        uid=8_765 cell "否"
+                          uid=8_766 generic
+                            uid=8_767 StaticText "否"
+                              uid=8_6 InlineTextBox "否"
+                        uid=8_768 cell "视频 FPS，支持范围为  1–60"
+                          uid=8_769 generic
+                            uid=8_770 StaticText "视频 FPS，支持范围为 "
+                              uid=8_6 InlineTextBox "视频 FPS，支持"
+                              uid=8_6 InlineTextBox "范围为 "
+                            uid=8_771 code
+                              uid=8_772 StaticText "1–60"
+                                uid=8_6 InlineTextBox "1–60"
+                      uid=8_773 row
+                        uid=8_774 cell "num_inference_steps"
+                          uid=8_775 generic
+                            uid=8_776 code
+                              uid=8_777 StaticText "num_inference_steps"
+                                uid=8_6 InlineTextBox "num_inference_steps"
+                        uid=8_778 cell "integer"
+                          uid=8_779 generic
+                            uid=8_780 StaticText "integer"
+                              uid=8_6 InlineTextBox "integer"
+                        uid=8_781 cell "否"
+                          uid=8_782 generic
+                            uid=8_783 StaticText "否"
+                              uid=8_6 InlineTextBox "否"
+                        uid=8_784 cell "推理步数"
+                          uid=8_785 generic
+                            uid=8_786 StaticText "推理步数"
+                              uid=8_6 InlineTextBox "推理步数"
+                      uid=8_787 row
+                        uid=8_788 cell "seed"
+                          uid=8_789 generic
+                            uid=8_790 code
+                              uid=8_791 StaticText "seed"
+                                uid=8_6 InlineTextBox "seed"
+                        uid=8_792 cell "integer"
+                          uid=8_793 generic
+                            uid=8_794 StaticText "integer"
+                              uid=8_6 InlineTextBox "integer"
+                        uid=8_795 cell "否"
+                          uid=8_796 generic
+                            uid=8_797 StaticText "否"
+                              uid=8_6 InlineTextBox "否"
+                        uid=8_798 cell "随机种子，用于保证结果可复现"
+                          uid=8_799 generic
+                            uid=8_800 StaticText "随机种子，用于保证结果可复现"
+                              uid=8_6 InlineTextBox "随机种子，用于"
+                              uid=8_6 InlineTextBox "保证结果可复现"
+                      uid=8_801 row
+                        uid=8_802 cell "negative_prompt"
+                          uid=8_803 generic
+                            uid=8_804 code
+                              uid=8_805 StaticText "negative_prompt"
+                                uid=8_6 InlineTextBox "negative_prompt"
+                        uid=8_806 cell "string"
+                          uid=8_807 generic
+                            uid=8_808 StaticText "string"
+                              uid=8_6 InlineTextBox "string"
+                        uid=8_809 cell "否"
+                          uid=8_810 generic
+                            uid=8_811 StaticText "否"
+                              uid=8_6 InlineTextBox "否"
+                        uid=8_812 cell "负向提示词，用于描述需要避免的内容"
+                          uid=8_813 generic
+                            uid=8_814 StaticText "负向提示词，用于描述需要避免的内容"
+                              uid=8_6 InlineTextBox "负向提示词，用"
+                              uid=8_6 InlineTextBox "于描述需要避免"
+                              uid=8_6 InlineTextBox "的内容"
+                      uid=8_815 row
+                        uid=8_816 cell "extra_body.image"
+                          uid=8_817 generic
+                            uid=8_818 code
+                              uid=8_819 StaticText "extra_body.image"
+                                uid=8_6 InlineTextBox "extra_body.image"
+                        uid=8_820 cell "array"
+                          uid=8_821 generic
+                            uid=8_822 StaticText "array"
+                              uid=8_6 InlineTextBox "array"
+                        uid=8_823 cell "否"
+                          uid=8_824 generic
+                            uid=8_825 StaticText "否"
+                              uid=8_6 InlineTextBox "否"
+                        uid=8_826 cell "多图视频或关键帧模式中的输入图片 URL"
+                          uid=8_827 generic
+                            uid=8_828 StaticText "多图视频或关键帧模式中的输入图片 URL"
+                              uid=8_6 InlineTextBox "多图视频或关键"
+                              uid=8_6 InlineTextBox "帧模式中的输入"
+                              uid=8_6 InlineTextBox "图片 URL"
+                      uid=8_829 row
+                        uid=8_830 cell "extra_body.mode"
+                          uid=8_831 generic
+                            uid=8_832 code
+                              uid=8_833 StaticText "extra_body.mode"
+                                uid=8_6 InlineTextBox "extra_body.mode"
+                        uid=8_834 cell "string"
+                          uid=8_835 generic
+                            uid=8_836 StaticText "string"
+                              uid=8_6 InlineTextBox "string"
+                        uid=8_837 cell "否"
+                          uid=8_838 generic
+                            uid=8_839 StaticText "否"
+                              uid=8_6 InlineTextBox "否"
+                        uid=8_840 cell "额外模式设置，例如  keyframes"
+                          uid=8_841 generic
+                            uid=8_842 StaticText "额外模式设置，例如 "
+                              uid=8_6 InlineTextBox "额外模式设置，"
+                              uid=8_6 InlineTextBox "例如 "
+                            uid=8_843 code
+                              uid=8_844 StaticText "keyframes"
+                                uid=8_6 InlineTextBox "keyframes"
+                  uid=8_845 separator orientation="horizontal"
+                  uid=8_846 heading "参数标准化说明 参数标准化说明" level="4"
+                    uid=8_847 generic
+                    uid=8_848 link "参数标准化说明" url="https://agnes-ai.com/doc/agnes-video-v20#37e4a189eee580539029dfdbd8cc19cf"
+                      uid=8_849 image
+                    uid=8_850 StaticText "参数标准化说明"
+                      uid=8_6 InlineTextBox "参数标准化说明"
+                  uid=8_851 generic
+                    uid=8_852 StaticText "Agnes-Video-V2.0 会对部分视频生成参数进行标准化处理，以保证生成稳定性和输出一致性。当开发者传入的 "
+                      uid=8_6 InlineTextBox "Agnes-Video-V2.0 会对部分视频生成参数进行标准化处理，以保证生成稳定性和输出一致性。当开发"
+                      uid=8_6 InlineTextBox "者传入的 "
+                    uid=8_853 code
+                      uid=8_854 StaticText "width"
+                        uid=8_6 InlineTextBox "width"
+                    uid=8_855 StaticText "、"
+                      uid=8_6 InlineTextBox "、"
+                    uid=8_856 code
+                      uid=8_857 StaticText "height"
+                        uid=8_6 InlineTextBox "height"
+                    uid=8_858 StaticText " 或宽高比不完全匹配模型支持的标准规格时，系统会自动识别最接近的分辨率档位和宽高比，并映射为对应的标准输出尺寸。"
+                      uid=8_6 InlineTextBox " 或宽高比不完全匹配模型支持的标准规格时，系统会自动识别最接近的分"
+                      uid=8_6 InlineTextBox "辨率档位和宽高比，并映射为对应的标准输出尺寸。"
+                  uid=8_859 generic
+                    uid=8_860 StaticText "当前模型支持 "
+                      uid=8_6 InlineTextBox "当前模型支持 "
+                    uid=8_861 code
+                      uid=8_862 StaticText "480p"
+                        uid=8_6 InlineTextBox "480p"
+                    uid=8_863 StaticText "、"
+                      uid=8_6 InlineTextBox "、"
+                    uid=8_864 code
+                      uid=8_865 StaticText "720p"
+                        uid=8_6 InlineTextBox "720p"
+                    uid=8_866 StaticText " 和 "
+                      uid=8_6 InlineTextBox " 和 "
+                    uid=8_867 code
+                      uid=8_868 StaticText "1080p"
+                        uid=8_6 InlineTextBox "1080p"
+                    uid=8_869 StaticText " 三个标准分辨率档位，推荐使用以下宽高比："
+                      uid=8_6 InlineTextBox " 三个标准分辨率档位，推荐使用以下宽高比："
+                  uid=8_870 table
+                    uid=8_871 ignored
+                      uid=8_872 row
+                        uid=8_873 cell "宽高比"
+                          uid=8_874 generic
+                            uid=8_875 StaticText "宽高比"
+                              uid=8_6 InlineTextBox "宽高比"
+                        uid=8_876 cell "推荐场景"
+                          uid=8_877 generic
+                            uid=8_878 StaticText "推荐场景"
+                              uid=8_6 InlineTextBox "推荐场景"
+                      uid=8_879 row
+                        uid=8_880 cell "16:9"
+                          uid=8_881 generic
+                            uid=8_882 code
+                              uid=8_883 StaticText "16:9"
+                                uid=8_6 InlineTextBox "16:9"
+                        uid=8_884 cell "横屏视频、产品演示、官网展示、YouTube 风格内容"
+                          uid=8_885 generic
+                            uid=8_886 StaticText "横屏视频、产品演示、官网展示、YouTube 风格内容"
+                              uid=8_6 InlineTextBox "横屏视频、产品演示、官网展示、YouTube 风格内容"
+                      uid=8_887 row
+                        uid=8_888 cell "9:16"
+                          uid=8_889 generic
+                            uid=8_890 code
+                              uid=8_891 StaticText "9:16"
+                                uid=8_6 InlineTextBox "9:16"
+                        uid=8_892 cell "竖屏短视频、移动端内容、TikTok / Reels / Shorts 风格内容"
+                          uid=8_893 generic
+                            uid=8_894 StaticText "竖屏短视频、移动端内容、TikTok / Reels / Shorts 风格内容"
+                              uid=8_6 InlineTextBox "竖屏短视频、移动端内容、TikTok / Reels / Shorts 风格内容"
+                      uid=8_895 row
+                        uid=8_896 cell "1:1"
+                          uid=8_897 generic
+                            uid=8_898 code
+                              uid=8_899 StaticText "1:1"
+                                uid=8_6 InlineTextBox "1:1"
+                        uid=8_900 cell "方形视频、社交媒体 Feed、角色或商品展示"
+                          uid=8_901 generic
+                            uid=8_902 StaticText "方形视频、社交媒体 Feed、角色或商品展示"
+                              uid=8_6 InlineTextBox "方形视频、社交媒体 Feed、角色或商品展示"
+                      uid=8_903 row
+                        uid=8_904 cell "4:3"
+                          uid=8_905 generic
+                            uid=8_906 code
+                              uid=8_907 StaticText "4:3"
+                                uid=8_6 InlineTextBox "4:3"
+                        uid=8_908 cell "传统横向画幅、通用展示内容"
+                          uid=8_909 generic
+                            uid=8_910 StaticText "传统横向画幅、通用展示内容"
+                              uid=8_6 InlineTextBox "传统横向画幅、通用展示内容"
+                      uid=8_911 row
+                        uid=8_912 cell "3:4"
+                          uid=8_913 generic
+                            uid=8_914 code
+                              uid=8_915 StaticText "3:4"
+                                uid=8_6 InlineTextBox "3:4"
+                        uid=8_916 cell "竖向展示、人物或商品主体突出的视频内容"
+                          uid=8_917 generic
+                            uid=8_918 StaticText "竖向展示、人物或商品主体突出的视频内容"
+                              uid=8_6 InlineTextBox "竖向展示、人物或商品主体突出的视频内容"
+                  uid=8_919 generic
+                    uid=8_920 StaticText "不同分辨率和宽高比会对应不同的实际输出尺寸和最大帧数限制。例如，接近 "
+                      uid=8_6 InlineTextBox "不同分辨率和宽高比会对应不同的实际输出尺寸和最大帧数限制。例如，接近 "
+                    uid=8_921 code
+                      uid=8_922 StaticText "720p / 16:9"
+                        uid=8_6 InlineTextBox "720p / 16:9"
+                    uid=8_923 StaticText " 的输入尺寸会被标准化为对应的标准输出尺寸。"
+                      uid=8_6 InlineTextBox " 的输入尺"
+                      uid=8_6 InlineTextBox "寸会被标准化为对应的标准输出尺寸。"
+                  uid=8_924 generic
+                    uid=8_925 StaticText "因此，请求中的原始 "
+                      uid=8_6 InlineTextBox "因此，请求中的原始 "
+                    uid=8_926 code
+                      uid=8_927 StaticText "width"
+                        uid=8_6 InlineTextBox "width"
+                    uid=8_928 StaticText "、"
+                      uid=8_6 InlineTextBox "、"
+                    uid=8_929 code
+                      uid=8_930 StaticText "height"
+                        uid=8_6 InlineTextBox "height"
+                    uid=8_931 StaticText "、"
+                      uid=8_6 InlineTextBox "、"
+                    uid=8_932 code
+                      uid=8_933 StaticText "num_frames"
+                        uid=8_6 InlineTextBox "num_frames"
+                    uid=8_934 StaticText " 等参数可能与实际执行时的标准参数不完全一致。开发者在展示任务信息、计算视频时长或排查生成问题时，应以接口返回结果中的 "
+                      uid=8_6 InlineTextBox " 等参数可能与实际执行时的标准参数不完全一"
+                      uid=8_6 InlineTextBox "致。开发者在展示任务信息、计算视频时长或排查生成问题时，应以接口返回结果中的 "
+                    uid=8_935 code
+                      uid=8_936 StaticText "size"
+                        uid=8_6 InlineTextBox "size"
+                    uid=8_937 StaticText "、"
+                      uid=8_6 InlineTextBox "、"
+                    uid=8_938 code
+                      uid=8_939 StaticText "seconds"
+                        uid=8_6 InlineTextBox "seconds"
+                    uid=8_940 StaticText " 等字段为准。"
+                      uid=8_6 InlineTextBox " 等字段为准。"
+                  uid=8_941 generic
+                    uid=8_942 StaticText " "
+                      uid=8_6 InlineTextBox " "
+                  uid=8_943 separator orientation="horizontal"
+                  uid=8_944 heading "创建视频任务 创建视频任务" level="3"
+                    uid=8_945 generic
+                    uid=8_946 link "创建视频任务" url="https://agnes-ai.com/doc/agnes-video-v20#3764a189eee580c79739ee52c52dd50d"
+                      uid=8_947 image
+                    uid=8_948 StaticText "创建视频任务"
+                      uid=8_6 InlineTextBox "创建视频任务"
+                  uid=8_949 heading "示例 1：文生视频 示例 1：文生视频" level="4"
+                    uid=8_950 generic
+                    uid=8_951 link "示例 1：文生视频" url="https://agnes-ai.com/doc/agnes-video-v20#3764a189eee580e7a159f9e88b0b2f50"
+                      uid=8_952 image
+                    uid=8_953 StaticText "示例 1：文生视频"
+                      uid=8_6 InlineTextBox "示例 1：文生视频"
+                  uid=8_954 generic
+                    uid=8_955 StaticText "用于直接根据文本提示词生成视频。"
+                      uid=8_6 InlineTextBox "用于直接根据文本提示词生成视频。"
+                  uid=8_956 generic
+                    uid=8_957 generic
+                      uid=8_958 generic
+                        uid=8_959 image
+                    uid=8_960 code
+                      uid=8_961 StaticText "curl"
+                        uid=8_6 InlineTextBox "curl"
+                      uid=8_962 StaticText " "
+                        uid=8_6 InlineTextBox " "
+                      uid=8_963 StaticText "-X"
+                        uid=8_6 InlineTextBox "-X"
+                      uid=8_964 StaticText " POST https://apihub.agnes-ai.com/v1/videos "
+                        uid=8_6 InlineTextBox " POST https://apihub.agnes-ai.com/v1/videos "
+                      uid=8_965 StaticText "\"
+                        uid=8_6 InlineTextBox "\"
+                      uid=8_966 StaticText "
+  "
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "  "
+                      uid=8_967 StaticText "-H"
+                        uid=8_6 InlineTextBox "-H"
+                      uid=8_968 StaticText " "
+                        uid=8_6 InlineTextBox " "
+                      uid=8_969 StaticText ""Authorization: Bearer YOUR_API_KEY""
+                        uid=8_6 InlineTextBox ""Authorization: Bearer YOUR_API_KEY""
+                      uid=8_970 StaticText " "
+                        uid=8_6 InlineTextBox " "
+                      uid=8_971 StaticText "\"
+                        uid=8_6 InlineTextBox "\"
+                      uid=8_972 StaticText "
+  "
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "  "
+                      uid=8_973 StaticText "-H"
+                        uid=8_6 InlineTextBox "-H"
+                      uid=8_974 StaticText " "
+                        uid=8_6 InlineTextBox " "
+                      uid=8_975 StaticText ""Content-Type: application/json""
+                        uid=8_6 InlineTextBox ""Content-Type: application/json""
+                      uid=8_976 StaticText " "
+                        uid=8_6 InlineTextBox " "
+                      uid=8_977 StaticText "\"
+                        uid=8_6 InlineTextBox "\"
+                      uid=8_978 StaticText "
+  "
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "  "
+                      uid=8_979 StaticText "-d"
+                        uid=8_6 InlineTextBox "-d"
+                      uid=8_980 StaticText " "
+                        uid=8_6 InlineTextBox " "
+                      uid=8_981 StaticText "'{
+    "model": "agnes-video-v2.0",
+    "prompt": "A cinematic shot of a cat walking on the beach at sunset, soft ocean waves, warm golden lighting, realistic motion",
+    "height": 768,
+    "width": 1152,
+    "num_frames": 121,
+    "frame_rate": 24
+  }'"
+                        uid=8_6 InlineTextBox "'{"
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "    "model": "agnes-video-v2.0","
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "    "prompt": "A cinematic shot of a cat walking on the beach at sunset, soft ocean waves, warm golden lighting, realistic motion","
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "    "height": 768,"
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "    "width": 1152,"
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "    "num_frames": 121,"
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "    "frame_rate": 24"
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "  }'"
+                  uid=8_982 separator orientation="horizontal"
+                  uid=8_983 heading "示例 2：图生视频 示例 2：图生视频" level="4"
+                    uid=8_984 generic
+                    uid=8_985 link "示例 2：图生视频" url="https://agnes-ai.com/doc/agnes-video-v20#3764a189eee5800296b7e3b3102176de"
+                      uid=8_986 image
+                    uid=8_987 StaticText "示例 2：图生视频"
+                      uid=8_6 InlineTextBox "示例 2：图生视频"
+                  uid=8_988 generic
+                    uid=8_989 StaticText "用于将单张图片动画化。"
+                      uid=8_6 InlineTextBox "用于将单张图片动画化。"
+                  uid=8_990 generic
+                    uid=8_991 generic
+                      uid=8_992 generic
+                        uid=8_993 image
+                    uid=8_994 code
+                      uid=8_995 StaticText "curl"
+                        uid=8_6 InlineTextBox "curl"
+                      uid=8_996 StaticText " "
+                        uid=8_6 InlineTextBox " "
+                      uid=8_997 StaticText "-X"
+                        uid=8_6 InlineTextBox "-X"
+                      uid=8_998 StaticText " POST https://apihub.agnes-ai.com/v1/videos "
+                        uid=8_6 InlineTextBox " POST https://apihub.agnes-ai.com/v1/videos "
+                      uid=8_999 StaticText "\"
+                        uid=8_6 InlineTextBox "\"
+                      uid=8_1000 StaticText "
+  "
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "  "
+                      uid=8_1001 StaticText "-H"
+                        uid=8_6 InlineTextBox "-H"
+                      uid=8_1002 StaticText " "
+                        uid=8_6 InlineTextBox " "
+                      uid=8_1003 StaticText ""Authorization: Bearer YOUR_API_KEY""
+                        uid=8_6 InlineTextBox ""Authorization: Bearer YOUR_API_KEY""
+                      uid=8_1004 StaticText " "
+                        uid=8_6 InlineTextBox " "
+                      uid=8_1005 StaticText "\"
+                        uid=8_6 InlineTextBox "\"
+                      uid=8_1006 StaticText "
+  "
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "  "
+                      uid=8_1007 StaticText "-H"
+                        uid=8_6 InlineTextBox "-H"
+                      uid=8_1008 StaticText " "
+                        uid=8_6 InlineTextBox " "
+                      uid=8_1009 StaticText ""Content-Type: application/json""
+                        uid=8_6 InlineTextBox ""Content-Type: application/json""
+                      uid=8_1010 StaticText " "
+                        uid=8_6 InlineTextBox " "
+                      uid=8_1011 StaticText "\"
+                        uid=8_6 InlineTextBox "\"
+                      uid=8_1012 StaticText "
+  "
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "  "
+                      uid=8_1013 StaticText "-d"
+                        uid=8_6 InlineTextBox "-d"
+                      uid=8_1014 StaticText " "
+                        uid=8_6 InlineTextBox " "
+                      uid=8_1015 StaticText "'{
+    "model": "agnes-video-v2.0",
+    "prompt": "The woman slowly turns around and looks back at the camera, natural facial expression, cinematic camera movement",
+    "image": "https://example.com/image.png",
+    "num_frames": 121,
+    "frame_rate": 24
+  }'"
+                        uid=8_6 InlineTextBox "'{"
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "    "model": "agnes-video-v2.0","
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "    "prompt": "The woman slowly turns around and looks back at the camera, natural facial expression, cinematic camera movement","
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "    "image": "https://example.com/image.png","
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "    "num_frames": 121,"
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "    "frame_rate": 24"
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "  }'"
+                  uid=8_1016 separator orientation="horizontal"
+                  uid=8_1017 heading "示例 3：多图视频生成 示例 3：多图视频生成" level="4"
+                    uid=8_1018 generic
+                    uid=8_1019 link "示例 3：多图视频生成" url="https://agnes-ai.com/doc/agnes-video-v20#3764a189eee580398cc1cc7900abf089"
+                      uid=8_1020 image
+                    uid=8_1021 StaticText "示例 3：多图视频生成"
+                      uid=8_6 InlineTextBox "示例 3：多图视频生成"
+                  uid=8_1022 generic
+                    uid=8_1023 StaticText "用于通过多张输入图片指导视频生成。"
+                      uid=8_6 InlineTextBox "用于通过多张输入图片指导视频生成。"
+                  uid=8_1024 generic
+                    uid=8_1025 generic
+                      uid=8_1026 generic
+                        uid=8_1027 image
+                    uid=8_1028 code
+                      uid=8_1029 StaticText "curl"
+                        uid=8_6 InlineTextBox "curl"
+                      uid=8_1030 StaticText " "
+                        uid=8_6 InlineTextBox " "
+                      uid=8_1031 StaticText "-X"
+                        uid=8_6 InlineTextBox "-X"
+                      uid=8_1032 StaticText " POST https://apihub.agnes-ai.com/v1/videos "
+                        uid=8_6 InlineTextBox " POST https://apihub.agnes-ai.com/v1/videos "
+                      uid=8_1033 StaticText "\"
+                        uid=8_6 InlineTextBox "\"
+                      uid=8_1034 StaticText "
+  "
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "  "
+                      uid=8_1035 StaticText "-H"
+                        uid=8_6 InlineTextBox "-H"
+                      uid=8_1036 StaticText " "
+                        uid=8_6 InlineTextBox " "
+                      uid=8_1037 StaticText ""Authorization: Bearer YOUR_API_KEY""
+                        uid=8_6 InlineTextBox ""Authorization: Bearer YOUR_API_KEY""
+                      uid=8_1038 StaticText " "
+                        uid=8_6 InlineTextBox " "
+                      uid=8_1039 StaticText "\"
+                        uid=8_6 InlineTextBox "\"
+                      uid=8_1040 StaticText "
+  "
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "  "
+                      uid=8_1041 StaticText "-H"
+                        uid=8_6 InlineTextBox "-H"
+                      uid=8_1042 StaticText " "
+                        uid=8_6 InlineTextBox " "
+                      uid=8_1043 StaticText ""Content-Type: application/json""
+                        uid=8_6 InlineTextBox ""Content-Type: application/json""
+                      uid=8_1044 StaticText " "
+                        uid=8_6 InlineTextBox " "
+                      uid=8_1045 StaticText "\"
+                        uid=8_6 InlineTextBox "\"
+                      uid=8_1046 StaticText "
+  "
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "  "
+                      uid=8_1047 StaticText "-d"
+                        uid=8_6 InlineTextBox "-d"
+                      uid=8_1048 StaticText " "
+                        uid=8_6 InlineTextBox " "
+                      uid=8_1049 StaticText "'{
+    "model": "agnes-video-v2.0",
+    "prompt": "Create a smooth transformation scene between the two reference images, cinematic lighting, consistent character identity, natural motion",
+    "extra_body": {
+      "image": [
+        "https://example.com/image1.png",
+        "https://example.com/image2.png"
+      ]
+    },
+    "num_frames": 121,
+    "frame_rate": 24
+  }'"
+                        uid=8_6 InlineTextBox "'{"
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "    "model": "agnes-video-v2.0","
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "    "prompt": "Create a smooth transformation scene between the two reference images, cinematic lighting, consistent character identity, natural motion","
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "    "extra_body": {"
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "      "image": ["
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "        "https://example.com/image1.png","
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "        "https://example.com/image2.png""
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "      ]"
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "    },"
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "    "num_frames": 121,"
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "    "frame_rate": 24"
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "  }'"
+                  uid=8_1050 separator orientation="horizontal"
+                  uid=8_1051 heading "示例 4：关键帧动画 示例 4：关键帧动画" level="4"
+                    uid=8_1052 generic
+                    uid=8_1053 link "示例 4：关键帧动画" url="https://agnes-ai.com/doc/agnes-video-v20#3764a189eee580879f79d3af75d477c1"
+                      uid=8_1054 image
+                    uid=8_1055 StaticText "示例 4：关键帧动画"
+                      uid=8_6 InlineTextBox "示例 4：关键帧动画"
+                  uid=8_1056 generic
+                    uid=8_1057 StaticText "用于在多个关键帧之间生成平滑动画。"
+                      uid=8_6 InlineTextBox "用于在多个关键帧之间生成平滑动画。"
+                  uid=8_1058 generic
+                    uid=8_1059 generic
+                      uid=8_1060 generic
+                        uid=8_1061 image
+                    uid=8_1062 code
+                      uid=8_1063 StaticText "curl"
+                        uid=8_6 InlineTextBox "curl"
+                      uid=8_1064 StaticText " "
+                        uid=8_6 InlineTextBox " "
+                      uid=8_1065 StaticText "-X"
+                        uid=8_6 InlineTextBox "-X"
+                      uid=8_1066 StaticText " POST https://apihub.agnes-ai.com/v1/videos "
+                        uid=8_6 InlineTextBox " POST https://apihub.agnes-ai.com/v1/videos "
+                      uid=8_1067 StaticText "\"
+                        uid=8_6 InlineTextBox "\"
+                      uid=8_1068 StaticText "
+  "
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "  "
+                      uid=8_1069 StaticText "-H"
+                        uid=8_6 InlineTextBox "-H"
+                      uid=8_1070 StaticText " "
+                        uid=8_6 InlineTextBox " "
+                      uid=8_1071 StaticText ""Authorization: Bearer YOUR_API_KEY""
+                        uid=8_6 InlineTextBox ""Authorization: Bearer YOUR_API_KEY""
+                      uid=8_1072 StaticText " "
+                        uid=8_6 InlineTextBox " "
+                      uid=8_1073 StaticText "\"
+                        uid=8_6 InlineTextBox "\"
+                      uid=8_1074 StaticText "
+  "
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "  "
+                      uid=8_1075 StaticText "-H"
+                        uid=8_6 InlineTextBox "-H"
+                      uid=8_1076 StaticText " "
+                        uid=8_6 InlineTextBox " "
+                      uid=8_1077 StaticText ""Content-Type: application/json""
+                        uid=8_6 InlineTextBox ""Content-Type: application/json""
+                      uid=8_1078 StaticText " "
+                        uid=8_6 InlineTextBox " "
+                      uid=8_1079 StaticText "\"
+                        uid=8_6 InlineTextBox "\"
+                      uid=8_1080 StaticText "
+  "
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "  "
+                      uid=8_1081 StaticText "-d"
+                        uid=8_6 InlineTextBox "-d"
+                      uid=8_1082 StaticText " "
+                        uid=8_6 InlineTextBox " "
+                      uid=8_1083 StaticText "'{
+    "model": "agnes-video-v2.0",
+    "prompt": "Generate a smooth cinematic transition between the keyframes, maintaining visual consistency and natural camera movement",
+    "extra_body": {
+      "image": [
+        "https://example.com/keyframe1.png",
+        "https://example.com/keyframe2.png"
+      ],
+      "mode": "keyframes"
+    },
+    "num_frames": 121,
+    "frame_rate": 24
+  }'"
+                        uid=8_6 InlineTextBox "'{"
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "    "model": "agnes-video-v2.0","
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "    "prompt": "Generate a smooth cinematic transition between the keyframes, maintaining visual consistency and natural camera movement","
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "    "extra_body": {"
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "      "image": ["
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "        "https://example.com/keyframe1.png","
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "        "https://example.com/keyframe2.png""
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "      ],"
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "      "mode": "keyframes""
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "    },"
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "    "num_frames": 121,"
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "    "frame_rate": 24"
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "  }'"
+                  uid=8_1084 separator orientation="horizontal"
+                  uid=8_1085 heading "创建任务响应 创建任务响应" level="3"
+                    uid=8_1086 generic
+                    uid=8_1087 link "创建任务响应" url="https://agnes-ai.com/doc/agnes-video-v20#3764a189eee58020af54d0f851d05a61"
+                      uid=8_1088 image
+                    uid=8_1089 StaticText "创建任务响应"
+                      uid=8_6 InlineTextBox "创建任务响应"
+                  uid=8_1090 generic
+                    uid=8_1091 StaticText "视频任务创建成功后，API 会返回任务信息。"
+                      uid=8_6 InlineTextBox "视频任务创建成功后，API 会返回任务信息。"
+                  uid=8_1092 generic
+                    uid=8_1093 StaticText "响应中会同时包含 "
+                      uid=8_6 InlineTextBox "响应中会同时包含 "
+                    uid=8_1094 code
+                      uid=8_1095 StaticText "task_id"
+                        uid=8_6 InlineTextBox "task_id"
+                    uid=8_1096 StaticText " 和 "
+                      uid=8_6 InlineTextBox " 和 "
+                    uid=8_1097 code
+                      uid=8_1098 StaticText "video_id"
+                        uid=8_6 InlineTextBox "video_id"
+                    uid=8_1099 StaticText "。"
+                      uid=8_6 InlineTextBox "。"
+                  uid=8_1100 generic
+                    uid=8_1101 StaticText "其中，"
+                      uid=8_6 InlineTextBox "其中，"
+                    uid=8_1102 code
+                      uid=8_1103 StaticText "video_id"
+                        uid=8_6 InlineTextBox "video_id"
+                    uid=8_1104 StaticText " 是推荐用于查询视频结果的 ID。"
+                      uid=8_6 InlineTextBox " 是推荐用于查询视频结果的 ID。"
+                  uid=8_1105 generic
+                    uid=8_1106 generic
+                      uid=8_1107 generic
+                        uid=8_1108 image
+                    uid=8_1109 code
+                      uid=8_1110 StaticText "{"
+                        uid=8_6 InlineTextBox "{"
+                      uid=8_1111 StaticText "
+  "
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "  "
+                      uid=8_1112 StaticText ""id""
+                        uid=8_6 InlineTextBox ""id""
+                      uid=8_1113 StaticText ":"
+                        uid=8_6 InlineTextBox ":"
+                      uid=8_1114 StaticText " "
+                        uid=8_6 InlineTextBox " "
+                      uid=8_1115 StaticText ""task_YOUR_TASK_ID""
+                        uid=8_6 InlineTextBox ""task_YOUR_TASK_ID""
+                      uid=8_1116 StaticText ","
+                        uid=8_6 InlineTextBox ","
+                      uid=8_1117 StaticText "
+  "
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "  "
+                      uid=8_1118 StaticText ""task_id""
+                        uid=8_6 InlineTextBox ""task_id""
+                      uid=8_1119 StaticText ":"
+                        uid=8_6 InlineTextBox ":"
+                      uid=8_1120 StaticText " "
+                        uid=8_6 InlineTextBox " "
+                      uid=8_1121 StaticText ""task_YOUR_TASK_ID""
+                        uid=8_6 InlineTextBox ""task_YOUR_TASK_ID""
+                      uid=8_1122 StaticText ","
+                        uid=8_6 InlineTextBox ","
+                      uid=8_1123 StaticText "
+  "
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "  "
+                      uid=8_1124 StaticText ""video_id""
+                        uid=8_6 InlineTextBox ""video_id""
+                      uid=8_1125 StaticText ":"
+                        uid=8_6 InlineTextBox ":"
+                      uid=8_1126 StaticText " "
+                        uid=8_6 InlineTextBox " "
+                      uid=8_1127 StaticText ""video_YOUR_VIDEO_ID""
+                        uid=8_6 InlineTextBox ""video_YOUR_VIDEO_ID""
+                      uid=8_1128 StaticText ","
+                        uid=8_6 InlineTextBox ","
+                      uid=8_1129 StaticText "
+  "
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "  "
+                      uid=8_1130 StaticText ""object""
+                        uid=8_6 InlineTextBox ""object""
+                      uid=8_1131 StaticText ":"
+                        uid=8_6 InlineTextBox ":"
+                      uid=8_1132 StaticText " "
+                        uid=8_6 InlineTextBox " "
+                      uid=8_1133 StaticText ""video""
+                        uid=8_6 InlineTextBox ""video""
+                      uid=8_1134 StaticText ","
+                        uid=8_6 InlineTextBox ","
+                      uid=8_1135 StaticText "
+  "
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "  "
+                      uid=8_1136 StaticText ""model""
+                        uid=8_6 InlineTextBox ""model""
+                      uid=8_1137 StaticText ":"
+                        uid=8_6 InlineTextBox ":"
+                      uid=8_1138 StaticText " "
+                        uid=8_6 InlineTextBox " "
+                      uid=8_1139 StaticText ""agnes-video-v2.0""
+                        uid=8_6 InlineTextBox ""agnes-video-v2.0""
+                      uid=8_1140 StaticText ","
+                        uid=8_6 InlineTextBox ","
+                      uid=8_1141 StaticText "
+  "
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "  "
+                      uid=8_1142 StaticText ""status""
+                        uid=8_6 InlineTextBox ""status""
+                      uid=8_1143 StaticText ":"
+                        uid=8_6 InlineTextBox ":"
+                      uid=8_1144 StaticText " "
+                        uid=8_6 InlineTextBox " "
+                      uid=8_1145 StaticText ""queued""
+                        uid=8_6 InlineTextBox ""queued""
+                      uid=8_1146 StaticText ","
+                        uid=8_6 InlineTextBox ","
+                      uid=8_1147 StaticText "
+  "
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "  "
+                      uid=8_1148 StaticText ""progress""
+                        uid=8_6 InlineTextBox ""progress""
+                      uid=8_1149 StaticText ":"
+                        uid=8_6 InlineTextBox ":"
+                      uid=8_1150 StaticText " "
+                        uid=8_6 InlineTextBox " "
+                      uid=8_1151 StaticText "0"
+                        uid=8_6 InlineTextBox "0"
+                      uid=8_1152 StaticText ","
+                        uid=8_6 InlineTextBox ","
+                      uid=8_1153 StaticText "
+  "
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "  "
+                      uid=8_1154 StaticText ""created_at""
+                        uid=8_6 InlineTextBox ""created_at""
+                      uid=8_1155 StaticText ":"
+                        uid=8_6 InlineTextBox ":"
+                      uid=8_1156 StaticText " "
+                        uid=8_6 InlineTextBox " "
+                      uid=8_1157 StaticText "1780457477"
+                        uid=8_6 InlineTextBox "1780457477"
+                      uid=8_1158 StaticText ","
+                        uid=8_6 InlineTextBox ","
+                      uid=8_1159 StaticText "
+  "
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "  "
+                      uid=8_1160 StaticText ""seconds""
+                        uid=8_6 InlineTextBox ""seconds""
+                      uid=8_1161 StaticText ":"
+                        uid=8_6 InlineTextBox ":"
+                      uid=8_1162 StaticText " "
+                        uid=8_6 InlineTextBox " "
+                      uid=8_1163 StaticText ""10.0""
+                        uid=8_6 InlineTextBox ""10.0""
+                      uid=8_1164 StaticText ","
+                        uid=8_6 InlineTextBox ","
+                      uid=8_1165 StaticText "
+  "
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "  "
+                      uid=8_1166 StaticText ""size""
+                        uid=8_6 InlineTextBox ""size""
+                      uid=8_1167 StaticText ":"
+                        uid=8_6 InlineTextBox ":"
+                      uid=8_1168 StaticText " "
+                        uid=8_6 InlineTextBox " "
+                      uid=8_1169 StaticText ""1280x768""
+                        uid=8_6 InlineTextBox ""1280x768""
+                      uid=8_1170 StaticText "
+"
+                        uid=8_6 InlineTextBox "
+"
+                      uid=8_1171 StaticText "}"
+                        uid=8_6 InlineTextBox "}"
+                  uid=8_1172 heading "响应字段说明 响应字段说明" level="4"
+                    uid=8_1173 generic
+                    uid=8_1174 link "响应字段说明" url="https://agnes-ai.com/doc/agnes-video-v20#3764a189eee5805babe9df55bfadb3b5"
+                      uid=8_1175 image
+                    uid=8_1176 StaticText "响应字段说明"
+                      uid=8_6 InlineTextBox "响应字段说明"
+                  uid=8_1177 table
+                    uid=8_1178 ignored
+                      uid=8_1179 row
+                        uid=8_1180 cell "字段"
+                          uid=8_1181 generic
+                            uid=8_1182 StaticText "字段"
+                              uid=8_6 InlineTextBox "字段"
+                        uid=8_1183 cell "类型"
+                          uid=8_1184 generic
+                            uid=8_1185 StaticText "类型"
+                              uid=8_6 InlineTextBox "类型"
+                        uid=8_1186 cell "说明"
+                          uid=8_1187 generic
+                            uid=8_1188 StaticText "说明"
+                              uid=8_6 InlineTextBox "说明"
+                      uid=8_1189 row
+                        uid=8_1190 cell "id"
+                          uid=8_1191 generic
+                            uid=8_1192 code
+                              uid=8_1193 StaticText "id"
+                                uid=8_6 InlineTextBox "id"
+                        uid=8_1194 cell "string"
+                          uid=8_1195 generic
+                            uid=8_1196 StaticText "string"
+                              uid=8_6 InlineTextBox "string"
+                        uid=8_1197 cell "任务 ID，可用于旧版查询接口"
+                          uid=8_1198 generic
+                            uid=8_1199 StaticText "任务 ID，可用于旧版查询接口"
+                              uid=8_6 InlineTextBox "任务 ID，可用于旧版查询接口"
+                      uid=8_1200 row
+                        uid=8_1201 cell "task_id"
+                          uid=8_1202 generic
+                            uid=8_1203 code
+                              uid=8_1204 StaticText "task_id"
+                                uid=8_6 InlineTextBox "task_id"
+                        uid=8_1205 cell "string"
+                          uid=8_1206 generic
+                            uid=8_1207 StaticText "string"
+                              uid=8_6 InlineTextBox "string"
+                        uid=8_1208 cell "任务 ID，作用与  id  相同"
+                          uid=8_1209 generic
+                            uid=8_1210 StaticText "任务 ID，作用与 "
+                              uid=8_6 InlineTextBox "任务 ID，作用与 "
+                            uid=8_1211 code
+                              uid=8_1212 StaticText "id"
+                                uid=8_6 InlineTextBox "id"
+                            uid=8_1213 StaticText " 相同"
+                              uid=8_6 InlineTextBox " 相同"
+                      uid=8_1214 row
+                        uid=8_1215 cell "video_id"
+                          uid=8_1216 generic
+                            uid=8_1217 code
+                              uid=8_1218 StaticText "video_id"
+                                uid=8_6 InlineTextBox "video_id"
+                        uid=8_1219 cell "string"
+                          uid=8_1220 generic
+                            uid=8_1221 StaticText "string"
+                              uid=8_6 InlineTextBox "string"
+                        uid=8_1222 cell "视频 ID，推荐用于查询视频结果"
+                          uid=8_1223 generic
+                            uid=8_1224 StaticText "视频 ID，推荐用于查询视频结果"
+                              uid=8_6 InlineTextBox "视频 ID，推荐用于查询视频结果"
+                      uid=8_1225 row
+                        uid=8_1226 cell "object"
+                          uid=8_1227 generic
+                            uid=8_1228 code
+                              uid=8_1229 StaticText "object"
+                                uid=8_6 InlineTextBox "object"
+                        uid=8_1230 cell "string"
+                          uid=8_1231 generic
+                            uid=8_1232 StaticText "string"
+                              uid=8_6 InlineTextBox "string"
+                        uid=8_1233 cell "对象类型，通常为  video"
+                          uid=8_1234 generic
+                            uid=8_1235 StaticText "对象类型，通常为 "
+                              uid=8_6 InlineTextBox "对象类型，通常为 "
+                            uid=8_1236 code
+                              uid=8_1237 StaticText "video"
+                                uid=8_6 InlineTextBox "video"
+                      uid=8_1238 row
+                        uid=8_1239 cell "model"
+                          uid=8_1240 generic
+                            uid=8_1241 code
+                              uid=8_1242 StaticText "model"
+                                uid=8_6 InlineTextBox "model"
+                        uid=8_1243 cell "string"
+                          uid=8_1244 generic
+                            uid=8_1245 StaticText "string"
+                              uid=8_6 InlineTextBox "string"
+                        uid=8_1246 cell "当前任务使用的模型"
+                          uid=8_1247 generic
+                            uid=8_1248 StaticText "当前任务使用的模型"
+                              uid=8_6 InlineTextBox "当前任务使用的模型"
+                      uid=8_1249 row
+                        uid=8_1250 cell "status"
+                          uid=8_1251 generic
+                            uid=8_1252 code
+                              uid=8_1253 StaticText "status"
+                                uid=8_6 InlineTextBox "status"
+                        uid=8_1254 cell "string"
+                          uid=8_1255 generic
+                            uid=8_1256 StaticText "string"
+                              uid=8_6 InlineTextBox "string"
+                        uid=8_1257 cell "当前任务状态"
+                          uid=8_1258 generic
+                            uid=8_1259 StaticText "当前任务状态"
+                              uid=8_6 InlineTextBox "当前任务状态"
+                      uid=8_1260 row
+                        uid=8_1261 cell "progress"
+                          uid=8_1262 generic
+                            uid=8_1263 code
+                              uid=8_1264 StaticText "progress"
+                                uid=8_6 InlineTextBox "progress"
+                        uid=8_1265 cell "integer"
+                          uid=8_1266 generic
+                            uid=8_1267 StaticText "integer"
+                              uid=8_6 InlineTextBox "integer"
+                        uid=8_1268 cell "当前任务进度百分比"
+                          uid=8_1269 generic
+                            uid=8_1270 StaticText "当前任务进度百分比"
+                              uid=8_6 InlineTextBox "当前任务进度百分比"
+                      uid=8_1271 row
+                        uid=8_1272 cell "created_at"
+                          uid=8_1273 generic
+                            uid=8_1274 code
+                              uid=8_1275 StaticText "created_at"
+                                uid=8_6 InlineTextBox "created_at"
+                        uid=8_1276 cell "integer"
+                          uid=8_1277 generic
+                            uid=8_1278 StaticText "integer"
+                              uid=8_6 InlineTextBox "integer"
+                        uid=8_1279 cell "任务创建时间戳"
+                          uid=8_1280 generic
+                            uid=8_1281 StaticText "任务创建时间戳"
+                              uid=8_6 InlineTextBox "任务创建时间戳"
+                      uid=8_1282 row
+                        uid=8_1283 cell "seconds"
+                          uid=8_1284 generic
+                            uid=8_1285 code
+                              uid=8_1286 StaticText "seconds"
+                                uid=8_6 InlineTextBox "seconds"
+                        uid=8_1287 cell "string"
+                          uid=8_1288 generic
+                            uid=8_1289 StaticText "string"
+                              uid=8_6 InlineTextBox "string"
+                        uid=8_1290 cell "视频时长，单位为秒"
+                          uid=8_1291 generic
+                            uid=8_1292 StaticText "视频时长，单位为秒"
+                              uid=8_6 InlineTextBox "视频时长，单位为秒"
+                      uid=8_1293 row
+                        uid=8_1294 cell "size"
+                          uid=8_1295 generic
+                            uid=8_1296 code
+                              uid=8_1297 StaticText "size"
+                                uid=8_6 InlineTextBox "size"
+                        uid=8_1298 cell "string"
+                          uid=8_1299 generic
+                            uid=8_1300 StaticText "string"
+                              uid=8_6 InlineTextBox "string"
+                        uid=8_1301 cell "视频分辨率"
+                          uid=8_1302 generic
+                            uid=8_1303 StaticText "视频分辨率"
+                              uid=8_6 InlineTextBox "视频分辨率"
+                  uid=8_1304 separator orientation="horizontal"
+                  uid=8_1305 heading "查询视频结果 查询视频结果" level="3"
+                    uid=8_1306 generic
+                    uid=8_1307 link "查询视频结果" url="https://agnes-ai.com/doc/agnes-video-v20#3764a189eee58050ba1aeebd147ec631"
+                      uid=8_1308 image
+                    uid=8_1309 StaticText "查询视频结果"
+                      uid=8_6 InlineTextBox "查询视频结果"
+                  uid=8_1310 heading "推荐方式：使用 video_id 查询 推荐方式：使用  video_id  查询" level="4"
+                    uid=8_1311 generic
+                    uid=8_1312 link "推荐方式：使用 video_id 查询" url="https://agnes-ai.com/doc/agnes-video-v20#3764a189eee5801b85efcf289ceb84b9"
+                      uid=8_1313 image
+                    uid=8_1314 StaticText "推荐方式：使用 "
+                      uid=8_6 InlineTextBox "推荐方式：使用 "
+                    uid=8_1315 code
+                      uid=8_1316 StaticText "video_id"
+                        uid=8_6 InlineTextBox "video_id"
+                    uid=8_1317 StaticText " 查询"
+                      uid=8_6 InlineTextBox " 查询"
+                  uid=8_1318 generic
+                    uid=8_1319 StaticText "创建视频任务后，使用返回的 "
+                      uid=8_6 InlineTextBox "创建视频任务后，使用返回的 "
+                    uid=8_1320 code
+                      uid=8_1321 StaticText "video_id"
+                        uid=8_6 InlineTextBox "video_id"
+                    uid=8_1322 StaticText " 查询视频结果。建议轮询间隔5s。"
+                      uid=8_6 InlineTextBox " 查询视频结果。建议轮询间隔5s。"
+                  uid=8_1323 generic
+                    uid=8_1324 generic
+                      uid=8_1325 generic
+                        uid=8_1326 image
+                    uid=8_1327 code
+                      uid=8_1328 StaticText "curl"
+                        uid=8_6 InlineTextBox "curl"
+                      uid=8_1329 StaticText " "
+                        uid=8_6 InlineTextBox " "
+                      uid=8_1330 StaticText "--location"
+                        uid=8_6 InlineTextBox "--location"
+                      uid=8_1331 StaticText " "
+                        uid=8_6 InlineTextBox " "
+                      uid=8_1332 StaticText "--request"
+                        uid=8_6 InlineTextBox "--request"
+                      uid=8_1333 StaticText " GET "
+                        uid=8_6 InlineTextBox " GET "
+                      uid=8_1334 StaticText "'https://apihub.agnes-ai.com/agnesapi?video_id=<VIDEO_ID>'"
+                        uid=8_6 InlineTextBox "'https://apihub.agnes-ai.com/agnesapi?video_id=<VIDEO_ID>'"
+                      uid=8_1335 StaticText " "
+                        uid=8_6 InlineTextBox " "
+                      uid=8_1336 StaticText "\"
+                        uid=8_6 InlineTextBox "\"
+                      uid=8_1337 StaticText "
+  "
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "  "
+                      uid=8_1338 StaticText "--header"
+                        uid=8_6 InlineTextBox "--header"
+                      uid=8_1339 StaticText " "
+                        uid=8_6 InlineTextBox " "
+                      uid=8_1340 StaticText "'Authorization: Bearer <API_KEY>'"
+                        uid=8_6 InlineTextBox "'Authorization: Bearer <API_KEY>'"
+                  uid=8_1341 generic
+                    uid=8_1342 StaticText "示例："
+                      uid=8_6 InlineTextBox "示例："
+                  uid=8_1343 generic
+                    uid=8_1344 generic
+                      uid=8_1345 generic
+                        uid=8_1346 image
+                    uid=8_1347 code
+                      uid=8_1348 StaticText "curl"
+                        uid=8_6 InlineTextBox "curl"
+                      uid=8_1349 StaticText " "
+                        uid=8_6 InlineTextBox " "
+                      uid=8_1350 StaticText "--location"
+                        uid=8_6 InlineTextBox "--location"
+                      uid=8_1351 StaticText " "
+                        uid=8_6 InlineTextBox " "
+                      uid=8_1352 StaticText "--request"
+                        uid=8_6 InlineTextBox "--request"
+                      uid=8_1353 StaticText " GET "
+                        uid=8_6 InlineTextBox " GET "
+                      uid=8_1354 StaticText "'https://apihub.agnes-ai.com/agnesapi?video_id=video_xxxxxx'"
+                        uid=8_6 InlineTextBox "'https://apihub.agnes-ai.com/agnesapi?video_id=video_xxxxxx'"
+                      uid=8_1355 StaticText " "
+                        uid=8_6 InlineTextBox " "
+                      uid=8_1356 StaticText "\"
+                        uid=8_6 InlineTextBox "\"
+                      uid=8_1357 StaticText "
+  "
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "  "
+                      uid=8_1358 StaticText "--header"
+                        uid=8_6 InlineTextBox "--header"
+                      uid=8_1359 StaticText " "
+                        uid=8_6 InlineTextBox " "
+                      uid=8_1360 StaticText "'Authorization: Bearer <API_KEY>'"
+                        uid=8_6 InlineTextBox "'Authorization: Bearer <API_KEY>'"
+                  uid=8_1361 separator orientation="horizontal"
+                  uid=8_1362 heading "可选参数：model_name 可选参数： model_name" level="4"
+                    uid=8_1363 generic
+                    uid=8_1364 link "可选参数：model_name" url="https://agnes-ai.com/doc/agnes-video-v20#3764a189eee58001b80ffdbb8cbd5a30"
+                      uid=8_1365 image
+                    uid=8_1366 StaticText "可选参数："
+                      uid=8_6 InlineTextBox "可选参数："
+                    uid=8_1367 code
+                      uid=8_1368 StaticText "model_name"
+                        uid=8_6 InlineTextBox "model_name"
+                  uid=8_1369 generic
+                    uid=8_1370 StaticText "查询视频结果时，也可以传入 "
+                      uid=8_6 InlineTextBox "查询视频结果时，也可以传入 "
+                    uid=8_1371 code
+                      uid=8_1372 StaticText "model_name"
+                        uid=8_6 InlineTextBox "model_name"
+                    uid=8_1373 StaticText " 显式指定模型名。"
+                      uid=8_6 InlineTextBox " 显式指定模型名。"
+                  uid=8_1374 generic
+                    uid=8_1375 generic
+                      uid=8_1376 generic
+                        uid=8_1377 image
+                    uid=8_1378 code
+                      uid=8_1379 StaticText "curl"
+                        uid=8_6 InlineTextBox "curl"
+                      uid=8_1380 StaticText " "
+                        uid=8_6 InlineTextBox " "
+                      uid=8_1381 StaticText "--location"
+                        uid=8_6 InlineTextBox "--location"
+                      uid=8_1382 StaticText " "
+                        uid=8_6 InlineTextBox " "
+                      uid=8_1383 StaticText "--request"
+                        uid=8_6 InlineTextBox "--request"
+                      uid=8_1384 StaticText " GET "
+                        uid=8_6 InlineTextBox " GET "
+                      uid=8_1385 StaticText "'https://apihub.agnes-ai.com/agnesapi?video_id=<VIDEO_ID>&model_name=<MODEL>'"
+                        uid=8_6 InlineTextBox "'https://apihub.agnes-ai.com/agnesapi?video_id=<VIDEO_ID>&model_name=<MODEL>'"
+                      uid=8_1386 StaticText " "
+                        uid=8_6 InlineTextBox " "
+                      uid=8_1387 StaticText "\"
+                        uid=8_6 InlineTextBox "\"
+                      uid=8_1388 StaticText "
+  "
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "  "
+                      uid=8_1389 StaticText "--header"
+                        uid=8_6 InlineTextBox "--header"
+                      uid=8_1390 StaticText " "
+                        uid=8_6 InlineTextBox " "
+                      uid=8_1391 StaticText "'Authorization: Bearer <API_KEY>'"
+                        uid=8_6 InlineTextBox "'Authorization: Bearer <API_KEY>'"
+                  uid=8_1392 generic
+                    uid=8_1393 StaticText "示例："
+                      uid=8_6 InlineTextBox "示例："
+                  uid=8_1394 generic
+                    uid=8_1395 generic
+                      uid=8_1396 generic
+                        uid=8_1397 image
+                    uid=8_1398 code
+                      uid=8_1399 StaticText "curl"
+                        uid=8_6 InlineTextBox "curl"
+                      uid=8_1400 StaticText " "
+                        uid=8_6 InlineTextBox " "
+                      uid=8_1401 StaticText "--location"
+                        uid=8_6 InlineTextBox "--location"
+                      uid=8_1402 StaticText " "
+                        uid=8_6 InlineTextBox " "
+                      uid=8_1403 StaticText "--request"
+                        uid=8_6 InlineTextBox "--request"
+                      uid=8_1404 StaticText " GET "
+                        uid=8_6 InlineTextBox " GET "
+                      uid=8_1405 StaticText "'https://apihub.agnes-ai.com/agnesapi?video_id=video_xxxxxx&model_name=agnes-video-v2.0'"
+                        uid=8_6 InlineTextBox "'https://apihub.agnes-ai.com/agnesapi?video_id=video_xxxxxx&model_name=agnes-video-v2.0'"
+                      uid=8_1406 StaticText " "
+                        uid=8_6 InlineTextBox " "
+                      uid=8_1407 StaticText "\"
+                        uid=8_6 InlineTextBox "\"
+                      uid=8_1408 StaticText "
+  "
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "  "
+                      uid=8_1409 StaticText "--header"
+                        uid=8_6 InlineTextBox "--header"
+                      uid=8_1410 StaticText " "
+                        uid=8_6 InlineTextBox " "
+                      uid=8_1411 StaticText "'Authorization: Bearer <API_KEY>'"
+                        uid=8_6 InlineTextBox "'Authorization: Bearer <API_KEY>'"
+                  uid=8_1412 generic
+                    uid=8_1413 StaticText " "
+                      uid=8_6 InlineTextBox " "
+                  uid=8_1414 separator orientation="horizontal"
+                  uid=8_1415 heading "兼容方式：使用 task_id 查询 兼容方式：使用  task_id  查询" level="4"
+                    uid=8_1416 generic
+                    uid=8_1417 link "兼容方式：使用 task_id 查询" url="https://agnes-ai.com/doc/agnes-video-v20#3764a189eee580d08946de112353db5b"
+                      uid=8_1418 image
+                    uid=8_1419 StaticText "兼容方式：使用 "
+                      uid=8_6 InlineTextBox "兼容方式：使用 "
+                    uid=8_1420 code
+                      uid=8_1421 StaticText "task_id"
+                        uid=8_6 InlineTextBox "task_id"
+                    uid=8_1422 StaticText " 查询"
+                      uid=8_6 InlineTextBox " 查询"
+                  uid=8_1423 generic
+                    uid=8_1424 StaticText "为了兼容旧版本，仍然可以使用 "
+                      uid=8_6 InlineTextBox "为了兼容旧版本，仍然可以使用 "
+                    uid=8_1425 code
+                      uid=8_1426 StaticText "task_id"
+                        uid=8_6 InlineTextBox "task_id"
+                    uid=8_1427 StaticText " 查询视频结果。"
+                      uid=8_6 InlineTextBox " 查询视频结果。"
+                  uid=8_1428 generic
+                    uid=8_1429 generic
+                      uid=8_1430 generic
+                        uid=8_1431 image
+                    uid=8_1432 code
+                      uid=8_1433 StaticText "curl"
+                        uid=8_6 InlineTextBox "curl"
+                      uid=8_1434 StaticText " "
+                        uid=8_6 InlineTextBox " "
+                      uid=8_1435 StaticText "--location"
+                        uid=8_6 InlineTextBox "--location"
+                      uid=8_1436 StaticText " "
+                        uid=8_6 InlineTextBox " "
+                      uid=8_1437 StaticText "--request"
+                        uid=8_6 InlineTextBox "--request"
+                      uid=8_1438 StaticText " GET "
+                        uid=8_6 InlineTextBox " GET "
+                      uid=8_1439 StaticText "'https://apihub.agnes-ai.com/v1/videos/<TASK_ID>'"
+                        uid=8_6 InlineTextBox "'https://apihub.agnes-ai.com/v1/videos/<TASK_ID>'"
+                      uid=8_1440 StaticText " "
+                        uid=8_6 InlineTextBox " "
+                      uid=8_1441 StaticText "\"
+                        uid=8_6 InlineTextBox "\"
+                      uid=8_1442 StaticText "
+  "
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "  "
+                      uid=8_1443 StaticText "--header"
+                        uid=8_6 InlineTextBox "--header"
+                      uid=8_1444 StaticText " "
+                        uid=8_6 InlineTextBox " "
+                      uid=8_1445 StaticText "'Authorization: Bearer <API_KEY>'"
+                        uid=8_6 InlineTextBox "'Authorization: Bearer <API_KEY>'"
+                  uid=8_1446 generic
+                    uid=8_1447 StaticText "示例："
+                      uid=8_6 InlineTextBox "示例："
+                  uid=8_1448 generic
+                    uid=8_1449 generic
+                      uid=8_1450 generic
+                        uid=8_1451 image
+                    uid=8_1452 code
+                      uid=8_1453 StaticText "curl"
+                        uid=8_6 InlineTextBox "curl"
+                      uid=8_1454 StaticText " "
+                        uid=8_6 InlineTextBox " "
+                      uid=8_1455 StaticText "--location"
+                        uid=8_6 InlineTextBox "--location"
+                      uid=8_1456 StaticText " "
+                        uid=8_6 InlineTextBox " "
+                      uid=8_1457 StaticText "--request"
+                        uid=8_6 InlineTextBox "--request"
+                      uid=8_1458 StaticText " GET "
+                        uid=8_6 InlineTextBox " GET "
+                      uid=8_1459 StaticText "'https://apihub.agnes-ai.com/v1/videos/task_xxxxxx'"
+                        uid=8_6 InlineTextBox "'https://apihub.agnes-ai.com/v1/videos/task_xxxxxx'"
+                      uid=8_1460 StaticText " "
+                        uid=8_6 InlineTextBox " "
+                      uid=8_1461 StaticText "\"
+                        uid=8_6 InlineTextBox "\"
+                      uid=8_1462 StaticText "
+  "
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "  "
+                      uid=8_1463 StaticText "--header"
+                        uid=8_6 InlineTextBox "--header"
+                      uid=8_1464 StaticText " "
+                        uid=8_6 InlineTextBox " "
+                      uid=8_1465 StaticText "'Authorization: Bearer <API_KEY>'"
+                        uid=8_6 InlineTextBox "'Authorization: Bearer <API_KEY>'"
+                  uid=8_1466 generic
+                    uid=8_1467 StaticText "该方式仍然支持，但新的接入建议使用 "
+                      uid=8_6 InlineTextBox "该方式仍然支持，但新的接入建议使用 "
+                    uid=8_1468 code
+                      uid=8_1469 StaticText "video_id"
+                        uid=8_6 InlineTextBox "video_id"
+                    uid=8_1470 StaticText " 查询方式。"
+                      uid=8_6 InlineTextBox " 查询方式。"
+                  uid=8_1471 separator orientation="horizontal"
+                  uid=8_1472 heading "查询结果响应 查询结果响应" level="3"
+                    uid=8_1473 generic
+                    uid=8_1474 link "查询结果响应" url="https://agnes-ai.com/doc/agnes-video-v20#3764a189eee58084b64ef8f39cad2b36"
+                      uid=8_1475 image
+                    uid=8_1476 StaticText "查询结果响应"
+                      uid=8_6 InlineTextBox "查询结果响应"
+                  uid=8_1477 generic
+                    uid=8_1478 StaticText "当任务完成后，API 会返回最终视频结果。"
+                      uid=8_6 InlineTextBox "当任务完成后，API 会返回最终视频结果。"
+                  uid=8_1479 generic
+                    uid=8_1480 generic
+                      uid=8_1481 generic
+                        uid=8_1482 image
+                    uid=8_1483 code
+                      uid=8_1484 StaticText "{"
+                        uid=8_6 InlineTextBox "{"
+                      uid=8_1485 StaticText "
+  "
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "  "
+                      uid=8_1486 StaticText ""id""
+                        uid=8_6 InlineTextBox ""id""
+                      uid=8_1487 StaticText ":"
+                        uid=8_6 InlineTextBox ":"
+                      uid=8_1488 StaticText " "
+                        uid=8_6 InlineTextBox " "
+                      uid=8_1489 StaticText ""task_YOUR_TASK_ID""
+                        uid=8_6 InlineTextBox ""task_YOUR_TASK_ID""
+                      uid=8_1490 StaticText ","
+                        uid=8_6 InlineTextBox ","
+                      uid=8_1491 StaticText "
+  "
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "  "
+                      uid=8_1492 StaticText ""video_id""
+                        uid=8_6 InlineTextBox ""video_id""
+                      uid=8_1493 StaticText ":"
+                        uid=8_6 InlineTextBox ":"
+                      uid=8_1494 StaticText " "
+                        uid=8_6 InlineTextBox " "
+                      uid=8_1495 StaticText ""video_YOUR_VIDEO_ID""
+                        uid=8_6 InlineTextBox ""video_YOUR_VIDEO_ID""
+                      uid=8_1496 StaticText ","
+                        uid=8_6 InlineTextBox ","
+                      uid=8_1497 StaticText "
+  "
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "  "
+                      uid=8_1498 StaticText ""model""
+                        uid=8_6 InlineTextBox ""model""
+                      uid=8_1499 StaticText ":"
+                        uid=8_6 InlineTextBox ":"
+                      uid=8_1500 StaticText " "
+                        uid=8_6 InlineTextBox " "
+                      uid=8_1501 StaticText ""agnes-video-v2.0""
+                        uid=8_6 InlineTextBox ""agnes-video-v2.0""
+                      uid=8_1502 StaticText ","
+                        uid=8_6 InlineTextBox ","
+                      uid=8_1503 StaticText "
+  "
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "  "
+                      uid=8_1504 StaticText ""object""
+                        uid=8_6 InlineTextBox ""object""
+                      uid=8_1505 StaticText ":"
+                        uid=8_6 InlineTextBox ":"
+                      uid=8_1506 StaticText " "
+                        uid=8_6 InlineTextBox " "
+                      uid=8_1507 StaticText ""video""
+                        uid=8_6 InlineTextBox ""video""
+                      uid=8_1508 StaticText ","
+                        uid=8_6 InlineTextBox ","
+                      uid=8_1509 StaticText "
+  "
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "  "
+                      uid=8_1510 StaticText ""status""
+                        uid=8_6 InlineTextBox ""status""
+                      uid=8_1511 StaticText ":"
+                        uid=8_6 InlineTextBox ":"
+                      uid=8_1512 StaticText " "
+                        uid=8_6 InlineTextBox " "
+                      uid=8_1513 StaticText ""completed""
+                        uid=8_6 InlineTextBox ""completed""
+                      uid=8_1514 StaticText ","
+                        uid=8_6 InlineTextBox ","
+                      uid=8_1515 StaticText "
+  "
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "  "
+                      uid=8_1516 StaticText ""progress""
+                        uid=8_6 InlineTextBox ""progress""
+                      uid=8_1517 StaticText ":"
+                        uid=8_6 InlineTextBox ":"
+                      uid=8_1518 StaticText " "
+                        uid=8_6 InlineTextBox " "
+                      uid=8_1519 StaticText "100"
+                        uid=8_6 InlineTextBox "100"
+                      uid=8_1520 StaticText ","
+                        uid=8_6 InlineTextBox ","
+                      uid=8_1521 StaticText "
+  "
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "  "
+                      uid=8_1522 StaticText ""seconds""
+                        uid=8_6 InlineTextBox ""seconds""
+                      uid=8_1523 StaticText ":"
+                        uid=8_6 InlineTextBox ":"
+                      uid=8_1524 StaticText " "
+                        uid=8_6 InlineTextBox " "
+                      uid=8_1525 StaticText ""10.0""
+                        uid=8_6 InlineTextBox ""10.0""
+                      uid=8_1526 StaticText ","
+                        uid=8_6 InlineTextBox ","
+                      uid=8_1527 StaticText "
+  "
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "  "
+                      uid=8_1528 StaticText ""size""
+                        uid=8_6 InlineTextBox ""size""
+                      uid=8_1529 StaticText ":"
+                        uid=8_6 InlineTextBox ":"
+                      uid=8_1530 StaticText " "
+                        uid=8_6 InlineTextBox " "
+                      uid=8_1531 StaticText ""1280x768""
+                        uid=8_6 InlineTextBox ""1280x768""
+                      uid=8_1532 StaticText ","
+                        uid=8_6 InlineTextBox ","
+                      uid=8_1533 StaticText "
+  "
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "  "
+                      uid=8_1534 StaticText ""remixed_from_video_id""
+                        uid=8_6 InlineTextBox ""remixed_from_video_id""
+                      uid=8_1535 StaticText ":"
+                        uid=8_6 InlineTextBox ":"
+                      uid=8_1536 StaticText " "
+                        uid=8_6 InlineTextBox " "
+                      uid=8_1537 StaticText ""https://storage.googleapis.com/agnes-aigc/aigc/videos/2026/06/03/video_xxxxxx.mp4""
+                        uid=8_6 InlineTextBox ""https://storage.googleapis.com/agnes-aigc/aigc/videos/2026/06/03/video_xxxxxx.mp4""
+                      uid=8_1538 StaticText ","
+                        uid=8_6 InlineTextBox ","
+                      uid=8_1539 StaticText "
+  "
+                        uid=8_6 InlineTextBox "
+"
+                        uid=8_6 InlineTextBox "  "
+                      uid=8_1540 StaticText ""error""
+                        uid=8_6 InlineTextBox ""error""
+                      uid=8_1541 StaticText ":"
+                        uid=8_6 InlineTextBox ":"
+                      uid=8_1542 StaticText " "
+                        uid=8_6 InlineTextBox " "
+                      uid=8_1543 StaticText "null"
+                        uid=8_6 InlineTextBox "null"
+                      uid=8_1544 StaticText "
+"
+                        uid=8_6 InlineTextBox "
+"
+                      uid=8_1545 StaticText "}"
+                        uid=8_6 InlineTextBox "}"
+                  uid=8_1546 heading "结果字段说明 结果字段说明" level="4"
+                    uid=8_1547 generic
+                    uid=8_1548 link "结果字段说明" url="https://agnes-ai.com/doc/agnes-video-v20#3764a189eee5800483dbcc390a38cd3b"
+                      uid=8_1549 image
+                    uid=8_1550 StaticText "结果字段说明"
+                      uid=8_6 InlineTextBox "结果字段说明"
+                  uid=8_1551 table
+                    uid=8_1552 ignored
+                      uid=8_1553 row
+                        uid=8_1554 cell "字段"
+                          uid=8_1555 generic
+                            uid=8_1556 StaticText "字段"
+                              uid=8_6 InlineTextBox "字段"
+                        uid=8_1557 cell "类型"
+                          uid=8_1558 generic
+                            uid=8_1559 StaticText "类型"
+                              uid=8_6 InlineTextBox "类型"
+                        uid=8_1560 cell "说明"
+                          uid=8_1561 generic
+                            uid=8_1562 StaticText "说明"
+                              uid=8_6 InlineTextBox "说明"
+                      uid=8_1563 row
+                        uid=8_1564 cell "id"
+                          uid=8_1565 generic
+                            uid=8_1566 code
+                              uid=8_1567 StaticText "id"
+                                uid=8_6 InlineTextBox "id"
+                        uid=8_1568 cell "string"
+                          uid=8_1569 generic
+                            uid=8_1570 StaticText "string"
+                              uid=8_6 InlineTextBox "string"
+                        uid=8_1571 cell "任务 ID"
+                          uid=8_1572 generic
+                            uid=8_1573 StaticText "任务 ID"
+                              uid=8_6 InlineTextBox "任务 ID"
+                      uid=8_1574 row
+                        uid=8_1575 cell "video_id"
+                          uid=8_1576 generic
+                            uid=8_1577 code
+                              uid=8_1578 StaticText "video_id"
+                                uid=8_6 InlineTextBox "video_id"
+                        uid=8_1579 cell "string"
+                          uid=8_1580 generic
+                            uid=8_1581 StaticText "string"
+                              uid=8_6 InlineTextBox "string"
+                        uid=8_1582 cell "视频 ID"
+                          uid=8_1583 generic
+                            uid=8_1584 StaticText "视频 ID"
+                              uid=8_6 InlineTextBox "视频 ID"
+                      uid=8_1585 row
+                        uid=8_1586 cell "model"
+                          uid=8_1587 generic
+                            uid=8_1588 code
+                              uid=8_1589 StaticText "model"
+                                uid=8_6 InlineTextBox "model"
+                        uid=8_1590 cell "string"
+                          uid=8_1591 generic
+                            uid=8_1592 StaticText "string"
+                              uid=8_6 InlineTextBox "string"
+                        uid=8_1593 cell "当前任务使用的模型"
+                          uid=8_1594 generic
+                            uid=8_1595 StaticText "当前任务使用的模型"
+                              uid=8_6 InlineTextBox "当前任务使用的模型"
+                      uid=8_1596 row
+                        uid=8_1597 cell "object"
+                          uid=8_1598 generic
+                            uid=8_1599 code
+                              uid=8_1600 StaticText "object"
+                                uid=8_6 InlineTextBox "object"
+                        uid=8_1601 cell "string"
+                          uid=8_1602 generic
+                            uid=8_1603 StaticText "string"
+                              uid=8_6 InlineTextBox "string"
+                        uid=8_1604 cell "对象类型"
+                          uid=8_1605 generic
+                            uid=8_1606 StaticText "对象类型"
+                              uid=8_6 InlineTextBox "对象类型"
+                      uid=8_1607 row
+                        uid=8_1608 cell "status"
+                          uid=8_1609 generic
+                            uid=8_1610 code
+                              uid=8_1611 StaticText "status"
+                                uid=8_6 InlineTextBox "status"
+                        uid=8_1612 cell "string"
+                          uid=8_1613 generic
+                            uid=8_1614 StaticText "string"
+                              uid=8_6 InlineTextBox "string"
+                        uid=8_1615 cell "任务状态"
+                          uid=8_1616 generic
+                            uid=8_1617 StaticText "任务状态"
+                              uid=8_6 InlineTextBox "任务状态"
+                      uid=8_1618 row
+                        uid=8_1619 cell "progress"
+                          uid=8_1620 generic
+                            uid=8_1621 code
+                              uid=8_1622 StaticText "progress"
+                                uid=8_6 InlineTextBox "progress"
+                        uid=8_1623 cell "integer"
+                          uid=8_1624 generic
+                            uid=8_1625 StaticText "integer"
+                              uid=8_6 InlineTextBox "integer"
+                        uid=8_1626 cell "任务进度百分比"
+                          uid=8_1627 generic
+                            uid=8_1628 StaticText "任务进度百分比"
+                              uid=8_6 InlineTextBox "任务进度百分比"
+                      uid=8_1629 row
+                        uid=8_1630 cell "seconds"
+                          uid=8_1631 generic
+                            uid=8_1632 code
+                              uid=8_1633 StaticText "seconds"
+                                uid=8_6 InlineTextBox "seconds"
+                        uid=8_1634 cell "string"
+                          uid=8_1635 generic
+                            uid=8_1636 StaticText "string"
+                              uid=8_6 InlineTextBox "string"
+                        uid=8_1637 cell "视频时长，单位为秒"
+                          uid=8_1638 generic
+                            uid=8_1639 StaticText "视频时长，单位为秒"
+                              uid=8_6 InlineTextBox "视频时长，单位为秒"
+                      uid=8_1640 row
+                        uid=8_1641 cell "size"
+                          uid=8_1642 generic
+                            uid=8_1643 code
+                              uid=8_1644 StaticText "size"
+                                uid=8_6 InlineTextBox "size"
+                        uid=8_1645 cell "string"
+                          uid=8_1646 generic
+                            uid=8_1647 StaticText "string"
+                              uid=8_6 InlineTextBox "string"
+                        uid=8_1648 cell "视频分辨率"
+                          uid=8_1649 generic
+                            uid=8_1650 StaticText "视频分辨率"
+                              uid=8_6 InlineTextBox "视频分辨率"
+                      uid=8_1651 row
+                        uid=8_1652 cell "remixed_from_video_id"
+                          uid=8_1653 generic
+                            uid=8_1654 code
+                              uid=8_1655 StaticText "remixed_from_video_id"
+                                uid=8_6 InlineTextBox "remixed_from_video_id"
+                        uid=8_1656 cell "string"
+                          uid=8_1657 generic
+                            uid=8_1658 StaticText "string"
+                              uid=8_6 InlineTextBox "string"
+                        uid=8_1659 cell "本字段为最终生成的视频 URL，仅在  status  为  completed  时可用"
+                          uid=8_1660 generic
+                            uid=8_1661 StaticText "本字段为最终生成的视频 URL，仅在 "
+                              uid=8_6 InlineTextBox "本字段为最终生成的视频 URL，仅在 "
+                            uid=8_1662 code
+                              uid=8_1663 StaticText "status"
+                                uid=8_6 InlineTextBox "status"
+                            uid=8_1664 StaticText " 为 "
+                              uid=8_6 InlineTextBox " 为 "
+                            uid=8_1665 code
+                              uid=8_1666 StaticText "completed"
+                                uid=8_6 InlineTextBox "completed"
+                            uid=8_1667 StaticText " 时可用"
+                              uid=8_6 InlineTextBox " 时可用"
+                      uid=8_1668 row
+                        uid=8_1669 cell "error"
+                          uid=8_1670 generic
+                            uid=8_1671 code
+                              uid=8_1672 StaticText "error"
+                                uid=8_6 InlineTextBox "error"
+                        uid=8_1673 cell "object / null"
+                          uid=8_1674 generic
+                            uid=8_1675 StaticText "object / null"
+                              uid=8_6 InlineTextBox "object / null"
+                        uid=8_1676 cell "错误信息，任务失败时返回"
+                          uid=8_1677 generic
+                            uid=8_1678 StaticText "错误信息，任务失败时返回"
+                              uid=8_6 InlineTextBox "错误信息，任务失败时返回"
+                  uid=8_1679 separator orientation="horizontal"
+                  uid=8_1680 heading "任务状态说明 任务状态说明" level="3"
+                    uid=8_1681 generic
+                    uid=8_1682 link "任务状态说明" url="https://agnes-ai.com/doc/agnes-video-v20#3764a189eee58037ae85d43ab79e7e7b"
+                      uid=8_1683 image
+                    uid=8_1684 StaticText "任务状态说明"
+                      uid=8_6 InlineTextBox "任务状态说明"
+                  uid=8_1685 table
+                    uid=8_1686 ignored
+                      uid=8_1687 row
+                        uid=8_1688 cell "状态"
+                          uid=8_1689 generic
+                            uid=8_1690 StaticText "状态"
+                              uid=8_6 InlineTextBox "状态"
+                        uid=8_1691 cell "说明"
+                          uid=8_1692 generic
+                            uid=8_1693 StaticText "说明"
+                              uid=8_6 InlineTextBox "说明"
+                      uid=8_1694 row
+                        uid=8_1695 cell "queued"
+                          uid=8_1696 generic
+                            uid=8_1697 code
+                              uid=8_1698 StaticText "queued"
+                                uid=8_6 InlineTextBox "queued"
+                        uid=8_1699 cell "任务正在队列中等待"
+                          uid=8_1700 generic
+                            uid=8_1701 StaticText "任务正在队列中等待"
+                              uid=8_6 InlineTextBox "任务正在队列中等待"
+                      uid=8_1702 row
+                        uid=8_1703 cell "in_progress"
+                          uid=8_1704 generic
+                            uid=8_1705 code
+                              uid=8_1706 StaticText "in_progress"
+                                uid=8_6 InlineTextBox "in_progress"
+                        uid=8_1707 cell "视频正在生成中"
+                          uid=8_1708 generic
+                            uid=8_1709 StaticText "视频正在生成中"
+                              uid=8_6 InlineTextBox "视频正在生成中"
+                      uid=8_1710 row
+                        uid=8_1711 cell "completed"
+                          uid=8_1712 generic
+                            uid=8_1713 code
+                              uid=8_1714 StaticText "completed"
+                                uid=8_6 InlineTextBox "completed"
+                        uid=8_1715 cell "视频已生成完成"
+                          uid=8_1716 generic
+                            uid=8_1717 StaticText "视频已生成完成"
+                              uid=8_6 InlineTextBox "视频已生成完成"
+                      uid=8_1718 row
+                        uid=8_1719 cell "failed"
+                          uid=8_1720 generic
+                            uid=8_1721 code
+                              uid=8_1722 StaticText "failed"
+                                uid=8_6 InlineTextBox "failed"
+                        uid=8_1723 cell "视频生成失败"
+                          uid=8_1724 generic
+                            uid=8_1725 StaticText "视频生成失败"
+                              uid=8_6 InlineTextBox "视频生成失败"
+                  uid=8_1726 separator orientation="horizontal"
+                  uid=8_1727 heading "视频时长控制 视频时长控制" level="3"
+                    uid=8_1728 generic
+                    uid=8_1729 link "视频时长控制" url="https://agnes-ai.com/doc/agnes-video-v20#3764a189eee580aba6e3c158f4d6ab85"
+                      uid=8_1730 image
+                    uid=8_1731 StaticText "视频时长控制"
+                      uid=8_6 InlineTextBox "视频时长控制"
+                  uid=8_1732 generic
+                    uid=8_1733 StaticText "Agnes-Video-V2.0 支持通过 "
+                      uid=8_6 InlineTextBox "Agnes-Video-V2.0 支持通过 "
+                    uid=8_1734 code
+                      uid=8_1735 StaticText "num_frames"
+                        uid=8_6 InlineTextBox "num_frames"
+                    uid=8_1736 StaticText " 和 "
+                      uid=8_6 InlineTextBox " 和 "
+                    uid=8_1737 code
+                      uid=8_1738 StaticText "frame_rate"
+                        uid=8_6 InlineTextBox "frame_rate"
+                    uid=8_1739 StaticText " 控制视频时长。"
+                      uid=8_6 InlineTextBox " 控制视频时长。"
+                  uid=8_1740 generic
+                    uid=8_1741 StaticText "计算公式："
+                      uid=8_6 InlineTextBox "计算公式："
+                  uid=8_1742 generic
+                    uid=8_1743 generic
+                      uid=8_1744 generic
+                        uid=8_1745 image
+                    uid=8_1746 code
+                      uid=8_1747 StaticText "seconds = num_frames / frame_rate"
+                        uid=8_6 InlineTextBox "seconds = num_frames / frame_rate"
+                  uid=8_1748 generic
+                    uid=8_1749 StaticText "其中："
+                      uid=8_6 InlineTextBox "其中："
+                  uid=8_1750 list
+                    uid=8_1751 listitem level="1"
+                      uid=8_1752 ListMarker "• "
+                        uid=8_6 ignored
+                      uid=8_1753 code
+                        uid=8_1754 StaticText "num_frames"
+                          uid=8_6 InlineTextBox "num_frames"
+                      uid=8_1755 StaticText " 表示生成的视频总帧数；"
+                        uid=8_6 InlineTextBox " 表示生成的视频总帧数；"
+                  uid=8_1756 list
+                    uid=8_1757 listitem level="1"
+                      uid=8_1758 ListMarker "• "
+                        uid=8_6 ignored
+                      uid=8_1759 code
+                        uid=8_1760 StaticText "frame_rate"
+                          uid=8_6 InlineTextBox "frame_rate"
+                      uid=8_1761 StaticText " 表示视频帧率，即每秒播放多少帧；"
+                        uid=8_6 InlineTextBox " 表示视频帧率，即每秒播放多少帧；"
+                  uid=8_1762 list
+                    uid=8_1763 listitem level="1"
+                      uid=8_1764 ListMarker "• "
+                        uid=8_6 ignored
+                      uid=8_1765 code
+                        uid=8_1766 StaticText "num_frames"
+                          uid=8_6 InlineTextBox "num_frames"
+                      uid=8_1767 StaticText " 必须小于或等于 "
+                        uid=8_6 InlineTextBox " 必须小于或等于 "
+                      uid=8_1768 code
+                        uid=8_1769 StaticText "441"
+                          uid=8_6 InlineTextBox "441"
+                      uid=8_1770 StaticText "；"
+                        uid=8_6 InlineTextBox "；"
+                  uid=8_1771 list
+                    uid=8_1772 listitem level="1"
+                      uid=8_1773 ListMarker "• "
+                        uid=8_6 ignored
+                      uid=8_1774 code
+                        uid=8_1775 StaticText "num_frames"
+                          uid=8_6 InlineTextBox "num_frames"
+                      uid=8_1776 StaticText " 必须满足 "
+                        uid=8_6 InlineTextBox " 必须满足 "
+                      uid=8_1777 code
+                        uid=8_1778 StaticText "8n + 1"
+                          uid=8_6 InlineTextBox "8n + 1"
+                      uid=8_1779 StaticText "；"
+                        uid=8_6 InlineTextBox "；"
+                  uid=8_1780 list
+                    uid=8_1781 listitem level="1"
+                      uid=8_1782 ListMarker "• "
+                        uid=8_6 ignored
+                      uid=8_1783 code
+                        uid=8_1784 StaticText "frame_rate"
+                          uid=8_6 InlineTextBox "frame_rate"
+                      uid=8_1785 StaticText " 支持范围为 "
+                        uid=8_6 InlineTextBox " 支持范围为 "
+                      uid=8_1786 code
+                        uid=8_1787 StaticText "1–60"
+                          uid=8_6 InlineTextBox "1–60"
+                      uid=8_1788 StaticText "。"
+                        uid=8_6 InlineTextBox "。"
+                  uid=8_1789 heading "常用时长参数 常用时长参数" level="4"
+                    uid=8_1790 generic
+                    uid=8_1791 link "常用时长参数" url="https://agnes-ai.com/doc/agnes-video-v20#3764a189eee58035981bd754d1d8d687"
+                      uid=8_1792 image
+                    uid=8_1793 StaticText "常用时长参数"
+                      uid=8_6 InlineTextBox "常用时长参数"
+                  uid=8_1794 table
+                    uid=8_1795 ignored
+                      uid=8_1796 row
+                        uid=8_1797 cell "目标时长"
+                          uid=8_1798 generic
+                            uid=8_1799 StaticText "目标时长"
+                              uid=8_6 InlineTextBox "目标时长"
+                        uid=8_1800 cell "推荐参数"
+                          uid=8_1801 generic
+                            uid=8_1802 StaticText "推荐参数"
+                              uid=8_6 InlineTextBox "推荐参数"
+                      uid=8_1803 row
+                        uid=8_1804 cell "约 3 秒"
+                          uid=8_1805 generic
+                            uid=8_1806 StaticText "约 3 秒"
+                              uid=8_6 InlineTextBox "约 3 秒"
+                        uid=8_1807 cell "num_frames: 81 ,  frame_rate: 24"
+                          uid=8_1808 generic
+                            uid=8_1809 code
+                              uid=8_1810 StaticText "num_frames: 81"
+                                uid=8_6 InlineTextBox "num_frames: 81"
+                            uid=8_1811 StaticText ", "
+                              uid=8_6 InlineTextBox ", "
+                            uid=8_1812 code
+                              uid=8_1813 StaticText "frame_rate: 24"
+                                uid=8_6 InlineTextBox "frame_rate: 24"
+                      uid=8_1814 row
+                        uid=8_1815 cell "约 5 秒"
+                          uid=8_1816 generic
+                            uid=8_1817 StaticText "约 5 秒"
+                              uid=8_6 InlineTextBox "约 5 秒"
+                        uid=8_1818 cell "num_frames: 121 ,  frame_rate: 24"
+                          uid=8_1819 generic
+                            uid=8_1820 code
+                              uid=8_1821 StaticText "num_frames: 121"
+                                uid=8_6 InlineTextBox "num_frames: 121"
+                            uid=8_1822 StaticText ", "
+                              uid=8_6 InlineTextBox ", "
+                            uid=8_1823 code
+                              uid=8_1824 StaticText "frame_rate: 24"
+                                uid=8_6 InlineTextBox "frame_rate: 24"
+                      uid=8_1825 row
+                        uid=8_1826 cell "约 10 秒"
+                          uid=8_1827 generic
+                            uid=8_1828 StaticText "约 10 秒"
+                              uid=8_6 InlineTextBox "约 10 秒"
+                        uid=8_1829 cell "num_frames: 241 ,  frame_rate: 24"
+                          uid=8_1830 generic
+                            uid=8_1831 code
+                              uid=8_1832 StaticText "num_frames: 241"
+                                uid=8_6 InlineTextBox "num_frames: 241"
+                            uid=8_1833 StaticText ", "
+                              uid=8_6 InlineTextBox ", "
+                            uid=8_1834 code
+                              uid=8_1835 StaticText "frame_rate: 24"
+                                uid=8_6 InlineTextBox "frame_rate: 24"
+                      uid=8_1836 row
+                        uid=8_1837 cell "约 18 秒"
+                          uid=8_1838 generic
+                            uid=8_1839 StaticText "约 18 秒"
+                              uid=8_6 InlineTextBox "约 18 秒"
+                        uid=8_1840 cell "num_frames: 441 ,  frame_rate: 24"
+                          uid=8_1841 generic
+                            uid=8_1842 code
+                              uid=8_1843 StaticText "num_frames: 441"
+                                uid=8_6 InlineTextBox "num_frames: 441"
+                            uid=8_1844 StaticText ", "
+                              uid=8_6 InlineTextBox ", "
+                            uid=8_1845 code
+                              uid=8_1846 StaticText "frame_rate: 24"
+                                uid=8_6 InlineTextBox "frame_rate: 24"
+                  uid=8_1847 generic
+                    uid=8_1848 StaticText "如果希望生成更长的视频，可以增加 "
+                      uid=8_6 InlineTextBox "如果希望生成更长的视频，可以增加 "
+                    uid=8_1849 code
+                      uid=8_1850 StaticText "num_frames"
+                        uid=8_6 InlineTextBox "num_frames"
+                    uid=8_1851 StaticText " 或降低 "
+                      uid=8_6 InlineTextBox " 或降低 "
+                    uid=8_1852 code
+                      uid=8_1853 StaticText "frame_rate"
+                        uid=8_6 InlineTextBox "frame_rate"
+                    uid=8_1854 StaticText "。"
+                      uid=8_6 InlineTextBox "。"
+                  uid=8_1855 generic
+                    uid=8_1856 StaticText "如果希望画面更流畅，可以使用更高的 "
+                      uid=8_6 InlineTextBox "如果希望画面更流畅，可以使用更高的 "
+                    uid=8_1857 code
+                      uid=8_1858 StaticText "frame_rate"
+                        uid=8_6 InlineTextBox "frame_rate"
+                    uid=8_1859 StaticText "，例如 "
+                      uid=8_6 InlineTextBox "，例如 "
+                    uid=8_1860 code
+                      uid=8_1861 StaticText "24"
+                        uid=8_6 InlineTextBox "24"
+                    uid=8_1862 StaticText " 或 "
+                      uid=8_6 InlineTextBox " 或 "
+                    uid=8_1863 code
+                      uid=8_1864 StaticText "30"
+                        uid=8_6 InlineTextBox "30"
+                    uid=8_1865 StaticText "。但在相同 "
+                      uid=8_6 InlineTextBox "。但在相同 "
+                    uid=8_1866 code
+                      uid=8_1867 StaticText "num_frames"
+                        uid=8_6 InlineTextBox "num_frames"
+                    uid=8_1868 StaticText " 下，"
+                      uid=8_6 InlineTextBox " 下，"
+                    uid=8_1869 code
+                      uid=8_1870 StaticText "frame_rate"
+                        uid=8_6 InlineTextBox "frame_rate"
+                    uid=8_1871 StaticText " 越高，视频时长越短。"
+                      uid=8_6 InlineTextBox " 越高，视频时长越短。"
+                  uid=8_1872 separator orientation="horizontal"
+                  uid=8_1873 heading "推荐参数 推荐参数" level="3"
+                    uid=8_1874 generic
+                    uid=8_1875 link "推荐参数" url="https://agnes-ai.com/doc/agnes-video-v20#3764a189eee580bdac8be2793104a6b4"
+                      uid=8_1876 image
+                    uid=8_1877 StaticText "推荐参数"
+                      uid=8_6 InlineTextBox "推荐参数"
+                  uid=8_1878 table
+                    uid=8_1879 ignored
+                      uid=8_1880 row
+                        uid=8_1881 cell "使用场景"
+                          uid=8_1882 generic
+                            uid=8_1883 StaticText "使用场景"
+                              uid=8_6 InlineTextBox "使用场景"
+                        uid=8_1884 cell "推荐设置"
+                          uid=8_1885 generic
+                            uid=8_1886 StaticText "推荐设置"
+                              uid=8_6 InlineTextBox "推荐设置"
+                      uid=8_1887 row
+                        uid=8_1888 cell "标准视频生成"
+                          uid=8_1889 generic
+                            uid=8_1890 StaticText "标准视频生成"
+                              uid=8_6 InlineTextBox "标准视频生成"
+                        uid=8_1891 cell "width: 1152 ,  height: 768 ,  num_frames: 121 ,  frame_rate: 24"
+                          uid=8_1892 generic
+                            uid=8_1893 code
+                              uid=8_1894 StaticText "width: 1152"
+                                uid=8_6 InlineTextBox "width: 1152"
+                            uid=8_1895 StaticText ", "
+                              uid=8_6 InlineTextBox ", "
+                            uid=8_1896 code
+                              uid=8_1897 StaticText "height: 768"
+                                uid=8_6 InlineTextBox "height: 768"
+                            uid=8_1898 StaticText ", "
+                              uid=8_6 InlineTextBox ", "
+                            uid=8_1899 code
+                              uid=8_1900 StaticText "num_frames: 121"
+                                uid=8_6 InlineTextBox "num_frames: 121"
+                            uid=8_1901 StaticText ", "
+                              uid=8_6 InlineTextBox ", "
+                            uid=8_1902 code
+                              uid=8_1903 StaticText "frame_rate: 24"
+                                uid=8_6 InlineTextBox "frame_rate: 24"
+                      uid=8_1904 row
+                        uid=8_1905 cell "短视频社交内容"
+                          uid=8_1906 generic
+                            uid=8_1907 StaticText "短视频社交内容"
+                              uid=8_6 InlineTextBox "短视频社交内容"
+                        uid=8_1908 cell "num_frames: 81  或  121 ,  frame_rate: 24"
+                          uid=8_1909 generic
+                            uid=8_1910 code
+                              uid=8_1911 StaticText "num_frames: 81"
+                                uid=8_6 InlineTextBox "num_frames: 81"
+                            uid=8_1912 StaticText " 或 "
+                              uid=8_6 InlineTextBox " 或 "
+                            uid=8_1913 code
+                              uid=8_1914 StaticText "121"
+                                uid=8_6 InlineTextBox "121"
+                            uid=8_1915 StaticText ", "
+                              uid=8_6 InlineTextBox ", "
+                            uid=8_1916 code
+                              uid=8_1917 StaticText "frame_rate: 24"
+                                uid=8_6 InlineTextBox "frame_rate: 24"
+                      uid=8_1918 row
+                        uid=8_1919 cell "更长视频"
+                          uid=8_1920 generic
+                            uid=8_1921 StaticText "更长视频"
+                              uid=8_6 InlineTextBox "更长视频"
+                        uid=8_1922 cell "增加  num_frames  或降低  frame_rate"
+                          uid=8_1923 generic
+                            uid=8_1924 StaticText "增加 "
+                              uid=8_6 InlineTextBox "增加 "
+                            uid=8_1925 code
+                              uid=8_1926 StaticText "num_frames"
+                                uid=8_6 InlineTextBox "num_frames"
+                            uid=8_1927 StaticText " 或降低 "
+                              uid=8_6 InlineTextBox " 或降低 "
+                            uid=8_1928 code
+                              uid=8_1929 StaticText "frame_rate"
+                                uid=8_6 InlineTextBox "frame_rate"
+                      uid=8_1930 row
+                        uid=8_1931 cell "更平滑运动"
+                          uid=8_1932 generic
+                            uid=8_1933 StaticText "更平滑运动"
+                              uid=8_6 InlineTextBox "更平滑运动"
+                        uid=8_1934 cell "使用  frame_rate: 24  或  30"
+                          uid=8_1935 generic
+                            uid=8_1936 StaticText "使用 "
+                              uid=8_6 InlineTextBox "使用 "
+                            uid=8_1937 code
+                              uid=8_1938 StaticText "frame_rate: 24"
+                                uid=8_6 InlineTextBox "frame_rate: 24"
+                            uid=8_1939 StaticText " 或 "
+                              uid=8_6 InlineTextBox " 或 "
+                            uid=8_1940 code
+                              uid=8_1941 StaticText "30"
+                                uid=8_6 InlineTextBox "30"
+                      uid=8_1942 row
+                        uid=8_1943 cell "可复现结果"
+                          uid=8_1944 generic
+                            uid=8_1945 StaticText "可复现结果"
+                              uid=8_6 InlineTextBox "可复现结果"
+                        uid=8_1946 cell "设置固定  seed"
+                          uid=8_1947 generic
+                            uid=8_1948 StaticText "设置固定 "
+                              uid=8_6 InlineTextBox "设置固定 "
+                            uid=8_1949 code
+                              uid=8_1950 StaticText "seed"
+                                uid=8_6 InlineTextBox "seed"
+                      uid=8_1951 row
+                        uid=8_1952 cell "关键帧过渡"
+                          uid=8_1953 generic
+                            uid=8_1954 StaticText "关键帧过渡"
+                              uid=8_6 InlineTextBox "关键帧过渡"
+                        uid=8_1955 cell "使用  extra_body.mode: "keyframes""
+                          uid=8_1956 generic
+                            uid=8_1957 StaticText "使用 "
+                              uid=8_6 InlineTextBox "使用 "
+                            uid=8_1958 code
+                              uid=8_1959 StaticText "extra_body.mode: "keyframes""
+                                uid=8_6 InlineTextBox "extra_body.mode: "keyframes""
+                      uid=8_1960 row
+                        uid=8_1961 cell "避免不需要的内容"
+                          uid=8_1962 generic
+                            uid=8_1963 StaticText "避免不需要的内容"
+                              uid=8_6 InlineTextBox "避免不需要的内"
+                              uid=8_6 InlineTextBox "容"
+                        uid=8_1964 cell "使用  negative_prompt"
+                          uid=8_1965 generic
+                            uid=8_1966 StaticText "使用 "
+                              uid=8_6 InlineTextBox "使用 "
+                            uid=8_1967 code
+                              uid=8_1968 StaticText "negative_prompt"
+                                uid=8_6 InlineTextBox "negative_prompt"
+                  uid=8_1969 separator orientation="horizontal"
+                  uid=8_1970 heading "Prompt 最佳实践 Prompt 最佳实践" level="3"
+                    uid=8_1971 generic
+                    uid=8_1972 link "Prompt 最佳实践" url="https://agnes-ai.com/doc/agnes-video-v20#3764a189eee580d9926ede49c515408c"
+                      uid=8_1973 image
+                    uid=8_1974 StaticText "Prompt 最佳实践"
+                      uid=8_6 InlineTextBox "Prompt 最佳实践"
+                  uid=8_1975 heading "文生视频 Prompt 文生视频 Prompt" level="4"
+                    uid=8_1976 generic
+                    uid=8_1977 link "文生视频 Prompt" url="https://agnes-ai.com/doc/agnes-video-v20#3764a189eee5803fb212c64972c011df"
+                      uid=8_1978 image
+                    uid=8_1979 StaticText "文生视频 Prompt"
+                      uid=8_6 InlineTextBox "文生视频 Prompt"
+                  uid=8_1980 generic
+                    uid=8_1981 StaticText "文生视频任务建议描述主体、动作、环境、镜头运动、光照和视觉风格。"
+                      uid=8_6 InlineTextBox "文生视频任务建议描述主体、动作、环境、镜头运动、光照和视觉风格。"
+                  uid=8_1982 generic
+                    uid=8_1983 StaticText "推荐结构："
+                      uid=8_6 InlineTextBox "推荐结构："
+                  uid=8_1984 generic
+                    uid=8_1985 generic
+                      uid=8_1986 generic
+                        uid=8_1987 image
+                    uid=8_1988 code
+                      uid=8_1989 StaticText "[主体] + [动作] + [场景] + [镜头运动] + [光照] + [风格]"
+                        uid=8_6 InlineTextBox "[主体] + [动作] + [场景] + [镜头运动] + [光照] + [风格]"
+                  uid=8_1990 generic
+                    uid=8_1991 StaticText "示例："
+                      uid=8_6 InlineTextBox "示例："
+                  uid=8_1992 generic
+                    uid=8_1993 generic
+                      uid=8_1994 generic
+                        uid=8_1995 image
+                    uid=8_1996 code
+                      uid=8_1997 StaticText "A young astronaut walking across a red desert planet, dust blowing in the wind, slow cinematic tracking shot, dramatic sunset lighting, realistic sci-fi style"
+                        uid=8_6 InlineTextBox "A young astronaut walking across a red desert planet, dust blowing in the wind, slow cinematic tracking shot, dramatic sunset lighting, realistic sci-fi style"
+                  uid=8_1998 separator orientation="horizontal"
+                  uid=8_1999 heading "图生视频 Prompt 图生视频 Prompt" level="4"
+                    uid=8_2000 generic
+                    uid=8_2001 link "图生视频 Prompt" url="https://agnes-ai.com/doc/agnes-video-v20#3764a189eee58053b0f2e153970a2a39"
+                      uid=8_2002 image
+                    uid=8_2003 StaticText "图生视频 Prompt"
+                      uid=8_6 InlineTextBox "图生视频 Prompt"
+                  uid=8_2004 generic
+                    uid=8_2005 StaticText "图生视频任务建议描述哪些内容需要运动，同时说明哪些主体元素需要保持稳定。"
+                      uid=8_6 InlineTextBox "图生视频任务建议描述哪些内容需要运动，同时说明哪些主体元素需要保持稳定。"
+                  uid=8_2006 generic
+                    uid=8_2007 StaticText "示例："
+                      uid=8_6 InlineTextBox "示例："
+                  uid=8_2008 generic
+                    uid=8_2009 generic
+                      uid=8_2010 generic
+                        uid=8_2011 image
+                    uid=8_2012 code
+                      uid=8_2013 StaticText "Animate the character with subtle breathing motion, hair moving gently in the wind, background lights flickering softly, while keeping the face and outfit consistent"
+                        uid=8_6 InlineTextBox "Animate the character with subtle breathing motion, hair moving gently in the wind, background lights flickering softly, while keeping the face and outfit consistent"
+                  uid=8_2014 separator orientation="horizontal"
+                  uid=8_2015 heading "多图视频 Prompt 多图视频 Prompt" level="4"
+                    uid=8_2016 generic
+                    uid=8_2017 link "多图视频 Prompt" url="https://agnes-ai.com/doc/agnes-video-v20#3764a189eee5805aa95add1e8955749f"
+                      uid=8_2018 image
+                    uid=8_2019 StaticText "多图视频 Prompt"
+                      uid=8_6 InlineTextBox "多图视频 Prompt"
+                  uid=8_2020 generic
+                    uid=8_2021 StaticText "多图视频任务建议描述输入图片之间的关系，以及画面如何过渡。"
+                      uid=8_6 InlineTextBox "多图视频任务建议描述输入图片之间的关系，以及画面如何过渡。"
+                  uid=8_2022 generic
+                    uid=8_2023 StaticText "示例："
+                      uid=8_6 InlineTextBox "示例："
+                  uid=8_2024 generic
+                    uid=8_2025 generic
+                      uid=8_2026 generic
+                        uid=8_2027 image
+                    uid=8_2028 code
+                      uid=8_2029 StaticText "Use the first image as the starting scene and the second image as the target scene. Create a smooth transformation with consistent lighting, natural motion, and cinematic pacing"
+                        uid=8_6 InlineTextBox "Use the first image as the starting scene and the second image as the target scene. Create a smooth transformation with consistent lighting, natural motion, and cinematic pacing"
+                  uid=8_2030 separator orientation="horizontal"
+                  uid=8_2031 heading "关键帧动画 Prompt 关键帧动画 Prompt" level="4"
+                    uid=8_2032 generic
+                    uid=8_2033 link "关键帧动画 Prompt" url="https://agnes-ai.com/doc/agnes-video-v20#3764a189eee58056bc28da2296664b97"
+                      uid=8_2034 image
+                    uid=8_2035 StaticText "关键帧动画 Prompt"
+                      uid=8_6 InlineTextBox "关键帧动画 Prompt"
+                  uid=8_2036 generic
+                    uid=8_2037 StaticText "关键帧动画任务建议清晰描述关键帧之间的过渡关系。"
+                      uid=8_6 InlineTextBox "关键帧动画任务建议清晰描述关键帧之间的过渡关系。"
+                  uid=8_2038 generic
+                    uid=8_2039 StaticText "示例："
+                      uid=8_6 InlineTextBox "示例："
+                  uid=8_2040 generic
+                    uid=8_2041 generic
+                      uid=8_2042 generic
+                        uid=8_2043 image
+                    uid=8_2044 code
+                      uid=8_2045 StaticText "Create a smooth transition from the first keyframe to the second keyframe, maintaining character identity, consistent camera angle, and natural motion between scenes"
+                        uid=8_6 InlineTextBox "Create a smooth transition from the first keyframe to the second keyframe, maintaining character identity, consistent camera angle, and natural motion between scenes"
+                  uid=8_2046 separator orientation="horizontal"
+                  uid=8_2047 heading "错误码 错误码" level="3"
+                    uid=8_2048 generic
+                    uid=8_2049 link "错误码" url="https://agnes-ai.com/doc/agnes-video-v20#3764a189eee580b58c7ec63a43369482"
+                      uid=8_2050 image
+                    uid=8_2051 StaticText "错误码"
+                      uid=8_6 InlineTextBox "错误码"
+                  uid=8_2052 table
+                    uid=8_2053 ignored
+                      uid=8_2054 row
+                        uid=8_2055 cell "状态码"
+                          uid=8_2056 generic
+                            uid=8_2057 StaticText "状态码"
+                              uid=8_6 InlineTextBox "状态码"
+                        uid=8_2058 cell "说明"
+                          uid=8_2059 generic
+                            uid=8_2060 StaticText "说明"
+                              uid=8_6 InlineTextBox "说明"
+                      uid=8_2061 row
+                        uid=8_2062 cell "400"
+                          uid=8_2063 generic
+                            uid=8_2064 code
+                              uid=8_2065 StaticText "400"
+                                uid=8_6 InlineTextBox "400"
+                        uid=8_2066 cell "请求无效，请检查请求参数"
+                          uid=8_2067 generic
+                            uid=8_2068 StaticText "请求无效，请检查请求参数"
+                              uid=8_6 InlineTextBox "请求无效，请检查请求参数"
+                      uid=8_2069 row
+                        uid=8_2070 cell "401"
+                          uid=8_2071 generic
+                            uid=8_2072 code
+                              uid=8_2073 StaticText "401"
+                                uid=8_6 InlineTextBox "401"
+                        uid=8_2074 cell "未授权，请检查 API Key"
+                          uid=8_2075 generic
+                            uid=8_2076 StaticText "未授权，请检查 API Key"
+                              uid=8_6 InlineTextBox "未授权，请检查 API Key"
+                      uid=8_2077 row
+                        uid=8_2078 cell "404"
+                          uid=8_2079 generic
+                            uid=8_2080 code
+                              uid=8_2081 StaticText "404"
+                                uid=8_6 InlineTextBox "404"
+                        uid=8_2082 cell "任务或视频不存在"
+                          uid=8_2083 generic
+                            uid=8_2084 StaticText "任务或视频不存在"
+                              uid=8_6 InlineTextBox "任务或视频不存在"
+                      uid=8_2085 row
+                        uid=8_2086 cell "500"
+                          uid=8_2087 generic
+                            uid=8_2088 code
+                              uid=8_2089 StaticText "500"
+                                uid=8_6 InlineTextBox "500"
+                        uid=8_2090 cell "服务器错误"
+                          uid=8_2091 generic
+                            uid=8_2092 StaticText "服务器错误"
+                              uid=8_6 InlineTextBox "服务器错误"
+                      uid=8_2093 row
+                        uid=8_2094 cell "503"
+                          uid=8_2095 generic
+                            uid=8_2096 code
+                              uid=8_2097 StaticText "503"
+                                uid=8_6 InlineTextBox "503"
+                        uid=8_2098 cell "服务繁忙，请稍后重试"
+                          uid=8_2099 generic
+                            uid=8_2100 StaticText "服务繁忙，请稍后重试"
+                              uid=8_6 InlineTextBox "服务繁忙，请稍后重试"
+                  uid=8_2101 separator orientation="horizontal"
+                  uid=8_2102 heading "价格 价格" level="3"
+                    uid=8_2103 generic
+                    uid=8_2104 link "价格" url="https://agnes-ai.com/doc/agnes-video-v20#3764a189eee580c28663e620b35d9561"
+                      uid=8_2105 image
+                    uid=8_2106 StaticText "价格"
+                      uid=8_6 InlineTextBox "价格"
+                  uid=8_2107 table
+                    uid=8_2108 ignored
+                      uid=8_2109 row
+                        uid=8_2110 cell "类型"
+                          uid=8_2111 generic
+                            uid=8_2112 StaticText "类型"
+                              uid=8_6 InlineTextBox "类型"
+                        uid=8_2113 cell "标准价格"
+                          uid=8_2114 generic
+                            uid=8_2115 StaticText "标准价格"
+                              uid=8_6 InlineTextBox "标准价格"
+                        uid=8_2116 cell "当前价格"
+                          uid=8_2117 generic
+                            uid=8_2118 StaticText "当前价格"
+                              uid=8_6 InlineTextBox "当前价格"
+                      uid=8_2119 row
+                        uid=8_2120 cell "Video Duration"
+                          uid=8_2121 generic
+                            uid=8_2122 StaticText "Video Duration"
+                              uid=8_6 InlineTextBox "Video Duration"
+                        uid=8_2123 cell "$0.005 / second"
+                          uid=8_2124 generic
+                            uid=8_2125 code
+                              uid=8_2126 StaticText "$0.005 / second"
+                                uid=8_6 InlineTextBox "$0.005 /"
+                                uid=8_6 InlineTextBox " "
+                                uid=8_6 InlineTextBox "second"
+                        uid=8_2127 cell "$0 / second"
+                          uid=8_2128 generic
+                            uid=8_2129 code
+                              uid=8_2130 StaticText "$0 / second"
+                                uid=8_6 InlineTextBox "$0 / second"
+                  uid=8_2131 separator orientation="horizontal"
+                  uid=8_2132 heading "注意事项 注意事项" level="3"
+                    uid=8_2133 generic
+                    uid=8_2134 link "注意事项" url="https://agnes-ai.com/doc/agnes-video-v20#3764a189eee5806dac8eccac0f432286"
+                      uid=8_2135 image
+                    uid=8_2136 StaticText "注意事项"
+                      uid=8_6 InlineTextBox "注意事项"
+                  uid=8_2137 list
+                    uid=8_2138 listitem level="1"
+                      uid=8_2139 ListMarker "• "
+                        uid=8_6 ignored
+                      uid=8_2140 StaticText "使用 "
+                        uid=8_6 InlineTextBox "使用 "
+                      uid=8_2141 code
+                        uid=8_2142 StaticText "agnes-video-v2.0"
+                          uid=8_6 InlineTextBox "agnes-video-v2.0"
+                      uid=8_2143 StaticText " 作为模型名称；"
+                        uid=8_6 InlineTextBox " 作为模型名称；"
+                  uid=8_2144 list
+                    uid=8_2145 listitem level="1"
+                      uid=8_2146 ListMarker "• "
+                        uid=8_6 ignored
+                      uid=8_2147 StaticText "视频生成是异步任务；"
+                        uid=8_6 InlineTextBox "视频生成是异步任务；"
+                  uid=8_2148 list
+                    uid=8_2149 listitem level="1"
+                      uid=8_2150 ListMarker "• "
+                        uid=8_6 ignored
+                      uid=8_2151 StaticText "需要先创建视频任务，再查询视频结果；"
+                        uid=8_6 InlineTextBox "需要先创建视频任务，再查询视频结果；"
+                  uid=8_2152 list
+                    uid=8_2153 listitem level="1"
+                      uid=8_2154 ListMarker "• "
+                        uid=8_6 ignored
+                      uid=8_2155 StaticText "创建任务响应中会同时返回 "
+                        uid=8_6 InlineTextBox "创建任务响应中会同时返回 "
+                      uid=8_2156 code
+                        uid=8_2157 StaticText "task_id"
+                          uid=8_6 InlineTextBox "task_id"
+                      uid=8_2158 StaticText " 和 "
+                        uid=8_6 InlineTextBox " 和 "
+                      uid=8_2159 code
+                        uid=8_2160 StaticText "video_id"
+                          uid=8_6 InlineTextBox "video_id"
+                      uid=8_2161 StaticText "；"
+                        uid=8_6 InlineTextBox "；"
+                  uid=8_2162 list
+                    uid=8_2163 listitem level="1"
+                      uid=8_2164 ListMarker "• "
+                        uid=8_6 ignored
+                      uid=8_2165 StaticText "新接入建议使用 "
+                        uid=8_6 InlineTextBox "新接入建议使用 "
+                      uid=8_2166 code
+                        uid=8_2167 StaticText "video_id"
+                          uid=8_6 InlineTextBox "video_id"
+                      uid=8_2168 StaticText " 查询视频结果；"
+                        uid=8_6 InlineTextBox " 查询视频结果；"
+                  uid=8_2169 list
+                    uid=8_2170 listitem level="1"
+                      uid=8_2171 ListMarker "• "
+                        uid=8_6 ignored
+                      uid=8_2172 StaticText "旧版 "
+                        uid=8_6 InlineTextBox "旧版 "
+                      uid=8_2173 code
+                        uid=8_2174 StaticText "task_id"
+                          uid=8_6 InlineTextBox "task_id"
+                      uid=8_2175 StaticText " 查询接口仍然支持；"
+                        uid=8_6 InlineTextBox " 查询接口仍然支持；"
+                  uid=8_2176 list
+                    uid=8_2177 listitem level="1"
+                      uid=8_2178 ListMarker "• "
+                        uid=8_6 ignored
+                      uid=8_2179 code
+                        uid=8_2180 StaticText "video_url"
+                          uid=8_6 InlineTextBox "video_url"
+                      uid=8_2181 StaticText " 仅在 "
+                        uid=8_6 InlineTextBox " 仅在 "
+                      uid=8_2182 code
+                        uid=8_2183 StaticText "status"
+                          uid=8_6 InlineTextBox "status"
+                      uid=8_2184 StaticText " 为 "
+                        uid=8_6 InlineTextBox " 为 "
+                      uid=8_2185 code
+                        uid=8_2186 StaticText "completed"
+                          uid=8_6 InlineTextBox "completed"
+                      uid=8_2187 StaticText " 时可用；"
+                        uid=8_6 InlineTextBox " 时可用；"
+                  uid=8_2188 list
+                    uid=8_2189 listitem level="1"
+                      uid=8_2190 ListMarker "• "
+                        uid=8_6 ignored
+                      uid=8_2191 code
+                        uid=8_2192 StaticText "num_frames"
+                          uid=8_6 InlineTextBox "num_frames"
+                      uid=8_2193 StaticText " 必须小于或等于 "
+                        uid=8_6 InlineTextBox " 必须小于或等于 "
+                      uid=8_2194 code
+                        uid=8_2195 StaticText "441"
+                          uid=8_6 InlineTextBox "441"
+                      uid=8_2196 StaticText "；"
+                        uid=8_6 InlineTextBox "；"
+                  uid=8_2197 list
+                    uid=8_2198 listitem level="1"
+                      uid=8_2199 ListMarker "• "
+                        uid=8_6 ignored
+                      uid=8_2200 code
+                        uid=8_2201 StaticText "num_frames"
+                          uid=8_6 InlineTextBox "num_frames"
+                      uid=8_2202 StaticText " 必须满足 "
+                        uid=8_6 InlineTextBox " 必须满足 "
+                      uid=8_2203 code
+                        uid=8_2204 StaticText "8n + 1"
+                          uid=8_6 InlineTextBox "8n + 1"
+                      uid=8_2205 StaticText "，例如 "
+                        uid=8_6 InlineTextBox "，例如 "
+                      uid=8_2206 code
+                        uid=8_2207 StaticText "81"
+                          uid=8_6 InlineTextBox "81"
+                      uid=8_2208 StaticText "、"
+                        uid=8_6 InlineTextBox "、"
+                      uid=8_2209 code
+                        uid=8_2210 StaticText "121"
+                          uid=8_6 InlineTextBox "121"
+                      uid=8_2211 StaticText "、"
+                        uid=8_6 InlineTextBox "、"
+                      uid=8_2212 code
+                        uid=8_2213 StaticText "161"
+                          uid=8_6 InlineTextBox "161"
+                      uid=8_2214 StaticText "、"
+                        uid=8_6 InlineTextBox "、"
+                      uid=8_2215 code
+                        uid=8_2216 StaticText "241"
+                          uid=8_6 InlineTextBox "241"
+                      uid=8_2217 StaticText " 或 "
+                        uid=8_6 InlineTextBox " 或 "
+                      uid=8_2218 code
+                        uid=8_2219 StaticText "441"
+                          uid=8_6 InlineTextBox "441"
+                      uid=8_2220 StaticText "；"
+                        uid=8_6 InlineTextBox "；"
+                  uid=8_2221 list
+                    uid=8_2222 listitem level="1"
+                      uid=8_2223 ListMarker "• "
+                        uid=8_6 ignored
+                      uid=8_2224 StaticText "文生视频任务仅要求传入 "
+                        uid=8_6 InlineTextBox "文生视频任务仅要求传入 "
+                      uid=8_2225 code
+                        uid=8_2226 StaticText "model"
+                          uid=8_6 InlineTextBox "model"
+                      uid=8_2227 StaticText " 和 "
+                        uid=8_6 InlineTextBox " 和 "
+                      uid=8_2228 code
+                        uid=8_2229 StaticText "prompt"
+                          uid=8_6 InlineTextBox "prompt"
+                      uid=8_2230 StaticText "；"
+                        uid=8_6 InlineTextBox "；"
+                  uid=8_2231 list
+                    uid=8_2232 listitem level="1"
+                      uid=8_2233 ListMarker "• "
+                        uid=8_6 ignored
+                      uid=8_2234 StaticText "图生视频任务需要通过 "
+                        uid=8_6 InlineTextBox "图生视频任务需要通过 "
+                      uid=8_2235 code
+                        uid=8_2236 StaticText "image"
+                          uid=8_6 InlineTextBox "image"
+                      uid=8_2237 StaticText " 提供图片 URL；"
+                        uid=8_6 InlineTextBox " 提供图片 URL；"
+                  uid=8_2238 list
+                    uid=8_2239 listitem level="1"
+                      uid=8_2240 ListMarker "• "
+                        uid=8_6 ignored
+                      uid=8_2241 StaticText "多图视频任务需要在 "
+                        uid=8_6 InlineTextBox "多图视频任务需要在 "
+                      uid=8_2242 code
+                        uid=8_2243 StaticText "extra_body.image"
+                          uid=8_6 InlineTextBox "extra_body.image"
+                      uid=8_2244 StaticText " 中提供多个图片 URL；"
+                        uid=8_6 InlineTextBox " 中提供多个图片 URL；"
+                  uid=8_2245 list
+                    uid=8_2246 listitem level="1"
+                      uid=8_2247 ListMarker "• "
+                        uid=8_6 ignored
+                      uid=8_2248 StaticText "关键帧动画需要设置 "
+                        uid=8_6 InlineTextBox "关键帧动画需要设置 "
+                      uid=8_2249 code
+                        uid=8_2250 StaticText "extra_body.mode"
+                          uid=8_6 InlineTextBox "extra_body.mode"
+                      uid=8_2251 StaticText " 为 "
+                        uid=8_6 InlineTextBox " 为 "
+                      uid=8_2252 code
+                        uid=8_2253 StaticText "keyframes"
+                          uid=8_6 InlineTextBox "keyframes"
+                      uid=8_2254 StaticText "。"
+                        uid=8_6 InlineTextBox "。"
+            uid=8_2255 generic
+          uid=8_2256 complementary
+            uid=8_2257 ignored
+              uid=8_2258 ignored
+                uid=8_2259 StaticText "≡ "
+                  uid=8_6 InlineTextBox "≡ "
+                uid=8_2260 StaticText "本页目录"
+                  uid=8_6 InlineTextBox "本页目录"
+              uid=8_2261 link "Agnes-Video-V2.0 API 接入指南" url="https://agnes-ai.com/doc/agnes-video-v20#heading-agnes-video-v20-api-%E6%8E%A5%E5%85%A5%E6%8C%87%E5%8D%97"
+                uid=8_2262 StaticText "Agnes-Video-V2.0 API 接入指南"
+                  uid=8_6 InlineTextBox "Agnes-Video-V2.0 API 接入指"
+                  uid=8_6 InlineTextBox "南"
+              uid=8_2263 link "概述" url="https://agnes-ai.com/doc/agnes-video-v20#heading-%E6%A6%82%E8%BF%B0"
+                uid=8_2264 StaticText "概述"
+                  uid=8_6 InlineTextBox "概述"
+              uid=8_2265 link "支持能力" url="https://agnes-ai.com/doc/agnes-video-v20#heading-%E6%94%AF%E6%8C%81%E8%83%BD%E5%8A%9B"
+                uid=8_2266 StaticText "支持能力"
+                  uid=8_6 InlineTextBox "支持能力"
+              uid=8_2267 link "适用场景" url="https://agnes-ai.com/doc/agnes-video-v20#heading-%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF"
+                uid=8_2268 StaticText "适用场景"
+                  uid=8_6 InlineTextBox "适用场景"
+              uid=8_2269 link "准备工作" url="https://agnes-ai.com/doc/agnes-video-v20#heading-%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"
+                uid=8_2270 StaticText "准备工作"
+                  uid=8_6 InlineTextBox "准备工作"
+              uid=8_2271 link "API Endpoints" url="https://agnes-ai.com/doc/agnes-video-v20#heading-api-endpoints"
+                uid=8_2272 StaticText "API Endpoints"
+                  uid=8_6 InlineTextBox "API Endpoints"
+              uid=8_2273 link "创建视频任务" url="https://agnes-ai.com/doc/agnes-video-v20#heading-%E5%88%9B%E5%BB%BA%E8%A7%86%E9%A2%91%E4%BB%BB%E5%8A%A1"
+                uid=8_2274 StaticText "创建视频任务"
+                  uid=8_6 InlineTextBox "创建视频任务"
+              uid=8_2275 link "查询视频结果：推荐方式" url="https://agnes-ai.com/doc/agnes-video-v20#heading-%E6%9F%A5%E8%AF%A2%E8%A7%86%E9%A2%91%E7%BB%93%E6%9E%9C%E6%8E%A8%E8%8D%90%E6%96%B9%E5%BC%8F"
+                uid=8_2276 StaticText "查询视频结果：推荐方式"
+                  uid=8_6 InlineTextBox "查询视频结果：推荐方式"
+              uid=8_2277 link "查询视频结果：兼容旧方式" url="https://agnes-ai.com/doc/agnes-video-v20#heading-%E6%9F%A5%E8%AF%A2%E8%A7%86%E9%A2%91%E7%BB%93%E6%9E%9C%E5%85%BC%E5%AE%B9%E6%97%A7%E6%96%B9%E5%BC%8F"
+                uid=8_2278 StaticText "查询视频结果：兼容旧方式"
+                  uid=8_6 InlineTextBox "查询视频结果：兼容旧方式"
+              uid=8_2279 link "请求参数" url="https://agnes-ai.com/doc/agnes-video-v20#heading-%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0"
+                uid=8_2280 StaticText "请求参数"
+                  uid=8_6 InlineTextBox "请求参数"
+              uid=8_2281 link "创建视频任务参数" url="https://agnes-ai.com/doc/agnes-video-v20#heading-%E5%88%9B%E5%BB%BA%E8%A7%86%E9%A2%91%E4%BB%BB%E5%8A%A1%E5%8F%82%E6%95%B0"
+                uid=8_2282 StaticText "创建视频任务参数"
+                  uid=8_6 InlineTextBox "创建视频任务参数"
+              uid=8_2283 link "参数标准化说明" url="https://agnes-ai.com/doc/agnes-video-v20#heading-%E5%8F%82%E6%95%B0%E6%A0%87%E5%87%86%E5%8C%96%E8%AF%B4%E6%98%8E"
+                uid=8_2284 StaticText "参数标准化说明"
+                  uid=8_6 InlineTextBox "参数标准化说明"
+              uid=8_2285 link "创建视频任务" url="https://agnes-ai.com/doc/agnes-video-v20#heading-%E5%88%9B%E5%BB%BA%E8%A7%86%E9%A2%91%E4%BB%BB%E5%8A%A1-2"
+                uid=8_2286 StaticText "创建视频任务"
+                  uid=8_6 InlineTextBox "创建视频任务"
+              uid=8_2287 link "示例 1：文生视频" url="https://agnes-ai.com/doc/agnes-video-v20#heading-%E7%A4%BA%E4%BE%8B-1%E6%96%87%E7%94%9F%E8%A7%86%E9%A2%91"
+                uid=8_2288 StaticText "示例 1：文生视频"
+                  uid=8_6 InlineTextBox "示例 1：文生视频"
+              uid=8_2289 link "示例 2：图生视频" url="https://agnes-ai.com/doc/agnes-video-v20#heading-%E7%A4%BA%E4%BE%8B-2%E5%9B%BE%E7%94%9F%E8%A7%86%E9%A2%91"
+                uid=8_2290 StaticText "示例 2：图生视频"
+                  uid=8_6 InlineTextBox "示例 2：图生视频"
+              uid=8_2291 link "示例 3：多图视频生成" url="https://agnes-ai.com/doc/agnes-video-v20#heading-%E7%A4%BA%E4%BE%8B-3%E5%A4%9A%E5%9B%BE%E8%A7%86%E9%A2%91%E7%94%9F%E6%88%90"
+                uid=8_2292 StaticText "示例 3：多图视频生成"
+                  uid=8_6 InlineTextBox "示例 3：多图视频生成"
+              uid=8_2293 link "示例 4：关键帧动画" url="https://agnes-ai.com/doc/agnes-video-v20#heading-%E7%A4%BA%E4%BE%8B-4%E5%85%B3%E9%94%AE%E5%B8%A7%E5%8A%A8%E7%94%BB"
+                uid=8_2294 StaticText "示例 4：关键帧动画"
+                  uid=8_6 InlineTextBox "示例 4：关键帧动画"
+              uid=8_2295 link "创建任务响应" url="https://agnes-ai.com/doc/agnes-video-v20#heading-%E5%88%9B%E5%BB%BA%E4%BB%BB%E5%8A%A1%E5%93%8D%E5%BA%94"
+                uid=8_2296 StaticText "创建任务响应"
+                  uid=8_6 InlineTextBox "创建任务响应"
+              uid=8_2297 link "响应字段说明" url="https://agnes-ai.com/doc/agnes-video-v20#heading-%E5%93%8D%E5%BA%94%E5%AD%97%E6%AE%B5%E8%AF%B4%E6%98%8E"
+                uid=8_2298 StaticText "响应字段说明"
+                  uid=8_6 InlineTextBox "响应字段说明"
+              uid=8_2299 link "查询视频结果" url="https://agnes-ai.com/doc/agnes-video-v20#heading-%E6%9F%A5%E8%AF%A2%E8%A7%86%E9%A2%91%E7%BB%93%E6%9E%9C"
+                uid=8_2300 StaticText "查询视频结果"
+                  uid=8_6 InlineTextBox "查询视频结果"
+              uid=8_2301 link "推荐方式：使用 video_id 查询" url="https://agnes-ai.com/doc/agnes-video-v20#heading-%E6%8E%A8%E8%8D%90%E6%96%B9%E5%BC%8F%E4%BD%BF%E7%94%A8-video-id-%E6%9F%A5%E8%AF%A2"
+                uid=8_2302 StaticText "推荐方式：使用 video_id 查询"
+                  uid=8_6 InlineTextBox "推荐方式：使用 video_id 查"
+                  uid=8_6 InlineTextBox "询"
+              uid=8_2303 link "可选参数：model_name" url="https://agnes-ai.com/doc/agnes-video-v20#heading-%E5%8F%AF%E9%80%89%E5%8F%82%E6%95%B0model-name"
+                uid=8_2304 StaticText "可选参数：model_name"
+                  uid=8_6 InlineTextBox "可选参数：model_name"
+              uid=8_2305 link "兼容方式：使用 task_id 查询" url="https://agnes-ai.com/doc/agnes-video-v20#heading-%E5%85%BC%E5%AE%B9%E6%96%B9%E5%BC%8F%E4%BD%BF%E7%94%A8-task-id-%E6%9F%A5%E8%AF%A2"
+                uid=8_2306 StaticText "兼容方式：使用 task_id 查询"
+                  uid=8_6 InlineTextBox "兼容方式：使用 task_id 查"
+                  uid=8_6 InlineTextBox "询"
+              uid=8_2307 link "查询结果响应" url="https://agnes-ai.com/doc/agnes-video-v20#heading-%E6%9F%A5%E8%AF%A2%E7%BB%93%E6%9E%9C%E5%93%8D%E5%BA%94"
+                uid=8_2308 StaticText "查询结果响应"
+                  uid=8_6 InlineTextBox "查询结果响应"
+              uid=8_2309 link "结果字段说明" url="https://agnes-ai.com/doc/agnes-video-v20#heading-%E7%BB%93%E6%9E%9C%E5%AD%97%E6%AE%B5%E8%AF%B4%E6%98%8E"
+                uid=8_2310 StaticText "结果字段说明"
+                  uid=8_6 InlineTextBox "结果字段说明"
+              uid=8_2311 link "任务状态说明" url="https://agnes-ai.com/doc/agnes-video-v20#heading-%E4%BB%BB%E5%8A%A1%E7%8A%B6%E6%80%81%E8%AF%B4%E6%98%8E"
+                uid=8_2312 StaticText "任务状态说明"
+                  uid=8_6 InlineTextBox "任务状态说明"
+              uid=8_2313 link "视频时长控制" url="https://agnes-ai.com/doc/agnes-video-v20#heading-%E8%A7%86%E9%A2%91%E6%97%B6%E9%95%BF%E6%8E%A7%E5%88%B6"
+                uid=8_2314 StaticText "视频时长控制"
+                  uid=8_6 InlineTextBox "视频时长控制"
+              uid=8_2315 link "常用时长参数" url="https://agnes-ai.com/doc/agnes-video-v20#heading-%E5%B8%B8%E7%94%A8%E6%97%B6%E9%95%BF%E5%8F%82%E6%95%B0"
+                uid=8_2316 StaticText "常用时长参数"
+                  uid=8_6 InlineTextBox "常用时长参数"
+              uid=8_2317 link "推荐参数" url="https://agnes-ai.com/doc/agnes-video-v20#heading-%E6%8E%A8%E8%8D%90%E5%8F%82%E6%95%B0"
+                uid=8_2318 StaticText "推荐参数"
+                  uid=8_6 InlineTextBox "推荐参数"
+              uid=8_2319 link "Prompt 最佳实践" url="https://agnes-ai.com/doc/agnes-video-v20#heading-prompt-%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5"
+                uid=8_2320 StaticText "Prompt 最佳实践"
+                  uid=8_6 InlineTextBox "Prompt 最佳实践"
+              uid=8_2321 link "文生视频 Prompt" url="https://agnes-ai.com/doc/agnes-video-v20#heading-%E6%96%87%E7%94%9F%E8%A7%86%E9%A2%91-prompt"
+                uid=8_2322 StaticText "文生视频 Prompt"
+                  uid=8_6 InlineTextBox "文生视频 Prompt"
+              uid=8_2323 link "图生视频 Prompt" url="https://agnes-ai.com/doc/agnes-video-v20#heading-%E5%9B%BE%E7%94%9F%E8%A7%86%E9%A2%91-prompt"
+                uid=8_2324 StaticText "图生视频 Prompt"
+                  uid=8_6 InlineTextBox "图生视频 Prompt"
+              uid=8_2325 link "多图视频 Prompt" url="https://agnes-ai.com/doc/agnes-video-v20#heading-%E5%A4%9A%E5%9B%BE%E8%A7%86%E9%A2%91-prompt"
+                uid=8_2326 StaticText "多图视频 Prompt"
+                  uid=8_6 InlineTextBox "多图视频 Prompt"
+              uid=8_2327 link "关键帧动画 Prompt" url="https://agnes-ai.com/doc/agnes-video-v20#heading-%E5%85%B3%E9%94%AE%E5%B8%A7%E5%8A%A8%E7%94%BB-prompt"
+                uid=8_2328 StaticText "关键帧动画 Prompt"
+                  uid=8_6 InlineTextBox "关键帧动画 Prompt"
+              uid=8_2329 link "错误码" url="https://agnes-ai.com/doc/agnes-video-v20#heading-%E9%94%99%E8%AF%AF%E7%A0%81"
+                uid=8_2330 StaticText "错误码"
+                  uid=8_6 InlineTextBox "错误码"
+              uid=8_2331 link "价格" url="https://agnes-ai.com/doc/agnes-video-v20#heading-%E4%BB%B7%E6%A0%BC"
+                uid=8_2332 StaticText "价格"
+                  uid=8_6 InlineTextBox "价格"
+              uid=8_2333 link "注意事项" url="https://agnes-ai.com/doc/agnes-video-v20#heading-%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"
+                uid=8_2334 StaticText "注意事项"
+                  uid=8_6 InlineTextBox "注意事项"
