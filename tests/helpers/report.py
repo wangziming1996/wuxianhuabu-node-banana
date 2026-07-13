@@ -3,10 +3,10 @@ from __future__ import annotations
 import os, re, time
 from typing import List, Tuple
 
-REPORT_PATH = "/Users/wangziming/aimake/zmt/wuxianhuabu/tests/REPORT.md"
+REPORT_PATH = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "REPORT.md")
 
-TABLE_RE = re.compile(r"^\|\s*(F\d+|V\d+|P\d+)\s*\|\s*([^|]+?)\s*\|\s*\*\*([^*]+)\*\*\s*\|\s*([^|]*)\s*\|\s*([^|]*?)\s*\|", re.MULTILINE)
-SECTION_RE = re.compile(r"^###\s+(F\d+|V\d+|P\d+)\s+", re.MULTILINE)
+TABLE_RE = re.compile(r"^\|\s*(F\d+|V\d+|P\d+|NB-\d+)\s*\|\s*([^|]+?)\s*\|\s*\*\*([^*]+)\*\*\s*\|\s*([^|]*)\s*\|\s*([^|]*?)\s*\|", re.MULTILINE)
+SECTION_RE = re.compile(r"^###\s+(F\d+|V\d+|P\d+|NB-\d+)\s+", re.MULTILINE)
 
 
 class Report:

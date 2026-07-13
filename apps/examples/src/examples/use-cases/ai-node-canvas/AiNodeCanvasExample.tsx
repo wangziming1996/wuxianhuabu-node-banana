@@ -79,9 +79,10 @@ function NodeCanvasInner() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  /* 把 canvas store 当前快照暴露到 window,供自动保存回调读取 */
+  /* 把 canvas store 当前快照暴露到 window,供自动保存回调 + 测试钩子使用 */
   useEffect(() => {
     ;(window as any).__NB_CANVAS = { nodes, edges }
+    ;(window as any).__NB_CANVAS_STORE = useCanvasStore
     setDirty(true)
   }, [nodes, edges, setDirty])
 

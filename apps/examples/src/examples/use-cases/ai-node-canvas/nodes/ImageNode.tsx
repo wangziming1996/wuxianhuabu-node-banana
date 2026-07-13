@@ -9,6 +9,8 @@ import type { AiCanvasNode, AspectRatioId } from '../types'
 import { useCanvasStore } from '../stores/canvasStore'
 import { defaultProvider } from '../ai/provider'
 import { runWithTaskSlot } from '../stores/taskStore'
+import { useProjectStore } from '../stores/projectStore'
+import { newId } from '../utils/ulid'
 
 type Props = NodeProps<AiCanvasNode>
 
@@ -69,6 +71,22 @@ export function ImageNode({ id, data, selected }: Props) {
         })
         const main = result.imageUrls[0]
         updateData(id, { imageUrl: main, status: 'done' })
+        // 写一条历史记录
+        const projState = useProjectStore.getState()
+        if (projState.currentId) {
+          projState.recordHistory({
+            id: newId('h'),
+            projectId: projState.currentId,
+            nodeId: id,
+            kind: 'generated',
+            title: data.title || '图片节点',
+            imageUrl: main,
+            prompt: injectedPrompt,
+            model: data.model,
+            size: data.size,
+            createdAt: Date.now(),
+          })
+        }
         return result
       })
     } catch (e: any) {

@@ -150,3 +150,7 @@ tests/artifacts/
 tests/REPORT.md
 tests/cases/__pycache__/
 tests/helpers/__pycache__/
+
+# Python
+__pycache__/
+*.pyc
