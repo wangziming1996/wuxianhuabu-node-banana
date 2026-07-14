@@ -31,7 +31,24 @@ ROOT = "/Users/wangziming/aimake/zmt/wuxianhuabu-node-banana/tests"
 ARTE = lambda *p: os.path.join(ROOT, "artifacts", *p)  # noqa
 def REL(p): return os.path.relpath(p, ROOT)
 
-UI_URL = "http://localhost:5422/ai-node-canvas/full"
+
+def _find_port():
+    """Discover the actual port the dev server is listening on."""
+    import urllib.request
+    for p in [5421, 5422, 5423, 5424]:
+        try:
+            urllib.request.urlopen(f"http://localhost:{p}/api/ai-status", timeout=2)
+            return p
+        except Exception:
+            continue
+    return 5422  # fallback
+
+
+def _base():
+    return f"http://localhost:{_find_port()}"
+
+
+UI_URL = _base() + "/ai-node-canvas/full"
 
 
 def _auth(page):
@@ -73,7 +90,7 @@ def case_nb_01_load(report):
         page = b.new_context(viewport={"width":1600,"height":1000}).new_page()
         page.on("console", lambda m: errs.append(m.text[:200]) if m.type == "error" else None)
         page.on("pageerror", lambda exc: perrs.append(str(exc)[:200]))
-        page.goto("http://localhost:5422/", timeout=30000, wait_until="domcontentloaded")
+        page.goto(_base() + "/", timeout=30000, wait_until="domcontentloaded")
         auth = _auth(page)
         _open(page)
         dom = page.evaluate("""() => ({
@@ -113,7 +130,7 @@ def case_nb_02_add_nodes(report):
         page = b.new_context(viewport={"width":1600,"height":1000}).new_page()
         page.on("console", lambda m: errs.append(m.text[:200]) if m.type == "error" else None)
         page.on("pageerror", lambda exc: perrs.append(str(exc)[:200]))
-        page.goto("http://localhost:5422/", timeout=30000, wait_until="domcontentloaded")
+        page.goto(_base() + "/", timeout=30000, wait_until="domcontentloaded")
         _auth(page); _open(page)
         # 点击 5 个 add button
         for label in ["图片","文本","角色","音频","自定义"]:
@@ -152,7 +169,7 @@ def case_nb_03_text_to_image_wire(report):
         page = b.new_context(viewport={"width":1600,"height":1000}).new_page()
         page.on("console", lambda m: errs.append(m.text[:200]) if m.type == "error" else None)
         page.on("pageerror", lambda exc: perrs.append(str(exc)[:200]))
-        page.goto("http://localhost:5422/", timeout=30000, wait_until="domcontentloaded")
+        page.goto(_base() + "/", timeout=30000, wait_until="domcontentloaded")
         _auth(page); _open(page)
         # 添加 text + image
         page.click('.nb-add-node-btn:has-text("文本")')
@@ -210,7 +227,7 @@ def case_nb_04_image_generate(report):
         page = b.new_context(viewport={"width":1600,"height":1000}).new_page()
         page.on("console", lambda m: errs.append(m.text[:200]) if m.type == "error" else None)
         page.on("pageerror", lambda exc: perrs.append(str(exc)[:200]))
-        page.goto("http://localhost:5422/", timeout=30000, wait_until="domcontentloaded")
+        page.goto(_base() + "/", timeout=30000, wait_until="domcontentloaded")
         _auth(page); _open(page)
         # 添加 image 节点 + 写 prompt
         page.click('.nb-add-node-btn:has-text("图片")')
@@ -277,7 +294,7 @@ def case_nb_05_history_panel(report):
         page = b.new_context(viewport={"width":1600,"height":1000}).new_page()
         page.on("console", lambda m: errs.append(m.text[:200]) if m.type == "error" else None)
         page.on("pageerror", lambda exc: perrs.append(str(exc)[:200]))
-        page.goto("http://localhost:5422/", timeout=30000, wait_until="domcontentloaded")
+        page.goto(_base() + "/", timeout=30000, wait_until="domcontentloaded")
         _auth(page); _open(page)
         # 添加 image 节点 + 触发图片生成(ImageNode 现在会自动 recordHistory)
         page.click('.nb-add-node-btn:has-text("图片")')
@@ -348,7 +365,7 @@ def case_nb_06_persistence(report):
         page = ctx.new_page()
         page.on("console", lambda m: errs.append(m.text[:200]) if m.type == "error" else None)
         page.on("pageerror", lambda exc: perrs.append(str(exc)[:200]))
-        page.goto("http://localhost:5422/", timeout=30000, wait_until="domcontentloaded")
+        page.goto(_base() + "/", timeout=30000, wait_until="domcontentloaded")
         _auth(page); _open(page)
         # 添加 3 个节点
         for lbl in ["图片","文本","角色"]:
@@ -404,7 +421,7 @@ def case_nb_07_custom_preset(report):
         page = b.new_context(viewport={"width":1600,"height":1000}).new_page()
         page.on("console", lambda m: errs.append(m.text[:200]) if m.type == "error" else None)
         page.on("pageerror", lambda exc: perrs.append(str(exc)[:200]))
-        page.goto("http://localhost:5422/", timeout=30000, wait_until="domcontentloaded")
+        page.goto(_base() + "/", timeout=30000, wait_until="domcontentloaded")
         _auth(page); _open(page)
         page.click('.nb-add-node-btn:has-text("自定义")')
         page.wait_for_timeout(500)
@@ -454,7 +471,7 @@ def case_nb_08_agent_chat(report):
         page = b.new_context(viewport={"width":1600,"height":1000}).new_page()
         page.on("console", lambda m: errs.append(m.text[:200]) if m.type == "error" else None)
         page.on("pageerror", lambda exc: perrs.append(str(exc)[:200]))
-        page.goto("http://localhost:5422/", timeout=30000, wait_until="domcontentloaded")
+        page.goto(_base() + "/", timeout=30000, wait_until="domcontentloaded")
         _auth(page); _open(page)
         # 在右侧 Agent 输入框里写,关掉"自动生图"
         page.locator('.nb-auto-toggle input').uncheck()
@@ -501,7 +518,7 @@ def case_nb_09_keysettings(report):
         page = b.new_context(viewport={"width":1600,"height":1000}).new_page()
         page.on("console", lambda m: errs.append(m.text[:200]) if m.type == "error" else None)
         page.on("pageerror", lambda exc: perrs.append(str(exc)[:200]))
-        page.goto("http://localhost:5422/", timeout=30000, wait_until="domcontentloaded")
+        page.goto(_base() + "/", timeout=30000, wait_until="domcontentloaded")
         _auth(page); _open(page)
         page.click('.nb-topbar button.nb-secondary-btn:has-text("设置")')
         page.wait_for_timeout(700)
@@ -560,7 +577,7 @@ def case_nb_11_upload(report):
         page = b.new_context(viewport={"width":1600,"height":1000}).new_page()
         page.on("console", lambda m: errs.append(m.text[:200]) if m.type == "error" else None)
         page.on("pageerror", lambda exc: perrs.append(str(exc)[:200]))
-        page.goto("http://localhost:5422/", timeout=30000, wait_until="domcontentloaded")
+        page.goto(_base() + "/", timeout=30000, wait_until="domcontentloaded")
         _auth(page); _open(page)
         page.click('[data-testid="upload-btn"]')
         page.wait_for_timeout(500)
@@ -597,7 +614,7 @@ def case_nb_12_slash_insert(report):
         page = b.new_context(viewport={"width":1600,"height":1000}).new_page()
         page.on("console", lambda m: errs.append(m.text[:200]) if m.type == "error" else None)
         page.on("pageerror", lambda exc: perrs.append(str(exc)[:200]))
-        page.goto("http://localhost:5422/", timeout=30000, wait_until="domcontentloaded")
+        page.goto(_base() + "/", timeout=30000, wait_until="domcontentloaded")
         _auth(page); _open(page)
         # 添加 text 节点
         page.click('.nb-add-node-btn:has-text("文本")')
@@ -641,7 +658,7 @@ def case_nb_13_storage_widget(report):
         page = b.new_context(viewport={"width":1600,"height":1000}).new_page()
         page.on("console", lambda m: errs.append(m.text[:200]) if m.type == "error" else None)
         page.on("pageerror", lambda exc: perrs.append(str(exc)[:200]))
-        page.goto("http://localhost:5422/", timeout=30000, wait_until="domcontentloaded")
+        page.goto(_base() + "/", timeout=30000, wait_until="domcontentloaded")
         _auth(page); _open(page)
         page.wait_for_timeout(2000)
         # 触发一次图片生成以让 cost > 0
@@ -695,7 +712,7 @@ def case_nb_14_multi_project_create(report):
         page = b.new_context(viewport={"width":1600,"height":1000}).new_page()
         page.on("console", lambda m: errs.append(m.text[:200]) if m.type == "error" else None)
         page.on("pageerror", lambda exc: perrs.append(str(exc)[:200]))
-        page.goto("http://localhost:5422/", timeout=30000, wait_until="domcontentloaded")
+        page.goto(_base() + "/", timeout=30000, wait_until="domcontentloaded")
         _auth(page); _open(page)
         # 打开 switcher 菜单,清点当前项目数
         page.click('.nb-topbar-center button.nb-secondary-btn:has-text("打开")')
@@ -740,7 +757,7 @@ def case_nb_15_all_presets_listed(report):
         page = b.new_context(viewport={"width":1600,"height":1000}).new_page()
         page.on("console", lambda m: errs.append(m.text[:200]) if m.type == "error" else None)
         page.on("pageerror", lambda exc: perrs.append(str(exc)[:200]))
-        page.goto("http://localhost:5422/", timeout=30000, wait_until="domcontentloaded")
+        page.goto(_base() + "/", timeout=30000, wait_until="domcontentloaded")
         _auth(page); _open(page)
         # 打开工作流预设 modal
         page.click('.nb-topbar-center button.nb-secondary-btn:has-text("工作流预设")')
@@ -774,14 +791,14 @@ def case_nb_16_multi_tab_warning(report):
         ctx = b.new_context(viewport={"width":1600,"height":1000})
         page1 = ctx.new_page()
         # 注册 / login in browser 1
-        page1.goto("http://localhost:5422/", timeout=30000, wait_until="domcontentloaded")
+        page1.goto(_base() + "/", timeout=30000, wait_until="domcontentloaded")
         auth = page1.evaluate("""async () => {
             const r = await fetch('/api/auth/login', {method:'POST',
               headers:{'Content-Type':'application/json'},
               body:JSON.stringify({email:'nb3@example.com', password:'test123456'}), credentials:'include'});
             return r.status;
         }""")
-        page1.goto("http://localhost:5422/ai-node-canvas/full", timeout=60000, wait_until="networkidle")
+        page1.goto(_base() + "/ai-node-canvas/full", timeout=60000, wait_until="networkidle")
         page1.wait_for_selector(".nb-app-shell", timeout=30000)
         page1.wait_for_timeout(2500)
         current_id_p1 = page1.evaluate("""() => {
@@ -797,7 +814,7 @@ def case_nb_16_multi_tab_warning(report):
         }""")
         # Page 2 (same context → same BroadcastChannel)
         page2 = ctx.new_page()
-        page2.goto("http://localhost:5422/ai-node-canvas/full", timeout=60000, wait_until="networkidle")
+        page2.goto(_base() + "/ai-node-canvas/full", timeout=60000, wait_until="networkidle")
         page2.wait_for_selector(".nb-app-shell", timeout=30000)
         page2.wait_for_timeout(2500)
         # 在 page2 上改个东西触发保存
@@ -851,7 +868,7 @@ def case_nb_17_polish_v2(report):
         page = b.new_context(viewport={"width":1600,"height":1000}).new_page()
         page.on("console", lambda m: errs.append(m.text[:200]) if m.type == "error" else None)
         page.on("pageerror", lambda exc: perrs.append(str(exc)[:200]))
-        page.goto("http://localhost:5422/", timeout=30000, wait_until="domcontentloaded")
+        page.goto(_base() + "/", timeout=30000, wait_until="domcontentloaded")
         _auth(page); _open(page)
         # 添加 1 张 image + 1 text + 1 character(3 种类型,触发 minimap 染色)
         for label in ["图片", "文本", "角色"]:

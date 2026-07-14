@@ -94,10 +94,11 @@ export function LeftSidebar() {
       <div className="nb-sidebar-section nb-tips">
         <h3>操作提示</h3>
         <ul>
-          <li>从节点左侧圆点拖到另一节点左侧圆点 → 连线</li>
-          <li>Cmd/Ctrl+Z 撤销,Cmd/Ctrl+Shift+Z 重做</li>
-          <li>双击空白处放置文本节点</li>
-          <li>节点右上拖动小圆点连接</li>
+          <li><b>点击节点</b>选中 → 按 <b>Delete</b> 或 <b>Backspace</b> 删除</li>
+          <li>Shift+点击 多选 / 空白处拖框多选 → 一键删除</li>
+          <li>从节点拖出到另一节点 → 连线</li>
+          <li>Cmd/Ctrl+Z 撤销 · Cmd/Ctrl+Shift+Z 重做</li>
+          <li>双击空白处创建文本节点</li>
           <li>右侧 AI 助手可用自然语言请求</li>
         </ul>
       </div>

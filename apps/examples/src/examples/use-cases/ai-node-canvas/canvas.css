@@ -768,3 +768,36 @@
   border-radius: 50%;
   animation: nb-spin 0.8s linear infinite;
 }
+/* 节点右上角删除按钮:默认隐藏,选中或 hover 时显示 */
+.nb-node-delete {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #ef476f;
+  color: #fff;
+  border: 2px solid #fff;
+  font-size: 13px;
+  line-height: 1;
+  font-weight: 700;
+  cursor: pointer;
+  opacity: 0;
+  transform: scale(0.85);
+  transition: opacity 0.15s, transform 0.15s, background 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+  padding: 0;
+}
+.nb-node:hover .nb-node-delete,
+.nb-node.nb-selected .nb-node-delete {
+  opacity: 1;
+  transform: scale(1);
+}
+.nb-node-delete:hover {
+  background: #c5283d;
+}

@@ -9,6 +9,7 @@ import { WORKFLOW_PRESETS } from '../ai/presets'
 import { useCanvasStore } from '../stores/canvasStore'
 import type { AiCanvasNode } from '../types'
 import { newId } from '../utils/ulid'
+import { NodeDeleteButton } from './NodeChrome'
 
 type Props = NodeProps<AiCanvasNode>
 
@@ -96,6 +97,8 @@ export function TextNode({ id, data, selected }: Props) {
           ))}
         </div>
       )}
-    </div>
+    
+        <NodeDeleteButton id={id} />
+      </div>
   )
 }

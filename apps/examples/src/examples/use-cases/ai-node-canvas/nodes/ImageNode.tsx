@@ -11,6 +11,7 @@ import { defaultProvider } from '../ai/provider'
 import { runWithTaskSlot } from '../stores/taskStore'
 import { useProjectStore } from '../stores/projectStore'
 import { newId } from '../utils/ulid'
+import { NodeDeleteButton } from './NodeChrome'
 
 type Props = NodeProps<AiCanvasNode>
 
@@ -180,6 +181,8 @@ export function ImageNode({ id, data, selected }: Props) {
       <button className="nb-primary-btn" disabled={busy || !injectedPrompt} onClick={handleGenerate}>
         {busy ? '生成中…' : '生成'}
       </button>
-    </div>
+    
+        <NodeDeleteButton id={id} />
+      </div>
   )
 }

@@ -9,6 +9,7 @@ import { useCanvasStore } from '../stores/canvasStore'
 import { defaultProvider } from '../ai/provider'
 import { runWithTaskSlot } from '../stores/taskStore'
 import type { AiCanvasNode } from '../types'
+import { NodeDeleteButton } from './NodeChrome'
 
 type Props = NodeProps<AiCanvasNode>
 
@@ -96,6 +97,8 @@ export function CustomNode({ id, data, selected }: Props) {
       <button className="nb-primary-btn" disabled={busy || !customData.templateId} onClick={handleExecute}>
         {busy ? '执行中…' : '执行预设'}
       </button>
-    </div>
+    
+        <NodeDeleteButton id={id} />
+      </div>
   )
 }

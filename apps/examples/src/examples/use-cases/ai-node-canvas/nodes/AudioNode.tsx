@@ -4,6 +4,7 @@
 import { Handle, Position, type NodeProps } from 'reactflow'
 import { useCanvasStore } from '../stores/canvasStore'
 import type { AiCanvasNode } from '../types'
+import { NodeDeleteButton } from './NodeChrome'
 
 type Props = NodeProps<AiCanvasNode>
 
@@ -34,6 +35,8 @@ export function AudioNode({ id, data, selected }: Props) {
       ) : (
         <div className="nb-image-placeholder">音频生成功能开发中</div>
       )}
-    </div>
+    
+        <NodeDeleteButton id={id} />
+      </div>
   )
 }
