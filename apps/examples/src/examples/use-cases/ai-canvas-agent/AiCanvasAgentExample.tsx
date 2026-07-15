@@ -386,9 +386,16 @@ const PROMPT_LIBRARY_PRESETS: PromptLibraryPreset[] = [
 		id: 'product-six-view',
 		category: '产品图',
 		title: '产品六视图',
-		description: '产品参考图生成标准 16:9 六视图。',
+		description: '以参考图为主体(产品/角色/物体),生成 16:9 六视图。',
 		prompt:
-			'以参考图中的产品为唯一主体，生成一张 16:9 横向画幅产品六视图：正视图、侧视图、后视图、俯视图、后侧视图、顶视图。标准无透视变形，柔和电影光，轻微胶片颗粒，8K 超写实。保持产品材质、颜色、比例、细节与识别特征一致，不添加文字、标志、水印或 UI 元素。',
+			'以参考图中的主体为唯一对象(无论它是产品、角色、物体还是其他),生成一张 16:9 横向画幅的多视角整列六视图:正视图、侧视图、后视图、俯视图、后侧视图、顶视图。\n' +
+			'硬性要求:\n' +
+			'1) 六个视角必须是【同一个主体】——和参考图完全一致:外形、材质、颜色、纹理、比例、细节、识别特征、零部件、姿态角度都不允许变。\n' +
+			'2) 标准正交视图,无透视变形、无镜头畸变。每个视角单独成块、互不重叠、清晰分隔。\n' +
+			'3) 柔和电影光 + 轻微胶片颗粒 + 8K 超写实质感。\n' +
+			'4) 背景:干净的中性灰或浅色摄影棚环境,无杂物。\n' +
+			'5) 不要凭空捏造参考图中没有的造型、零件、装饰或文字。\n' +
+			'6) 不添加文字、标志、商标、水印、UI 元素或尺寸标注。',
 	},
 	{
 		id: 'commercial-lighting',
@@ -418,11 +425,18 @@ const WORKFLOW_PRESETS: Array<{
 	{
 		id: 'six-view',
 		title: '产品六视图',
-		description: '上传产品图后直接生成 16:9 六视图',
+		description: '以参考图为主体(产品/角色/物体),生成 16:9 六视图',
 		size: '16:9',
 		count: 1,
 		prompt:
-			'以参考图片中的产品为唯一主体，生成一张图内整齐排列六视图：正视图、侧视图、后视图、俯视图、后侧视图、顶视图，标准无透视变形，柔和电影光，轻微胶片颗粒，8K 超写实。保持产品材质、颜色、比例、细节与识别特征完全一致，不添加文字、标志、水印或 UI 元素。',
+			'以参考图中的主体为唯一对象(无论它是产品、角色、物体还是其他),生成一张 16:9 横向画幅的多视角整列六视图:正视图、侧视图、后视图、俯视图、后侧视图、顶视图。\n' +
+			'硬性要求:\n' +
+			'1) 六个视角必须是【同一个主体】——和参考图完全一致:外形、材质、颜色、纹理、比例、细节、识别特征、零部件都不允许变。\n' +
+			'2) 标准正交视图,无透视变形、无镜头畸变。每个视角单独成块、互不重叠、清晰分隔。\n' +
+			'3) 柔和电影光 + 轻微胶片颗粒 + 8K 超写实质感。\n' +
+			'4) 背景:干净的中性灰或浅色摄影棚环境,无杂物。\n' +
+			'5) 不要凭空捏造参考图中没有的造型、零件、装饰或文字。\n' +
+			'6) 不添加文字、标志、商标、水印、UI 元素或尺寸标注。',
 	},
 	{
 		id: 'prompt-analysis',
@@ -436,15 +450,19 @@ const WORKFLOW_PRESETS: Array<{
 	{
 		id: 'lighting-contact-sheet',
 		title: '九宫格灯光',
-		description: '固定 16:9 奢华时尚灯光探索',
+		description: '以参考图为主体,展示 9 种不同专业打光方案的 3x3 对比',
 		size: '16:9',
 		count: 1,
-		prompt: `Create a single 3x3 luxury fashion editorial lighting exploration contact sheet.
-The final image must contain exactly nine separate panels arranged in a clean 3x3 grid.
-The same subject must appear in all nine panels.
-Maintain character continuity, facial features, hairstyle, styling logic, wardrobe logic, and product continuity.
-The purpose of the contact sheet is to explore nine completely different luxury commercial lighting systems.
-Each panel must use a distinctly different professional photography lighting setup.
+		prompt: `CRITICAL IDENTITY LOCK — read this BEFORE everything else:
+[Figure-1] is the single source of truth for the subject. The final image is a 3x3 grid showing the EXACT SAME subject as Figure-1, photographed under nine different lighting setups.
+- The subject's identity, face, hairstyle, body shape, wardrobe, accessories, age, gender, skin tone, ethnicity, pose and expression MUST be preserved exactly across all nine panels.
+- ONLY the lighting (direction, intensity, color temperature, shadow geometry, highlight placement, background tone, contrast ratio) is allowed to change between panels.
+- DO NOT generate nine different people, nine different models, or nine different characters. All nine panels must show one and the same person/object.
+- DO NOT vary the subject's pose, expression, or wardrobe. The pose, framing and camera angle are fixed; only the light changes.
+
+OUTPUT FORMAT:
+Create a single 3x3 grid image at 16:9 landscape ratio. The final image must contain exactly nine separate panels arranged in a clean 3x3 grid with no overlap, no shared edges, no collage-style bleed.
+Each panel must use a distinctly different professional photography lighting setup:
 Panel 1 - Luxury Beige Editorial: soft frontal beauty light, large octabox illumination, creamy beige gradient background, subtle shadow transition, luxury fashion campaign atmosphere, refined skin rendering, premium editorial portrait.
 Panel 2 - High-Key Beauty Campaign: bright commercial beauty lighting, nearly shadowless illumination, white-to-sky-blue seamless background, glowing skin highlights, luxury cosmetics advertisement lighting, fresh and clean visual mood.
 Panel 3 - Deep Brown Silhouette Portrait: strong side lighting, controlled shadow falloff, deep brown gradient background, shoulder rim light, cinematic silhouette effect, luxury fragrance campaign atmosphere.
@@ -454,10 +472,13 @@ Panel 6 - Premium Product Advertising Light: strong side illumination, sharp hig
 Panel 7 - Contemporary Blue Commercial Light: cool blue gradient background, soft directional lighting, glossy fabric reflections, premium technology campaign atmosphere, fashion-tech advertising aesthetic.
 Panel 8 - Luxury Eyewear Backlight: bright white background, strong side-backlight, clean contour lighting, wind-blown hair effect, premium eyewear advertising atmosphere, modern editorial portrait.
 Panel 9 - High-Contrast Beauty Close-Up: macro beauty lighting, extreme skin detail visibility, controlled specular highlights, sharp facial contours, luxury skincare campaign aesthetic, premium cosmetic photography.
-Every panel must have different lighting direction, different contrast ratio, different shadow structure, different highlight behavior, different mood, and different commercial advertising atmosphere.
-Do not simply change background colors. Each panel must visibly demonstrate a unique professional photography lighting setup.
-Luxury fashion editorial photography, commercial advertising portrait, realistic skin texture, visible pores, natural imperfections, premium retouching, ultra photorealistic, magazine-quality lighting study.
-No text, no logos, no watermark, no UI elements. Nine clearly separated panels. Final aspect ratio must remain 16:9.`,
+
+HARD RULES (must all be satisfied):
+1) Subject identity, face, hairstyle, wardrobe, pose, expression, framing and camera angle are LOCKED to Figure-1 across all 9 panels.
+2) Every panel must have a visibly different lighting direction, contrast ratio, shadow structure, highlight behavior, mood, and commercial atmosphere.
+3) Do not simply change background colors to fake a lighting change — the light source, its direction, and its color temperature must be observably different per panel.
+4) No text, no logos, no watermark, no UI elements, no panel numbers or labels inside the image.
+5) Final aspect ratio must be exactly 16:9, with nine clearly separated panels of equal size. Luxury fashion editorial photography, commercial advertising portrait, realistic skin texture, visible pores, natural imperfections, premium retouching, ultra photorealistic, magazine-quality lighting study.`,
 	},
 ]
 
