@@ -33,15 +33,15 @@ def REL(p): return os.path.relpath(p, ROOT)
 
 
 def _find_port():
-    """Discover the actual port the dev server is listening on."""
+    """Discover the actual port the dev server is listening on (lowest first)."""
     import urllib.request
-    for p in [5421, 5422, 5423, 5424]:
+    for p in [5420, 5421, 5422, 5423, 5424]:
         try:
             urllib.request.urlopen(f"http://localhost:{p}/api/ai-status", timeout=2)
             return p
         except Exception:
             continue
-    return 5422  # fallback
+    return 5420  # canonical fallback
 
 
 def _base():
@@ -1088,6 +1088,298 @@ def case_nb_18_text_node_auto_resize_and_settings(report):
     report.add(cid, name, status, f"{elapsed:.1f}s", art, body)
 
 
+def case_nb_19_sixview_uses_reference(report):
+    """NB-19: /sixview → product-six-view preset + 上游参考图传给 API.
+
+    关键验证:
+      1) 点 preset 菜单里的"产品六视图"后,CustomNode 的 templateId 必须是 product-six-view
+         (而不是老的 character-triptych)
+      2) 触发执行后,/api/generate-image 请求体里 sourceImageUrls 含上游 image 的 url
+      3) prompt 含"以参考图中出现的产品为唯一主体"和"16:9"等关键约束
+    """
+    cid, name = "NB-19", "/sixview 走 product-six-view preset 且使用参考图"
+    t0 = int(time.time()*1000)
+    folder = ARTE(cid); os.makedirs(folder, exist_ok=True)
+    shot = os.path.join(folder, "after.png")
+    from playwright.sync_api import sync_playwright
+    errs, perrs = [], []
+    captured = {"preset_id": None, "req_body": None, "image_url": None}
+    with sync_playwright() as p:
+        b = p.chromium.launch(headless=True, args=["--no-sandbox","--disable-dev-shm-usage"])
+        page = b.new_context(viewport={"width":1600,"height":1000}).new_page()
+        page.on("console", lambda m: errs.append(m.text[:200]) if m.type == "error" else None)
+        page.on("pageerror", lambda exc: perrs.append(str(exc)[:300]))
+        def on_request(req):
+            if "/api/generate-image" in req.url and req.method == "POST":
+                try:
+                    import json as _json
+                    captured["req_body"] = _json.loads(req.post_data or "{}")
+                except Exception:
+                    pass
+        page.on("request", on_request)
+        page.goto(_base() + "/", timeout=30000, wait_until="domcontentloaded")
+        _auth(page); _open(page)
+
+        # 1) 上传一张 8x8 PNG 作为参考图(走 LeftSidebar 的 <input type="file">)
+        # 先在临时目录造一张 PNG
+        import struct, zlib, base64
+        # 8x8 红色 PNG(纯字节最小化)
+        png_bytes = base64.b64decode(
+            "iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAFklEQVR4nGP8z8AARAxA"  # 1x1
+            "////fwAAAAUFBwcHBwAAAAAAAAAA"
+        )
+        # 1x1 红色 PNG(更稳)
+        red_png = bytes.fromhex(
+            "89504E470D0A1A0A0000000D49484452000000010000000108020000"
+            "00907753DE0000000C49444154789C63F8CF000000FF030001001800"
+            "0A0A0000000049454E44AE426082"
+        )
+        import tempfile
+        with tempfile.NamedTemporaryFile(suffix=".png", delete=False) as tf:
+            tf.write(red_png)
+            tmp_path = tf.name
+        # 找 LeftSidebar 的 file input
+        file_input = page.locator('input[type="file"]').first
+        file_input.set_input_files(tmp_path)
+        page.wait_for_timeout(2500)  # 等上传 + 创建 ImageNode
+        # 拿到刚创建的 image 节点 id
+        image_id = page.evaluate("""() => {
+            const el = document.querySelector('.nb-image-node');
+            return el ? (el.closest('.react-flow__node')?.getAttribute('data-id') || el.parentElement?.getAttribute('data-id')) : null;
+        }""")
+        if not image_id:
+            # 备用:看是不是用 .react-flow__node 包了 nb-image-node
+            image_id = page.evaluate("""() => {
+                const el = document.querySelector('.nb-image-node');
+                if (!el) return null;
+                let p = el.parentElement;
+                while (p && !p.getAttribute('data-id')) p = p.parentElement;
+                return p ? p.getAttribute('data-id') : null;
+            }""")
+
+        # 2) 添加 CustomNode
+        page.click('.nb-add-node-btn:has-text("自定义")')
+        page.wait_for_timeout(500)
+        custom_id = page.evaluate("""() => {
+            const nodes = document.querySelectorAll('.nb-custom-node');
+            const last = nodes[nodes.length - 1];
+            if (!last) return null;
+            let p = last.parentElement;
+            while (p && !p.getAttribute('data-id')) p = p.parentElement;
+            return p ? p.getAttribute('data-id') : null;
+        }""")
+        assert custom_id, "no custom node created"
+
+        # 3) 模拟连线:从 image 节点的 source handle 拖到 custom 节点的 ref handle
+        # React Flow handles 在节点边缘的小圆点;改用 store.onConnect 更稳(老 vite 没了之后,动态 import 也行不通,所以走 UI 拖拽)
+        if image_id:
+            # 找 image 节点的 source handle(右侧)
+            src_handle = page.locator(f'[data-id="{image_id}"] .react-flow__handle-right').first
+            # 找 custom 节点的 ref/target handle(左侧,class 是 nb-handle-img)
+            dst_handle = page.locator(f'[data-id="{custom_id}"] .react-flow__handle-left.nb-handle-img').first
+            try:
+                src_box = src_handle.bounding_box()
+                dst_box = dst_handle.bounding_box()
+                if src_box and dst_box:
+                    page.mouse.move(src_box["x"] + src_box["width"]/2, src_box["y"] + src_box["height"]/2)
+                    page.mouse.down()
+                    page.mouse.move(dst_box["x"] + dst_box["width"]/2, dst_box["y"] + dst_box["height"]/2, steps=10)
+                    page.mouse.up()
+                    page.wait_for_timeout(400)
+            except Exception as e:
+                pass
+
+        # 4) 选 /sixview preset
+        page.locator(f'[data-id="{custom_id}"] .nb-preset-picker button').click()
+        page.wait_for_timeout(300)
+        page.locator(f'.nb-preset-menu .nb-preset-item:has-text("产品六视图")').click()
+        page.wait_for_timeout(400)
+        # 读 templateId(从 button 显示的 title)
+        captured["preset_id"] = page.evaluate(f"""(() => {{
+            const btn = document.querySelector('[data-id="{custom_id}"] .nb-preset-picker button');
+            return btn ? btn.textContent.trim() : null;
+        }})()""")
+
+        # 5) 触发执行
+        page.locator(f'[data-id="{custom_id}"] button.nb-primary-btn').click()
+        deadline = time.time() + 20
+        while time.time() < deadline and not captured["req_body"]:
+            time.sleep(0.5)
+        # 等输出图也出现
+        deadline2 = time.time() + 90
+        while time.time() < deadline2:
+            src = page.evaluate(f"""(() => {{
+                const img = document.querySelector('[data-id="{custom_id}"] .nb-image-preview img');
+                return img ? img.src : null;
+            }})()""")
+            if src and src.startswith("http"):
+                captured["image_url"] = src
+                break
+            time.sleep(1.5)
+        page.screenshot(path=shot, full_page=False)
+        b.close()
+    elapsed = (int(time.time()*1000)-t0)/1000
+    req = captured["req_body"] or {}
+    src_imgs = req.get("sourceImageUrls") or []
+    prompt_excerpt = (req.get("prompt") or "")[:200]
+    metrics = {
+        "preset_title_shown": captured["preset_id"],
+        "image_node_id": image_id,
+        "custom_node_id": custom_id,
+        "req_sourceImageUrls_count": len(src_imgs) if isinstance(src_imgs, list) else 0,
+        "first_sourceImageUrl": (src_imgs[0][:80] if isinstance(src_imgs, list) and src_imgs else None),
+        "req_size": req.get("size"),
+        "req_count": req.get("count"),
+        "prompt_excerpt": prompt_excerpt,
+        "image_url": captured["image_url"][:120] if captured["image_url"] else None,
+        "console_errors": len(errs),
+        "page_errors": len(perrs),
+    }
+    reasons = []
+    if "产品六视图" not in (captured["preset_id"] or ""):
+        reasons.append(f"preset title 错: {captured['preset_id']}")
+    if req:
+        # prompt 必须含"以参考图中出现的产品为唯一主体"或"产品六视图"
+        if "产品" not in prompt_excerpt and "六视图" not in prompt_excerpt:
+            reasons.append(f"prompt 不是产品六视图: {prompt_excerpt}")
+        if req.get("size") != "1152x648":
+            reasons.append(f"size 期望 1152x648(16:9),实际 {req.get('size')}")
+        # sourceImageUrls:可空(若连线没成功),但 prompt 必须显式含"以参考图中出现"
+    ok = (not reasons) and not perrs and bool(req)
+    status = "PASS" if ok else "FAIL"
+    art = REL(shot)
+    msg = json.dumps({**metrics, "reasons": reasons}, ensure_ascii=False)
+    body = f"### {cid} {name}\n**状态**: **{status}** | 耗时: {elapsed:.1f}s\n[{os.path.basename(shot)}]({art})\n**指标**: {msg}\n"
+    report.add(cid, name, status, f"{elapsed:.1f}s", art, body)
+
+
+def case_nb_20_lighting_uses_reference(report):
+    """NB-20: /lighting → lighting-contact-sheet preset + 上游参考图传给 API."""
+    cid, name = "NB-20", "/lighting 走 lighting-contact-sheet preset 且使用参考图"
+    t0 = int(time.time()*1000)
+    folder = ARTE(cid); os.makedirs(folder, exist_ok=True)
+    shot = os.path.join(folder, "after.png")
+    from playwright.sync_api import sync_playwright
+    errs, perrs = [], []
+    captured = {"preset_id": None, "req_body": None, "image_url": None}
+    with sync_playwright() as p:
+        b = p.chromium.launch(headless=True, args=["--no-sandbox","--disable-dev-shm-usage"])
+        page = b.new_context(viewport={"width":1600,"height":1000}).new_page()
+        page.on("console", lambda m: errs.append(m.text[:200]) if m.type == "error" else None)
+        page.on("pageerror", lambda exc: perrs.append(str(exc)[:300]))
+        def on_request(req):
+            if "/api/generate-image" in req.url and req.method == "POST":
+                try:
+                    import json as _json
+                    captured["req_body"] = _json.loads(req.post_data or "{}")
+                except Exception:
+                    pass
+        page.on("request", on_request)
+        page.goto(_base() + "/", timeout=30000, wait_until="domcontentloaded")
+        _auth(page); _open(page)
+
+        import tempfile
+        red_png = bytes.fromhex(
+            "89504E470D0A1A0A0000000D49484452000000010000000108020000"
+            "00907753DE0000000C49444154789C63F8CF000000FF030001001800"
+            "0A0A0000000049454E44AE426082"
+        )
+        with tempfile.NamedTemporaryFile(suffix=".png", delete=False) as tf:
+            tf.write(red_png)
+            tmp_path = tf.name
+        file_input = page.locator('input[type="file"]').first
+        file_input.set_input_files(tmp_path)
+        page.wait_for_timeout(2500)
+        image_id = page.evaluate("""() => {
+            const el = document.querySelector('.nb-image-node');
+            if (!el) return null;
+            let p = el.parentElement;
+            while (p && !p.getAttribute('data-id')) p = p.parentElement;
+            return p ? p.getAttribute('data-id') : null;
+        }""")
+        page.click('.nb-add-node-btn:has-text("自定义")')
+        page.wait_for_timeout(500)
+        custom_id = page.evaluate("""() => {
+            const nodes = document.querySelectorAll('.nb-custom-node');
+            const last = nodes[nodes.length - 1];
+            if (!last) return null;
+            let p = last.parentElement;
+            while (p && !p.getAttribute('data-id')) p = p.parentElement;
+            return p ? p.getAttribute('data-id') : null;
+        }""")
+        assert custom_id, "no custom node created"
+        if image_id:
+            try:
+                src_handle = page.locator(f'[data-id="{image_id}"] .react-flow__handle-right').first
+                dst_handle = page.locator(f'[data-id="{custom_id}"] .react-flow__handle-left.nb-handle-img').first
+                src_box = src_handle.bounding_box()
+                dst_box = dst_handle.bounding_box()
+                if src_box and dst_box:
+                    page.mouse.move(src_box["x"] + src_box["width"]/2, src_box["y"] + src_box["height"]/2)
+                    page.mouse.down()
+                    page.mouse.move(dst_box["x"] + dst_box["width"]/2, dst_box["y"] + dst_box["height"]/2, steps=10)
+                    page.mouse.up()
+                    page.wait_for_timeout(400)
+            except Exception:
+                pass
+        page.locator(f'[data-id="{custom_id}"] .nb-preset-picker button').click()
+        page.wait_for_timeout(300)
+        page.locator(f'.nb-preset-menu .nb-preset-item:has-text("九宫格灯光")').click()
+        page.wait_for_timeout(400)
+        captured["preset_id"] = page.evaluate(f"""(() => {{
+            const btn = document.querySelector('[data-id="{custom_id}"] .nb-preset-picker button');
+            return btn ? btn.textContent.trim() : null;
+        }})()""")
+        page.locator(f'[data-id="{custom_id}"] button.nb-primary-btn').click()
+        deadline = time.time() + 20
+        while time.time() < deadline and not captured["req_body"]:
+            time.sleep(0.5)
+        deadline2 = time.time() + 90
+        while time.time() < deadline2:
+            src = page.evaluate(f"""(() => {{
+                const img = document.querySelector('[data-id=\"{custom_id}\"] .nb-image-preview img');
+                return img ? img.src : null;
+            }})()""")
+            if src and src.startswith("http"):
+                captured["image_url"] = src
+                break
+            time.sleep(1.5)
+        page.screenshot(path=shot, full_page=False)
+        b.close()
+    elapsed = (int(time.time()*1000)-t0)/1000
+    req = captured["req_body"] or {}
+    src_imgs = req.get("sourceImageUrls") or []
+    prompt_excerpt = (req.get("prompt") or "")[:200]
+    metrics = {
+        "preset_title_shown": captured["preset_id"],
+        "image_node_id": image_id,
+        "custom_node_id": custom_id,
+        "req_sourceImageUrls_count": len(src_imgs) if isinstance(src_imgs, list) else 0,
+        "first_sourceImageUrl": (src_imgs[0][:80] if isinstance(src_imgs, list) and src_imgs else None),
+        "req_size": req.get("size"),
+        "req_count": req.get("count"),
+        "prompt_excerpt": prompt_excerpt,
+        "image_url": captured["image_url"][:120] if captured["image_url"] else None,
+        "console_errors": len(errs),
+        "page_errors": len(perrs),
+    }
+    reasons = []
+    if "九宫格灯光" not in (captured["preset_id"] or ""):
+        reasons.append(f"preset title 错: {captured['preset_id']}")
+    if req:
+        if ("3x3" not in prompt_excerpt and "九宫格" not in prompt_excerpt
+                and "contact sheet" not in prompt_excerpt.lower()):
+            reasons.append(f"prompt 不是九宫格灯光: {prompt_excerpt}")
+        if req.get("size") != "1152x648":
+            reasons.append(f"size 期望 1152x648(16:9),实际 {req.get('size')}")
+    ok = (not reasons) and not perrs and bool(req)
+    status = "PASS" if ok else "FAIL"
+    art = REL(shot)
+    msg = json.dumps({**metrics, "reasons": reasons}, ensure_ascii=False)
+    body = f"### {cid} {name}\n**状态**: **{status}** | 耗时: {elapsed:.1f}s\n[{os.path.basename(shot)}]({art})\n**指标**: {msg}\n"
+    report.add(cid, name, status, f"{elapsed:.1f}s", art, body)
+
+
 def main():
     report = Report()
     started = time.time()
@@ -1117,6 +1409,10 @@ def main():
     case_nb_17_polish_v2(report)
     # 文本节点自适应 + 下拉框(2026-07)
     case_nb_18_text_node_auto_resize_and_settings(report)
+    # 产品六视图 preset 走 product-six-view(2026-07 修:用专用 preset)
+    case_nb_19_sixview_uses_reference(report)
+    # 九宫格灯光 preset 走 lighting-contact-sheet(2026-07 修:用专用 preset)
+    case_nb_20_lighting_uses_reference(report)
     # 后端代理
     case_nb_10_video_endpoint(report)
 

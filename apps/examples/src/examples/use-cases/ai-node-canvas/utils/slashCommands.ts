@@ -13,9 +13,9 @@ export interface SlashCommandMatch {
 }
 
 const SLUG_TO_PRESET: Record<string, string> = {
-  sixview: 'character-triptych',      // 产品六视图 → 用 character 三视图生成
-  triptych: 'character-triptych',
-  lighting: 'storyboard-grid-9',
+  sixview: 'product-six-view',        // 产品六视图(2026-07 修:用专用 preset,不是 character 三视图)
+  triptych: 'character-triptych',     // 角色三视图
+  lighting: 'lighting-contact-sheet', // 九宫格灯光(2026-07 修:用专用 preset,不是 storyboard-grid-9)
   motion: 'motion-transfer',
   poster: 'cn-poster',
   sketch: 'quick-sketch',
