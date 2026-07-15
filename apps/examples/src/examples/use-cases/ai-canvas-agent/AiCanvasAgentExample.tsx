@@ -425,18 +425,22 @@ const WORKFLOW_PRESETS: Array<{
 	{
 		id: 'six-view',
 		title: '产品六视图',
-		description: '以参考图为主体(产品/角色/物体),生成 16:9 六视图',
+		description: '以参考图为主体(产品/角色/物体),生成全身 16:9 六视图',
 		size: '16:9',
 		count: 1,
 		prompt:
-			'以参考图中的主体为唯一对象(无论它是产品、角色、物体还是其他),生成一张 16:9 横向画幅的多视角整列六视图:正视图、侧视图、后视图、俯视图、后侧视图、顶视图。\n' +
-			'硬性要求:\n' +
-			'1) 六个视角必须是【同一个主体】——和参考图完全一致:外形、材质、颜色、纹理、比例、细节、识别特征、零部件都不允许变。\n' +
-			'2) 标准正交视图,无透视变形、无镜头畸变。每个视角单独成块、互不重叠、清晰分隔。\n' +
-			'3) 柔和电影光 + 轻微胶片颗粒 + 8K 超写实质感。\n' +
-			'4) 背景:干净的中性灰或浅色摄影棚环境,无杂物。\n' +
-			'5) 不要凭空捏造参考图中没有的造型、零件、装饰或文字。\n' +
-			'6) 不添加文字、标志、商标、水印、UI 元素或尺寸标注。',
+			'以参考图中的主体为唯一对象(无论它是产品、角色、人物、物体还是其他),生成一张 16:9 横向画幅的多视角整列六视图:正视图、侧视图、后视图、俯视图、后侧视图、顶视图。\n' +
+			'【全身出图硬性要求 — 必须严格遵守,违反任何一条都视为失败】:\n' +
+			'1) 全身呈现(从头到脚完整可见):每一个视角的子图都必须把参考图主体的【完整全身】画出来,头部、躯干、四肢、配饰、道具全部入画。\n' +
+			'2) 禁止裁切:不允许出现半身像、胸部以上特写、头部特写、脸肩特写,所有 6 个视角的取景都必须包含主体的全部身体。\n' +
+			'3) 比例严格保持:6 个视角的【头身比、身高肩宽比、四肢长度比例、道具与身体的相对大小】必须和参考图完全一致,不允许出现「头大身小」「腿长躯干短」等任何比例失真。\n' +
+			'4) 取景范围统一:6 个视角使用【完全相同的相机距离、缩放比例、画幅大小】,让 6 个子图的主体在画面里大小一致(就好像把同一个物体在同一个转盘上转了 6 个角度)。\n' +
+			'5) 同一主体:六个视角必须是【同一个主体】——外形、材质、颜色、纹理、比例、细节、识别特征、零部件都不允许变。\n' +
+			'6) 标准正交视图,无透视变形、无镜头畸变。每个视角单独成块、互不重叠、清晰分隔。\n' +
+			'7) 柔和电影光 + 轻微胶片颗粒 + 8K 超写实质感。\n' +
+			'8) 背景:干净的中性灰或浅色摄影棚环境,无杂物。\n' +
+			'9) 不要凭空捏造参考图中没有的造型、零件、装饰或文字。\n' +
+			'10) 不添加文字、标志、商标、水印、UI 元素或尺寸标注。',
 	},
 	{
 		id: 'prompt-analysis',
@@ -454,31 +458,34 @@ const WORKFLOW_PRESETS: Array<{
 		size: '16:9',
 		count: 1,
 		prompt: `CRITICAL IDENTITY LOCK — read this BEFORE everything else:
-[Figure-1] is the single source of truth for the subject. The final image is a 3x3 grid showing the EXACT SAME subject as Figure-1, photographed under nine different lighting setups.
-- The subject's identity, face, hairstyle, body shape, wardrobe, accessories, age, gender, skin tone, ethnicity, pose and expression MUST be preserved exactly across all nine panels.
-- ONLY the lighting (direction, intensity, color temperature, shadow geometry, highlight placement, background tone, contrast ratio) is allowed to change between panels.
-- DO NOT generate nine different people, nine different models, or nine different characters. All nine panels must show one and the same person/object.
-- DO NOT vary the subject's pose, expression, or wardrobe. The pose, framing and camera angle are fixed; only the light changes.
+[Figure-1] is the SINGLE source of truth for the subject. The final image is a 3x3 grid showing THE EXACT SAME subject as Figure-1, rendered under nine different lighting setups.
+- IDENTITY MUST BE PRESERVED EXACTLY across all 9 panels: face shape, facial features, eye shape, nose, mouth, skin color, hair color, hair style, head accessories (crown, hat, hairpin, horns, etc.), body type, body height, gender presentation, age appearance, costume, armor, weapons, props, jewelry, color palette, art style, and any other distinctive visual trait of Figure-1.
+- ONLY the lighting is allowed to change between panels: light source direction, light intensity, color temperature (warm/cool/neutral), shadow geometry, highlight placement, background tone, contrast ratio.
+- DO NOT generate nine different people. All nine panels must show one and the same person/character/product. If Figure-1 is a fantasy warrior with horns and armor, EVERY panel must show THAT EXACT warrior — not a different man, not a woman, not a modern person.
+- DO NOT vary pose, expression, framing, or camera angle. The pose, distance, framing and camera angle are FIXED; only the light changes.
+- DO NOT change clothing, armor, weapons, hair, face, body, or skin. ONLY light and its immediate visual effect on the scene may vary.
 
 OUTPUT FORMAT:
-Create a single 3x3 grid image at 16:9 landscape ratio. The final image must contain exactly nine separate panels arranged in a clean 3x3 grid with no overlap, no shared edges, no collage-style bleed.
-Each panel must use a distinctly different professional photography lighting setup:
-Panel 1 - Luxury Beige Editorial: soft frontal beauty light, large octabox illumination, creamy beige gradient background, subtle shadow transition, luxury fashion campaign atmosphere, refined skin rendering, premium editorial portrait.
-Panel 2 - High-Key Beauty Campaign: bright commercial beauty lighting, nearly shadowless illumination, white-to-sky-blue seamless background, glowing skin highlights, luxury cosmetics advertisement lighting, fresh and clean visual mood.
-Panel 3 - Deep Brown Silhouette Portrait: strong side lighting, controlled shadow falloff, deep brown gradient background, shoulder rim light, cinematic silhouette effect, luxury fragrance campaign atmosphere.
-Panel 4 - Dramatic Cut-Light Portrait: hard directional spotlight crossing the face, strong shadow geometry, high contrast facial sculpting, dark background, editorial fashion drama, luxury beauty campaign lighting.
-Panel 5 - Red Luxury Mood Lighting: deep crimson background, narrow spotlight illumination, emotional luxury atmosphere, rich shadows, sophisticated fashion advertising aesthetic.
-Panel 6 - Premium Product Advertising Light: strong side illumination, sharp highlight edges, cool white background, realistic shadow projection, luxury consumer electronics advertisement lighting.
-Panel 7 - Contemporary Blue Commercial Light: cool blue gradient background, soft directional lighting, glossy fabric reflections, premium technology campaign atmosphere, fashion-tech advertising aesthetic.
-Panel 8 - Luxury Eyewear Backlight: bright white background, strong side-backlight, clean contour lighting, wind-blown hair effect, premium eyewear advertising atmosphere, modern editorial portrait.
-Panel 9 - High-Contrast Beauty Close-Up: macro beauty lighting, extreme skin detail visibility, controlled specular highlights, sharp facial contours, luxury skincare campaign aesthetic, premium cosmetic photography.
+Create a single 3x3 grid image at 16:9 landscape ratio. Nine equal-sized panels, clean grid layout, no overlap, no shared edges, no collage-style bleed.
 
-HARD RULES (must all be satisfied):
-1) Subject identity, face, hairstyle, wardrobe, pose, expression, framing and camera angle are LOCKED to Figure-1 across all 9 panels.
-2) Every panel must have a visibly different lighting direction, contrast ratio, shadow structure, highlight behavior, mood, and commercial atmosphere.
-3) Do not simply change background colors to fake a lighting change — the light source, its direction, and its color temperature must be observably different per panel.
-4) No text, no logos, no watermark, no UI elements, no panel numbers or labels inside the image.
-5) Final aspect ratio must be exactly 16:9, with nine clearly separated panels of equal size. Luxury fashion editorial photography, commercial advertising portrait, realistic skin texture, visible pores, natural imperfections, premium retouching, ultra photorealistic, magazine-quality lighting study.`,
+Each panel uses a DIFFERENT professional photography lighting setup. The descriptions below describe the LIGHTING and BACKGROUND ONLY — they do NOT specify or change the subject's gender, age, clothing, or appearance (those are locked to Figure-1):
+Panel 1 - Soft Frontal Beauty Light: large octabox key light directly in front of Figure-1, even illumination, subtle shadow falloff, neutral light beige gradient background.
+Panel 2 - High-Key Overhead Light: bright overhead softbox, nearly shadowless, white-to-pale-blue seamless background, clean bright mood.
+Panel 3 - Side Rim Light with Dark Background: strong single side light (camera left or right), deep brown to charcoal gradient background, shoulder rim light, dramatic silhouette feel.
+Panel 4 - Hard Directional Spot Light: hard spotlight cutting across from one side, strong shadow geometry on Figure-1, dark background, high contrast sculpting.
+Panel 5 - Warm Tungsten Mood Light: deep amber/crimson background, warm narrow spotlight, emotional mood, rich shadows.
+Panel 6 - Cool Product-Studio Light: cool white background, strong side illumination, sharp highlight edges, realistic shadow projection on the floor, clean commercial vibe.
+Panel 7 - Cool Blue Tech Light: cool blue gradient background, soft directional light, glossy material reflections where applicable, modern tech mood.
+Panel 8 - Strong Backlight: bright white or pale background, strong backlight behind Figure-1, clean contour/rim outline visible, slight halo.
+Panel 9 - Macro Close-Up Under Key Light: macro-distance key light, visible skin/material texture, controlled specular highlights, sharp face/body contours.
+
+HARD RULES (every one must be satisfied):
+1) Figure-1's identity, face, hair, body, costume, props, and overall appearance are LOCKED across all 9 panels.
+2) Every panel must have a visibly different lighting direction, contrast, shadow structure, highlight behavior, mood, and background tone.
+3) Do not fake a lighting change by only switching background colors — the light source, its direction, and its color temperature must be observably different per panel.
+4) The 9 panels may be of any subject (person, character, product, animal, object) — they MUST be the same subject as Figure-1.
+5) No text, no logos, no watermark, no UI elements, no panel numbers or labels inside the image.
+6) Final aspect ratio 16:9, nine clearly separated equal-size panels, magazine-quality photographic rendering, ultra photorealistic.`,
 	},
 ]
 
@@ -1824,34 +1831,76 @@ export default function AiCanvasAgentExample() {
 		const sourceNodes = normalizeSourceImages(sourceOverride, promptNode, nodes)
 		updatePromptNode(promptNode.id, { status: 'generating', error: '' })
 
-		try {
-			const sizeConfig =
-				ASPECT_RATIOS.find((item) => item.id === promptNode.size) || ASPECT_RATIOS[0]
-			const generationCount = normalizeGenerationCount(promptNode.count)
-			const sourceImageUrls = await Promise.all(sourceNodes.map(createGenerationSourceImageUrl))
-			const generationPrompt = buildImageGenerationPrompt(
-				promptNode.prompt.trim(),
-				promptNode.size,
-				sourceNodes.some((node) => node.annotations?.length)
-			)
-			const response = await fetch('/api/generate-image', {
-				method: 'POST',
-				headers: { 'Content-Type': 'application/json' },
-				body: JSON.stringify({
-					model: activeImageModel,
-					prompt: generationPrompt,
-					size: sizeConfig.apiSize,
-					aspectRatio: promptNode.size,
-					count: generationCount,
-					sourceImageUrl: sourceImageUrls[0] || '',
-					sourceImageUrls,
-				}),
-			})
-			const data = (await response.json()) as GeneratedImageResponse
-			if (!response.ok) throw new Error(data.error || '图片生成失败')
-			const imageUrls = normalizeGeneratedImageUrls(data)
-			if (!imageUrls.length) throw new Error('接口没有返回图片')
+		// 自动重试:上游图像队列满时 (HTTP 500 "image queue is full"),不要让用户点
+		// 多次。后台每 5s 重试,最多 60 次 = 5 分钟。期间在画布顶部提示进度。
+		// 其他错误立即抛出给用户。
+		const isQueueFull = (msg: string | undefined) =>
+			!!msg && /queue\s*(is\s*)?full|image\s*queue/i.test(msg)
+		const RETRY_DELAY_MS = 5000
+		const MAX_RETRIES = 60 // 60 * 5s = 5 min
 
+		const sizeConfig =
+			ASPECT_RATIOS.find((item) => item.id === promptNode.size) || ASPECT_RATIOS[0]
+		const generationCount = normalizeGenerationCount(promptNode.count)
+		const sourceImageUrls = await Promise.all(sourceNodes.map(createGenerationSourceImageUrl))
+		const generationPrompt = buildImageGenerationPrompt(
+			promptNode.prompt.trim(),
+			promptNode.size,
+			sourceNodes.some((node) => node.annotations?.length)
+		)
+
+		let response: Response | null = null
+		let data: GeneratedImageResponse | null = null
+		let lastError: Error | null = null
+		const startedAt = Date.now()
+		for (let attempt = 0; attempt <= MAX_RETRIES; attempt++) {
+			try {
+				response = await fetch('/api/generate-image', {
+					method: 'POST',
+					headers: { 'Content-Type': 'application/json' },
+					body: JSON.stringify({
+						model: activeImageModel,
+						prompt: generationPrompt,
+						size: sizeConfig.apiSize,
+						aspectRatio: promptNode.size,
+						count: generationCount,
+						sourceImageUrl: sourceImageUrls[0] || '',
+						sourceImageUrls,
+					}),
+				})
+				data = (await response.json()) as GeneratedImageResponse
+				if (response.ok) break
+				const errMsg = (data as any)?.error
+				if (isQueueFull(errMsg) && attempt < MAX_RETRIES) {
+					const elapsed = Math.round((Date.now() - startedAt) / 1000)
+					setCanvasNotice(
+						`图像生成队列繁忙,后台自动重试中 (${attempt + 1}/${MAX_RETRIES},已等 ${elapsed}s)…`
+					)
+					await new Promise<void>((resolve) => setTimeout(resolve, RETRY_DELAY_MS))
+					continue
+				}
+				lastError = new Error(errMsg || `图片生成失败 (HTTP ${response.status})`)
+				break
+			} catch (err) {
+				const msg = err instanceof Error ? err.message : String(err)
+				if (isQueueFull(msg) && attempt < MAX_RETRIES) {
+					const elapsed = Math.round((Date.now() - startedAt) / 1000)
+					setCanvasNotice(
+						`图像生成队列繁忙,后台自动重试中 (${attempt + 1}/${MAX_RETRIES},已等 ${elapsed}s)…`
+					)
+					await new Promise<void>((resolve) => setTimeout(resolve, RETRY_DELAY_MS))
+					continue
+				}
+				lastError = err instanceof Error ? err : new Error(msg)
+				break
+			}
+		}
+		if (lastError) throw lastError
+		if (!response || !data) throw new Error('图片生成失败:未收到响应')
+		const imageUrls = normalizeGeneratedImageUrls(data)
+		if (!imageUrls.length) throw new Error('接口没有返回图片')
+
+		try {
 			const fallbackSize = parseApiSize(sizeConfig.apiSize)
 			const createdAt = Date.now()
 			let nextY = promptNode.y
