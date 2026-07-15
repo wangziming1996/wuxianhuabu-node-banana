@@ -801,3 +801,190 @@
 .nb-node-delete:hover {
   background: #c5283d;
 }
+
+/* 文本节点允许突破默认 320px 宽度上限(JS 控制在 260~600) */
+.nb-text-node { max-width: 600px; }
+
+/* ============================================================
+   Text Node 样式 (2026-07 加)
+   - 节点宽度由 JS 动态算,这里只控制外观
+   - 设置面板 / chip / toggle 视觉
+   ============================================================ */
+
+/* ---------- 文本节点基础 ---------- */
+.nb-text-node .nb-text-input {
+  resize: none;          /* 自适应高度,禁用手动 resize */
+  min-height: 0;         /* 允许 textarea 在内容少时收缩 */
+  line-height: 1.45;
+  font-weight: inherit;
+  text-align: left;
+  word-break: break-word;
+  white-space: pre-wrap;
+  background: transparent;
+  border-color: #e5e7eb;
+  color: #181b22;
+  padding: 6px 8px;
+  transition: color 120ms ease, background 120ms ease, font-size 120ms ease;
+}
+
+.nb-text-node .nb-text-input:focus {
+  background: #fff;
+  border-color: #06b6d4;
+}
+
+/* 字号变体 */
+.nb-text-node.nb-tx-sm .nb-text-input { font-size: 12px; }
+.nb-text-node.nb-tx-md .nb-text-input { font-size: 14px; }
+.nb-text-node.nb-tx-lg .nb-text-input { font-size: 18px; }
+.nb-text-node.nb-tx-xl .nb-text-input { font-size: 24px; line-height: 1.4; }
+
+/* 字重 */
+.nb-text-node.nb-tx-w-bold .nb-text-input { font-weight: 700; }
+.nb-text-node.nb-tx-w-normal .nb-text-input { font-weight: 400; }
+
+/* 对齐 */
+.nb-text-node.nb-tx-a-left   .nb-text-input { text-align: left; }
+.nb-text-node.nb-tx-a-center .nb-text-input { text-align: center; }
+.nb-text-node.nb-tx-a-right  .nb-text-input { text-align: right; }
+
+/* 文字颜色 */
+.nb-text-node.nb-tx-c-default .nb-text-input { color: #181b22; }
+.nb-text-node.nb-tx-c-muted   .nb-text-input { color: #6b7280; }
+.nb-text-node.nb-tx-c-accent  .nb-text-input { color: #6366f1; }
+.nb-text-node.nb-tx-c-success .nb-text-input { color: #10b981; }
+.nb-text-node.nb-tx-c-danger  .nb-text-input { color: #ef476f; }
+
+/* 背景颜色 */
+.nb-text-node.nb-tx-bg-transparent { background: #fff; }
+.nb-text-node.nb-tx-bg-paper       { background: #f9fafb; }
+.nb-text-node.nb-tx-bg-sunken      { background: #f3f4f6; }
+.nb-text-node.nb-tx-bg-accent      { background: #eef2ff; }
+
+/* ---------- header 上的设置按钮 ---------- */
+.nb-text-node__header-actions {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+.nb-icon-btn {
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: #6b7280;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 120ms ease, color 120ms ease, border-color 120ms ease;
+}
+.nb-icon-btn:hover {
+  background: #f3f4f6;
+  color: #181b22;
+}
+.nb-icon-btn.is-active {
+  background: #eef2ff;
+  color: #6366f1;
+  border-color: #c7d2fe;
+}
+
+/* ---------- 设置面板 ---------- */
+.nb-text-settings {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #fafbfc;
+  font-size: 11px;
+}
+.nb-text-settings__row {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  align-items: center;
+  gap: 8px;
+}
+.nb-text-settings__row > label {
+  color: #6b7280;
+  font-weight: 500;
+}
+.nb-text-settings__row--toggle {
+  grid-template-columns: 1fr auto;
+}
+.nb-text-settings__group {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+/* chip 通用 */
+.nb-chip {
+  border: 1px solid #d1d5db;
+  background: #fff;
+  color: #374151;
+  border-radius: 4px;
+  padding: 3px 8px;
+  font-size: 11px;
+  cursor: pointer;
+  line-height: 1.2;
+  min-width: 28px;
+  transition: background 120ms ease, color 120ms ease, border-color 120ms ease;
+}
+.nb-chip:hover { background: #f3f4f6; }
+.nb-chip.is-on {
+  background: #6366f1;
+  color: #fff;
+  border-color: #6366f1;
+}
+
+/* 颜色色块 */
+.nb-chip-color {
+  width: 26px;
+  height: 22px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+.nb-chip-color-default { color: #181b22; }
+.nb-chip-color-muted   { color: #6b7280; }
+.nb-chip-color-accent  { color: #6366f1; }
+.nb-chip-color-success { color: #10b981; }
+.nb-chip-color-danger  { color: #ef476f; }
+
+/* 背景色块 */
+.nb-chip-bg-transparent { background: #fff; }
+.nb-chip-bg-paper       { background: #f9fafb; }
+.nb-chip-bg-sunken      { background: #f3f4f6; }
+.nb-chip-bg-accent      { background: #eef2ff; color: #4338ca; }
+
+/* switch 开关 */
+.nb-toggle {
+  width: 32px;
+  height: 18px;
+  border-radius: 999px;
+  background: #d1d5db;
+  border: 0;
+  padding: 0;
+  position: relative;
+  cursor: pointer;
+  transition: background 160ms ease;
+}
+.nb-toggle__thumb {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 14px;
+  height: 14px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  transition: transform 160ms ease;
+}
+.nb-toggle.is-on { background: #6366f1; }
+.nb-toggle.is-on .nb-toggle__thumb { transform: translateX(14px); }

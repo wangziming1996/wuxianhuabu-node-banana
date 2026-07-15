@@ -924,6 +924,170 @@ def case_nb_17_polish_v2(report):
     report.add(cid, name, status, f"{elapsed:.1f}s", art, body)
 
 
+def case_nb_18_text_node_auto_resize_and_settings(report):
+    """NB-18: 文本节点自动变宽变高 + 设置下拉框(字号/对齐/颜色/作为 prompt 注入)。"""
+    cid, name = "NB-18", "文本节点自适应宽度+下拉设置面板"
+    t0 = int(time.time()*1000)
+    folder = ARTE(cid); os.makedirs(folder, exist_ok=True)
+    shot_initial = os.path.join(folder, "initial.png")
+    shot_long = os.path.join(folder, "long_text.png")
+    shot_settings = os.path.join(folder, "settings_open.png")
+    shot_aligned = os.path.join(folder, "aligned.png")
+    from playwright.sync_api import sync_playwright
+    errs, perrs = [], []
+    metrics = {}
+    with sync_playwright() as p:
+        b = p.chromium.launch(headless=True, args=["--no-strip-types","--no-sandbox","--disable-dev-shm-usage"])
+        page = b.new_context(viewport={"width":1600,"height":1000}).new_page()
+        page.on("console", lambda m: errs.append(m.text[:200]) if m.type == "error" else None)
+        page.on("pageerror", lambda exc: perrs.append(str(exc)[:300]))
+        page.goto(_base() + "/", timeout=30000, wait_until="domcontentloaded")
+        _auth(page); _open(page)
+
+        # 1) 添加文本节点
+        page.click('.nb-add-node-btn:has-text("文本")')
+        page.wait_for_timeout(500)
+        node_id = page.evaluate("""() => {
+            const el = document.querySelector('.nb-text-node');
+            return el ? (el.closest('.react-flow__node')?.getAttribute('data-id') || el.parentElement?.getAttribute('data-id')) : null;
+        }""")
+        assert node_id, "no text node created"
+
+        # 2) 初始尺寸(空文本 → 最小宽度 260, 至少 3 行高)
+        # 用 inline style 读真实 CSS 尺寸,不受 canvas zoom 影响
+        page.wait_for_timeout(400)
+        initial_size = page.evaluate(f"""(() => {{
+            const el = document.querySelector('[data-id="{node_id}"] .nb-text-node');
+            if (!el) return null;
+            const zoom = (document.querySelector('.react-flow__viewport')?.style.transform.match(/scale\(([0-9.]+)\)/) || [1, 1])[1];
+            const r = el.getBoundingClientRect();
+            return {{
+                w: Math.round(parseFloat(el.style.width) || r.width),
+                h: Math.round(parseFloat(el.style.minHeight) || r.height),
+                zoom: parseFloat(zoom),
+                inlineW: el.style.width,
+                inlineH: el.style.minHeight,
+            }};
+        }})()""")
+        page.screenshot(path=shot_initial, full_page=False)
+        metrics["initial"] = initial_size
+
+        # 3) 输入一段很长的中文(30 字符一行,3 行)→ 节点应该自动变宽到 600px 之内
+        long_text = "古藤老树昏鸦" * 6 + "\n" + "小桥流水人家" * 6 + "\n" + "古道西风瘦马" * 6
+        page.locator(f'[data-id="{node_id}"] .nb-text-input').fill(long_text)
+        page.wait_for_timeout(700)  # 给 auto-resize 一点时间
+        long_size = page.evaluate(f"""(() => {{
+            const el = document.querySelector('[data-id="{node_id}"] .nb-text-node');
+            if (!el) return null;
+            const r = el.getBoundingClientRect();
+            return {{
+                w: Math.round(parseFloat(el.style.width) || r.width),
+                h: Math.round(parseFloat(el.style.minHeight) || r.height),
+                nodeW: el.getAttribute('data-node-width'),
+                inlineW: el.style.width,
+                inlineH: el.style.minHeight,
+            }};
+        }})()""")
+        page.screenshot(path=shot_long, full_page=False)
+        metrics["long_text"] = long_size
+
+        # 4) 打开设置面板
+        page.click(f'[data-id="{node_id}"] [data-testid="text-node-settings-btn"]')
+        page.wait_for_timeout(400)
+        settings_open = page.evaluate(f"""(() => {{
+            const el = document.querySelector('[data-id="{node_id}"] [data-testid="text-node-settings"]');
+            return el ? el.children.length : 0;
+        }})()""")
+        page.screenshot(path=shot_settings, full_page=False)
+        metrics["settings_open"] = settings_open
+
+        # 5) 改字号为 xl + 居中对齐 + 红色 + 透明背景
+        page.click(f'[data-id="{node_id}"] [data-testid="text-fs-xl"]')
+        page.wait_for_timeout(150)
+        page.click(f'[data-id="{node_id}"] [data-testid="text-align-center"]')
+        page.wait_for_timeout(150)
+        page.click(f'[data-id="{node_id}"] [data-testid="text-color-danger"]')
+        page.wait_for_timeout(150)
+        page.click(f'[data-id="{node_id}"] [data-testid="text-fw-bold"]')
+        page.wait_for_timeout(400)
+
+        styled = page.evaluate(f"""(() => {{
+            const el = document.querySelector('[data-id="{node_id}"] .nb-text-node');
+            if (!el) return null;
+            return {{
+                className: el.className,
+                hasXl: el.classList.contains('nb-tx-xl'),
+                hasCenter: el.classList.contains('nb-tx-a-center'),
+                hasDanger: el.classList.contains('nb-tx-c-danger'),
+                hasBold: el.classList.contains('nb-tx-w-bold'),
+                ta: (() => {{ const t = el.querySelector('.nb-text-input'); return t ? {{fs: getComputedStyle(t).fontSize, ta: getComputedStyle(t).textAlign, color: getComputedStyle(t).color, weight: getComputedStyle(t).fontWeight}} : null; }})(),
+            }};
+        }})()""")
+        page.screenshot(path=shot_aligned, full_page=False)
+        metrics["styled"] = styled
+
+        # 6) 切换 isPrompt 开关
+        before_isp = page.evaluate(f"""(() => {{
+            const b = document.querySelector('[data-id="{node_id}"] [data-testid="text-isprompt-toggle"]');
+            return b ? b.getAttribute('aria-checked') : null;
+        }})()""")
+        page.click(f'[data-id="{node_id}"] [data-testid="text-isprompt-toggle"]')
+        page.wait_for_timeout(200)
+        after_isp = page.evaluate(f"""(() => {{
+            const b = document.querySelector('[data-id="{node_id}"] [data-testid="text-isprompt-toggle"]');
+            return b ? b.getAttribute('aria-checked') : null;
+        }})()""")
+        metrics["isPrompt"] = {"before": before_isp, "after": after_isp}
+
+        b.close()
+
+    elapsed = (int(time.time()*1000)-t0)/1000
+    # 验证:
+    #  - 初始宽 >=260, 高 >= HEADER + 3行
+    #  - 长文本:宽 <= 600, 高 > 初始
+    #  - settings 面板有 ≥5 个 row
+    #  - styled className 应用了所有 4 个变体
+    #  - textarea computed style 也跟着变(fontSize >= 18px for xl, textAlign=center, color 偏红, weight=700)
+    ok = True
+    reasons = []
+    if not (initial_size and initial_size["w"] >= 260):
+        ok = False; reasons.append(f"initial.w={initial_size and initial_size['w']} < 260")
+    if not (long_size and 200 <= long_size["w"] <= 600):
+        ok = False; reasons.append(f"long.w={long_size and long_size['w']} not in [200,600]")
+    if not (long_size and initial_size and long_size["h"] >= initial_size["h"]):
+        ok = False; reasons.append(f"long.h not >= initial.h ({long_size and long_size['h']} vs {initial_size and initial_size['h']})")
+    if not (settings_open and settings_open >= 5):
+        ok = False; reasons.append(f"settings rows={settings_open} < 5")
+    if not (styled and styled.get("hasXl") and styled.get("hasCenter") and styled.get("hasDanger") and styled.get("hasBold")):
+        ok = False; reasons.append(f"missing class: {styled}")
+    ta = (styled or {}).get("ta") or {}
+    try:
+        fs_px = float((ta.get("fs") or "0").rstrip("px"))
+    except Exception:
+        fs_px = 0
+    if fs_px < 18:
+        ok = False; reasons.append(f"textarea fontSize={ta.get('fs')} (want >= 18px)")
+    if ta.get("ta") != "center":
+        ok = False; reasons.append(f"textarea textAlign={ta.get('ta')} (want center)")
+    if ta.get("weight") not in ("700", "bold"):
+        ok = False; reasons.append(f"textarea weight={ta.get('weight')} (want 700/bold)")
+    if before_isp == after_isp:
+        ok = False; reasons.append(f"isPrompt toggle did not flip ({before_isp} -> {after_isp})")
+    status = "PASS" if ok else "FAIL"
+    art = REL(shot_aligned)
+    msg = json.dumps({**metrics, "console_errors": len(errs), "page_errors": len(perrs), "reasons": reasons}, ensure_ascii=False)
+    body = (
+        f"### {cid} {name}\n"
+        f"**状态**: **{status}** | 耗时: {elapsed:.1f}s\n"
+        f"**产物**: [{os.path.basename(shot_initial)}]({os.path.relpath(shot_initial, ROOT)}), "
+        f"[{os.path.basename(shot_long)}]({os.path.relpath(shot_long, ROOT)}), "
+        f"[{os.path.basename(shot_settings)}]({os.path.relpath(shot_settings, ROOT)}), "
+        f"[{os.path.basename(shot_aligned)}]({os.path.relpath(shot_aligned, ROOT)})\n"
+        f"**指标**: {msg}\n"
+    )
+    report.add(cid, name, status, f"{elapsed:.1f}s", art, body)
+
+
 def main():
     report = Report()
     started = time.time()
@@ -951,6 +1115,8 @@ def main():
     case_nb_16_multi_tab_warning(report)
     # 视觉调优
     case_nb_17_polish_v2(report)
+    # 文本节点自适应 + 下拉框(2026-07)
+    case_nb_18_text_node_auto_resize_and_settings(report)
     # 后端代理
     case_nb_10_video_endpoint(report)
 

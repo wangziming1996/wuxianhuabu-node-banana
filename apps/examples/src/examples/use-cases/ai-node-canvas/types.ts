@@ -34,10 +34,22 @@ export interface ImageNodeData {
 }
 
 /* ---------------- 文本节点 ---------------- */
+export type TextFontSize = 'sm' | 'md' | 'lg' | 'xl'
+export type TextFontWeight = 'normal' | 'bold'
+export type TextAlign = 'left' | 'center' | 'right'
+export type TextColorToken = 'default' | 'muted' | 'accent' | 'danger' | 'success'
+export type TextBgToken = 'transparent' | 'paper' | 'sunken' | 'accent'
+
 export interface TextNodeData {
   kind: 'text'
   text: string                   // 任意文本,会自动 trim 给下游
   isPrompt?: boolean             // 是否当作 prompt 注入
+  // 样式(控制面板里可调,2026-07 加)
+  fontSize?: TextFontSize        // 默认 'md'
+  fontWeight?: TextFontWeight    // 默认 'normal'
+  align?: TextAlign              // 默认 'left'
+  color?: TextColorToken         // 默认 'default'
+  bg?: TextBgToken               // 默认 'transparent'
 }
 
 /* ---------------- 角色节点 ---------------- */
