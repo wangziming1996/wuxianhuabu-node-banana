@@ -1728,17 +1728,20 @@ async function generateSingleImageFromImage({
 	if (isNanoBananaModel(model)) {
 		return generateNanoBananaImageEdit({ authHeader, model, prompt, sourceImageUrls })
 	}
-	// Agnes API 不支持 /v1/images/edits，使用 /v1/images/generations 并传入 image 参数
+	// Agnes Image 2.0 Flash 同时支持文生图 / 图生图 / 图像编辑,共用 /v1/images/generations endpoint。
+	// 图生图关键:image 字段必须塞进 extra_body(不能放顶层),可以传 URL 列表或 dataURL(base64)
+	// 见 https://agnes-ai.com/zh-Hans/docs/agnes-image-20-flash
 	const body: Record<string, any> = {
 		model,
 		prompt,
 		n: 1,
 		size,
 	}
-	if (sourceImageUrls.length === 1) {
-		body.image = sourceImageUrls[0]
-	} else if (sourceImageUrls.length > 1) {
-		body.image = sourceImageUrls
+	if (sourceImageUrls.length > 0) {
+		body.extra_body = {
+			...(body.extra_body || {}),
+			image: sourceImageUrls,
+		}
 	}
 	const response = await fetchWithTimeout(getImageGenerationEndpoint(), {
 		method: 'POST',
